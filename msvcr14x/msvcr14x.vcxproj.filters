@@ -1,0 +1,1600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ucrt">
+      <UniqueIdentifier>{9ED12EEA-ECE7-4F25-800A-5496B87129D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\conio">
+      <UniqueIdentifier>{B17410CB-6B2C-4222-8E44-50F2DEE44E99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\convert">
+      <UniqueIdentifier>{C8DE8BAC-55C8-45C1-A82A-468459A155E4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\dll">
+      <UniqueIdentifier>{EBDF564B-C870-4D38-95F2-5627AAB9B0FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\env">
+      <UniqueIdentifier>{CDEB583E-3074-4E90-BC80-0975C0DED169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\exec">
+      <UniqueIdentifier>{922EF863-A2F6-4D58-BC87-892E50095066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\filesystem">
+      <UniqueIdentifier>{82D4311E-6FE6-4F3C-81F8-0ADD3B482468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\heap">
+      <UniqueIdentifier>{E408A626-3CF1-4550-A5DE-EFC75AEBD0B8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\inc">
+      <UniqueIdentifier>{7FF28700-1967-4EFF-AEFD-F607475CFAB1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\inc\i386">
+      <UniqueIdentifier>{3E8EB71A-1245-43DA-B150-2AD858D02A77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\initializers">
+      <UniqueIdentifier>{FB415B9B-04C4-4A76-9283-9CCAF86CE363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\initializers\i386">
+      <UniqueIdentifier>{E811B3E3-34BA-4F51-A73A-8197BA65152D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\internal">
+      <UniqueIdentifier>{9A6057AE-ED7F-4238-8D0B-CB9FC753164A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\locale">
+      <UniqueIdentifier>{8459B0EA-5CB8-4E96-8028-04CCD84229D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\lowio">
+      <UniqueIdentifier>{B304D4CE-C93C-4BEA-9E26-565C90BC3341}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\mbstring">
+      <UniqueIdentifier>{93E0FC7E-980E-4FDA-AC0B-F3449A45CAE4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\misc">
+      <UniqueIdentifier>{AA392C6E-D96E-486A-936F-E798CF7931FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\startup">
+      <UniqueIdentifier>{56099686-7C56-4206-92C1-11B0ECA0D82F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\stdio">
+      <UniqueIdentifier>{BB1A689A-24C2-4872-920F-25730C11D490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\stdlib">
+      <UniqueIdentifier>{79B9A238-2B0D-42D1-8C42-5459F0849C3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\string">
+      <UniqueIdentifier>{3843A14D-8584-4140-8AB0-B0AF28DBE732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\string\amd64">
+      <UniqueIdentifier>{784830A8-919F-40D4-AA0F-08297EC42311}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\string\i386">
+      <UniqueIdentifier>{BA78A257-BBFD-4772-9135-75797FDDC557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ucrt\time">
+      <UniqueIdentifier>{1EE98B67-8596-4B60-9333-FCE46FE14E7B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{e93ba7aa-89a8-4bb3-87ea-2b6394fc1316}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="msvcr14x.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_big_integer.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_fltintrn.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_lowio.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_mbstring.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_securecrt.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_simd.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_stdio.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_stdio_input.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_stdio_output.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_string_templates.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_strtox.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_time.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_traits.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_win32_buffer.h">
+      <Filter>ucrt\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\nt.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ntrtl.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\nturtl.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\corecrt_internal_state_isolation.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\memccpy.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcat.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcmp.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcspn.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcspn.c">
+      <Filter>ucrt\string\amd64</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncat.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncmp.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncpy.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnset.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strpbrk.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strpbrk.c">
+      <Filter>ucrt\string\amd64</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strrev.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strset.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strspn.c">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strspn.c">
+      <Filter>ucrt\string\amd64</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_ctype.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_filbuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_file.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_flsbuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_fptostr.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_freebuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_getbuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_mbslen.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_sftbuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\_strerr.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_wctype.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\abort.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\abs.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\access.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\align.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\dll\appcrt_dllmain.cpp">
+      <Filter>ucrt\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_data.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_parsing.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_wildcards.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_winmain.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\asctime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\assert.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\atof.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\atoldbl.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\atox.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\bsearch.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\bsearch_s.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\byteswap.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\c16rtomb.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\c32rtomb.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\calloc.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\calloc_base.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\cenvarg.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\cfout.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cgets.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cgetws.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\chdir.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\chmod.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\chsize.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\clearerr.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\clock.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\clock_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\close.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\closeall.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\commit.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\CompareStringA.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\CompareStringW.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\console_input_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\console_output_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cprintf.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cputs.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cputws.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\creat.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\CreateProcessA.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\crtmbox.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cscanf.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\ctime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\ctype.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\cvt.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\days.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\dbgrpt.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\dbgrptt.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\debug_fill_threshold.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\debug_heap.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\debug_heap_hook.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\difftime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\div.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\drive.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\drivemap.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\drivfree.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\dup.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\dup2.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\dll\empty.cpp">
+      <Filter>ucrt\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\environment_initialization.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\eof.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\errno.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\exception_filter.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\exit.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\expand.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fclose.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\fcvt.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fdopen.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\feoferr.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fflush.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgetc.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgetpos.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgets.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgetwc.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\filelength.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fileno.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\findfile.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\fma3_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fopen.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\fp_flags.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputc.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputs.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputwc.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputws.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fread.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\free.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\free_base.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\freopen.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fseek.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fsetpos.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ftell.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\ftime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\fullpath.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fwrite.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\gcvt.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\get_environment_from_os.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\get_qualified_locale.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\getch.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\getcwd.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\getenv.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\GetLocaleInfoA.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\GetModuleFileNameA.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\getpath.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\getpid.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\getproc.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\getqloc_downlevel.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\gets.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\GetStringTypeA.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\gettemppath.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\getw.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\getwch.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\glstatus.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\gmtime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heap_handle.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heapchk.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heapmin.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heapwalk.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\imaxabs.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\imaxdiv.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\initcon.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\initconin.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\initctype.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\initialization.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\initmon.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\initnum.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\initterm.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\inittime.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\input.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\invalid_parameter.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\ioinit.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\is_wctype.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\isatty.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\isctype.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbalnm.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbalph.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbbyte.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbdgt.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbgrph.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbknj.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismblgl.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismblwr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbprn.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbpunc.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbsle.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbspc.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\ismbstr.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbupr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\iswctype.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\labs.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\lcidtoname_downlevel.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\LCMapStringA.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\LCMapStringW.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\lconv_unsigned_char_initialization.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\ldiv.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lfind.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lfind_s.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\llabs.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lldiv.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\loaddll.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\LoadLibraryExA.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\locale_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\locale_refcounting.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\locale_update.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\localeconv.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\localtime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\locking.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\locks.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\loctotime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lsearch.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lsearch_s.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\lseek.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\makepath.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\malloc.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\malloc_base.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbbtype.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbccpy.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbccpy_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbccpy_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbclen.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbclevel.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbctype.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mblen.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbrtoc16.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbrtoc32.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbrtowc.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsbtype.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscat_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscat_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbschr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscmp.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscoll.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscpy_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscpy_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscspn.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsdec.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsicmp.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsicoll.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsinc.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbslen.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbslen_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbslwr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcat.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcat_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcat_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcmp.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcnt.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcol.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcpy.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcpy_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcpy_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbicm.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbico.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbset.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbset_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbset_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnccnt.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncmp.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncoll.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnextc.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnicmp.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnicol.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsninc.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbspbrk.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsrchr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsrev.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsset.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsset_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsset_s_l.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsspn.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsspnp.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsstr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbstok.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbstok_s.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbstowcs.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsupr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtohira.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtokata.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtolwr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtoupr.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbtowc.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\memcpy_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\memicmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\mkdir.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\mktemp.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\mktime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\msize.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\multibyte_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ncommode.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\new_handler.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\new_mode.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\nlsdata.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\onexit.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\open.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\openfile.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\osfinfo.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\output.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\OutputDebugStringA.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\per_thread_data.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\perror.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\pipe.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\popen.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\printf_count_output.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\putch.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\putenv.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\puts.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\putw.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\putwch.cpp">
+      <Filter>ucrt\conio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\putws.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\qsort.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\qsort_s.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rand.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rand_s.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\read.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\realloc.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\realloc_base.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\recalloc.cpp">
+      <Filter>ucrt\heap</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\rename.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\report_runtime_error.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\resetstk.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\rewind.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\rmdir.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\rmtmp.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rotl.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rotr.cpp">
+      <Filter>ucrt\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\searchenv.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\set_error_mode.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\setbuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\SetCurrentDirectoryA.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\setenv.cpp">
+      <Filter>ucrt\env</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\SetEnvironmentVariableA.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\seterrm.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\setlocale.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\setmaxf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\setmode.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\setvbuf.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\shared_initialization.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\signal.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\slbeep.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnl.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnlp.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnv.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnvp.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\splitpath.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\i386\sse2_initializer.cpp">
+      <Filter>ucrt\initializers\i386</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\stat.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\stdio_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcat_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcoll.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcpy_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\strdate.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strdup.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\stream.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\strerror.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\strftime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\stricmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\stricoll.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strlwr.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncat_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncnt.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncoll.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncpy_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnicmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnicol.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnlen.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnset_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strset_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\strtime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\strtod.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strtok.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strtok_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\strtox.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strupr.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strxfrm.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\swab.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\syserr.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\system.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\systime.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\tell.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\telli64.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\tempnam.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\terminate.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\thread.cpp">
+      <Filter>ucrt\startup</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\time.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\timeset.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\timeset_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\tmpfile.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\tmpfile_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\tojisjms.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\tolower_toupper.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\tombbmbc.cpp">
+      <Filter>ucrt\mbstring</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\towlower.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\towupper.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\txtmode.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\tzset.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\umask.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ungetc.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ungetwc.cpp">
+      <Filter>ucrt\stdio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\unlink.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\utime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\waccess.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\wait.cpp">
+      <Filter>ucrt\exec</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wchmod.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wcrtomb.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscat.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscat_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscoll.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscpy.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscpy_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscspn.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsdup.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\wcsftime.cpp">
+      <Filter>ucrt\time</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsicmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsicoll.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcslwr.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncat.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncat_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncnt.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncoll.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncpy.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncpy_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnicmp.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnicol.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnset.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnset_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcspbrk.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsrev.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsset.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsset_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsspn.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcstok.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcstok_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wcstombs.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsupr.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsxfrm.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wctomb.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wctrans.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wctype.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\winapi_thunks.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wmemcpy_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wmemmove_s.cpp">
+      <Filter>ucrt\string</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wmkdir.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\wperror.cpp">
+      <Filter>ucrt\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wrename.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\write.cpp">
+      <Filter>ucrt\lowio</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wrmdir.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\wsetlocale.cpp">
+      <Filter>ucrt\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wunlink.cpp">
+      <Filter>ucrt\filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\xtoa.cpp">
+      <Filter>ucrt\convert</Filter>
+    </ClCompile>
+    <ClCompile Include="oswrappers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="exports.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\fmode_initializer.cpp">
+      <Filter>ucrt\initializers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msvcr14x_x86.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s.inl">
+      <Filter>ucrt\mbstring</Filter>
+    </None>
+    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s.inl">
+      <Filter>ucrt\mbstring</Filter>
+    </None>
+    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s.inl">
+      <Filter>ucrt\mbstring</Filter>
+    </None>
+    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\i386\cruntime.inc">
+      <Filter>ucrt\inc\i386</Filter>
+    </None>
+    <None Include="msvcr14x_x64.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\_memicmp.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\_strnicm.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\memccpy.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcat.asm">
+      <Filter>ucrt\string\amd64</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strcat.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcmp.asm">
+      <Filter>ucrt\string\amd64</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strcmp.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strcspn.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strlen.asm">
+      <Filter>ucrt\string\amd64</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strlen.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strncat.asm">
+      <Filter>ucrt\string\amd64</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strncat.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strncmp.asm">
+      <Filter>ucrt\string\amd64</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strncmp.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strncpy.asm">
+      <Filter>ucrt\string\amd64</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strncpy.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strnset.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strpbrk.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strrev.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strset.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strspn.asm">
+      <Filter>ucrt\string\i386</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

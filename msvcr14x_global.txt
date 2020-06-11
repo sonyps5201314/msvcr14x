@@ -1,0 +1,3 @@
+目标目录：C:\Program Files (x86)\Windows Kits\10\Lib\x.x.x.x\ucrt\xxx
+先备份复制原目标，复制并替换到目标目录下
+不需要用时就还原回来

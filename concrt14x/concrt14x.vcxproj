@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E9ECED0F-4A90-4143-A1A3-EF1E03B8DD25}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>concrt140</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>CONCRT14X</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>CONCRT14XD</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>CONCRT14XD</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>CONCRT14X</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_ATL_XP_TARGETING;CONCRTDLL;_CRTBLD;CONCRT14XEXPORTS;_WINDOWS;_USRDLL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>concrt14x.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\msvcprt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <BaseAddress>0x50500000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_ATL_XP_TARGETING;CONCRTDLL;_CRTBLD;CONCRT14XEXPORTS;_WINDOWS;_USRDLL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SupportJustMyCode>false</SupportJustMyCode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>concrt14x.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\msvcprtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <BaseAddress>0x40500000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_ATL_XP_TARGETING;CONCRTDLL;_CRTBLD;CONCRT14XEXPORTS;_WINDOWS;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SupportJustMyCode>false</SupportJustMyCode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>concrt14x.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\msvcprtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <BaseAddress>0x405000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_ATL_XP_TARGETING;CONCRTDLL;_CRTBLD;CONCRT14XEXPORTS;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>concrt14x.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\msvcprt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <BaseAddress>0x505000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\align.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\CacheLocalScheduleGroup.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\cds_cache_aligned_allocator.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\collections.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\concrtinternal.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ContextBase.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ExecutionResource.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ExternalContextBase.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\FairScheduleGroup.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\FreeThreadProxy.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\FreeVirtualProcessorRoot.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\HillClimbing.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\InternalContextBase.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Mailbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Platform.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\RealizedChore.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ResourceManager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\rminternal.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ScheduleGroupBase.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerBase.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerProxy.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingNode.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingRing.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SearchAlgorithms.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\StructuredWorkStealingQueue.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SubAllocator.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\targetver.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\TaskCollection.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadInternalContext.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxy.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxyFactory.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadScheduler.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadVirtualProcessor.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Timer.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Trace.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Transmogrificator.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\TransmogrifiedPrimary.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSBackgroundPoller.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeThreadProxy.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeVirtualProcessorRoot.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulerProxy.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulingContext.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadInternalContext.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadProxy.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadScheduler.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadVirtualProcessor.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSWrapper.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\utils.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessor.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessorRoot.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\WinRTWrapper.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\workqueue.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\WorkStealingQueue.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Agent.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\CacheLocalScheduleGroup.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\cds_cache_aligned_allocator.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Chores.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\concurrent_hash.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\concurrent_queue.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\concurrent_vector.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Context.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ContextBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\CurrentScheduler.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\event.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Exceptions.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ExecutionResource.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ExternalContextBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\FairScheduleGroup.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\FreeThreadProxy.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\FreeVirtualProcessorRoot.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\HillClimbing.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\InternalContextBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\location.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Platform.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ppl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\RealizedChore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ResourceManager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\rtlocks.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ScheduleGroupBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerPolicyBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerProxy.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingNode.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingRing.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SearchAlgorithms.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\staticinits.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SubAllocator.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TaskCollection.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TaskCollectionBase.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadInternalContext.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxy.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxyFactoryManager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadScheduler.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadVirtualProcessor.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Timer.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Trace.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Transmogrificator.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TransmogrifiedPrimary.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSBackgroundPoller.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeThreadProxy.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeVirtualProcessorRoot.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulerProxy.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulingContext.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadInternalContext.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadProxy.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadScheduler.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadVirtualProcessor.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSWrapper.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\utils.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessor.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessorRoot.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\WinRTWrapper.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\WorkQueue.cpp" />
+    <ClCompile Include="concrt14x.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="concrt14x.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

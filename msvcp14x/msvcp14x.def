@@ -1,0 +1,2 @@
+EXPORTS
+	;msvcp140_2.dll中的符号目前我们是用msvcp14x_static_part来静态链接的，这么做的原因是不常用，且代码体积有点大

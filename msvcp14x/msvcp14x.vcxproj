@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{2A9057C5-4E11-4577-BBB6-6D80298180D7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>msvcp140</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MSVCP14X</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>MSVCP14XD</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>MSVCP14XD</TargetName>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MSVCP14X</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
+      <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
+      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
+      <BaseAddress>0x50300000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
+      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
+      <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <BaseAddress>0x40300000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>?pinit@@3P6AHXZEA</ForceSymbolReferences>
+      <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <BaseAddress>0x403000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>?pinit@@3P6AHXZEA</ForceSymbolReferences>
+      <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
+      <BaseAddress>0x503000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="awint.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\filesys.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\generics.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\primitives.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\wrapwin.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmath.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxcctype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxdftype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxfftype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxlftype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxstod.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.h" />
+    <ClInclude Include="ehdata.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="trnsctrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\msvcr14X\win2000fix.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cerr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cin.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\clog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cond.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cthread.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\excptptr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesys.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\fiopen.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\future.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\instances.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iomanip.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ios.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iosptrs.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iostream.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0_implib.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale_implib_pure.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\mpiostream.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\multprec.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\mutex.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\nothrow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\parallel_algorithms.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ppltasks.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\raisehan.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\sharedmutex.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\stdhndlr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\stdthrow.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\taskscheduler.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\thread0.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcerr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcin.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushclog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushiostr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\vector_algorithms.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wcerr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wcin.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wclog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wcout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\winapinls.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wiostrea.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wlocale.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xalloc.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xcosh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdateord.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdint.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdnorm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdscale.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdtento.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdtest.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdunscal.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xexp.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfcosh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdint.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdnorm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdscale.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdtento.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdtest.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdunsca.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xferaise.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfexp.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfprec.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfsinh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfvalues.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xgetwctype.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlcosh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldint.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldscale.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldtento.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldtest.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldunsca.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlexp.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlgamma.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlocale.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlock.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlpoly.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlprec.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlsinh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlvalues.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xmbtowc.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xnotify.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xonce.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xpoly.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xprec.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xrngabort.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xrngdev.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xsinh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstod.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstof.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoflt.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstol.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstold.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoll.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstopfx.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoul.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoull.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoxflt.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstrcoll.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstrxfrm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xthrow.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xtime.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xtowlower.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xtowupper.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xvalues.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwcscoll.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwcsxfrm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwctomb.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstod.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstof.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoflt.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstold.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstopfx.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_toupper.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exception.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exceptions.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\pplerror.cpp" />
+    <ClCompile Include="msvcp14x.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StlCompareStringA.cpp" />
+    <ClCompile Include="StlCompareStringW.cpp" />
+    <ClCompile Include="StlLCMapStringA.cpp" />
+    <ClCompile Include="StlLCMapStringW.cpp" />
+    <ClCompile Include="winapisupp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msvcp14x.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

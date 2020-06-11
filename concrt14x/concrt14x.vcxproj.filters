@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="concrt">
+      <UniqueIdentifier>{f1a0eaf0-c64d-4bbc-91f0-88d33abad664}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\align.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\CacheLocalScheduleGroup.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\cds_cache_aligned_allocator.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\collections.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\concrtinternal.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ContextBase.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ExecutionResource.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ExternalContextBase.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\FairScheduleGroup.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\FreeThreadProxy.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\FreeVirtualProcessorRoot.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\HillClimbing.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\InternalContextBase.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Mailbox.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Platform.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\RealizedChore.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ResourceManager.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\rminternal.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ScheduleGroupBase.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerBase.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerProxy.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingNode.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingRing.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SearchAlgorithms.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\StructuredWorkStealingQueue.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\SubAllocator.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\targetver.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\TaskCollection.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadInternalContext.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxy.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxyFactory.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadScheduler.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadVirtualProcessor.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Timer.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Trace.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Transmogrificator.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\TransmogrifiedPrimary.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSBackgroundPoller.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeThreadProxy.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeVirtualProcessorRoot.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulerProxy.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulingContext.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadInternalContext.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadProxy.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadScheduler.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadVirtualProcessor.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSWrapper.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\utils.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessor.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessorRoot.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\WinRTWrapper.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\workqueue.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\WorkStealingQueue.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="concrt14x.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Agent.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\CacheLocalScheduleGroup.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\cds_cache_aligned_allocator.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Chores.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\concurrent_hash.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\concurrent_queue.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\concurrent_vector.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Context.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ContextBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\CurrentScheduler.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\event.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Exceptions.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ExecutionResource.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ExternalContextBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\FairScheduleGroup.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\FreeThreadProxy.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\FreeVirtualProcessorRoot.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\HillClimbing.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\InternalContextBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\location.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Platform.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ppl.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\RealizedChore.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ResourceManager.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\rtlocks.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ScheduleGroupBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerPolicyBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulerProxy.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingNode.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SchedulingRing.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SearchAlgorithms.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\staticinits.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\SubAllocator.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TaskCollection.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TaskCollectionBase.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadInternalContext.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxy.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadProxyFactoryManager.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadScheduler.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\ThreadVirtualProcessor.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Timer.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Trace.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Transmogrificator.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TransmogrifiedPrimary.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSBackgroundPoller.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeThreadProxy.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeVirtualProcessorRoot.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulerProxy.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulingContext.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadInternalContext.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadProxy.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadScheduler.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadVirtualProcessor.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSWrapper.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\utils.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessor.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\VirtualProcessorRoot.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\WinRTWrapper.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\WorkQueue.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="concrt14x.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
