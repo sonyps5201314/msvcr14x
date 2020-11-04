@@ -1,4 +1,4 @@
-check_prerequisite.vbs
+WScript check_prerequisite.vbs
 git clone https://github.com/sonyps5201314/ntdll.git ../ntdll
 WScript ../ntdll/setup.vbs
 expand ./first_time_build_need_files.cab . -F:*

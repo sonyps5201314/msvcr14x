@@ -12,3 +12,12 @@
 #pragma comment(lib,"win2k3_KERNEL32.lib")
 #pragma comment(lib,"win2k3_kernl32p.lib")
 #endif
+
+//由于无法修改winapisupp.cpp,所以目前通过下面这样来防止pinit的符号因我们的链接选项中指定了/OPT:REF而被剔除
+#include "winapisupp.cpp"
+#ifndef _WIN64
+#pragma comment(linker, "/include:?pinit_force_included@@3P6AHXZA")
+#else
+#pragma comment(linker, "/include:?pinit_force_included@@3P6AHXZEA")
+#endif
+_CRTALLOC(".CRT$XIC") /*static*/ _PIFV pinit_force_included = initialize_pointers;

@@ -66,6 +66,9 @@
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Mailbox.h">
       <Filter>concrt</Filter>
     </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\pch.h">
+      <Filter>concrt</Filter>
+    </ClInclude>
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Platform.h">
       <Filter>concrt</Filter>
     </ClInclude>
@@ -249,6 +252,9 @@
       <Filter>concrt</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\location.cpp">
+      <Filter>concrt</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\pch.cpp">
       <Filter>concrt</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Platform.cpp">

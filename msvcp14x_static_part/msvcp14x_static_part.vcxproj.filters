@@ -47,5 +47,14 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\special_math.cpp">
       <Filter>stl</Filter>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xonce2.cpp">
+      <Filter>stl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror_import_lib.cpp">
+      <Filter>stl</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesystem.cpp">
+      <Filter>stl</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
