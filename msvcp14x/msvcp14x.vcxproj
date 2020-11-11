@@ -202,18 +202,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\awint.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\primitives.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmath.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxcctype.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxdftype.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxfftype.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxlftype.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxstod.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.h" />
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\awint.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\primitives.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmath.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxcctype.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxdftype.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxfftype.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxlftype.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxstod.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.hpp" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.hpp" />
     <ClInclude Include="ehdata.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -230,7 +230,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cerr.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cin.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\clog.cpp" />
@@ -431,6 +436,7 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_toupper.cpp" />
+    <ClCompile Include="atomic.cpp" />
     <ClCompile Include="msvcp14x.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

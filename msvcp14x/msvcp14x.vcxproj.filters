@@ -30,40 +30,40 @@
     <ClInclude Include="trnsctrl.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\awint.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\awint.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\primitives.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\primitives.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmath.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmath.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxcctype.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxcctype.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxdftype.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxdftype.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxfftype.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxfftype.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxlftype.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxlftype.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxstod.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxstod.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.hpp">
       <Filter>stl</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.h">
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.hpp">
       <Filter>stl</Filter>
     </ClInclude>
   </ItemGroup>
@@ -484,6 +484,9 @@
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.cpp">
       <Filter>stl</Filter>
+    </ClCompile>
+    <ClCompile Include="atomic.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
