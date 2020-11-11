@@ -245,7 +245,7 @@ Sub SetEnvironment()
 End Sub
 
 Sub AskForCopyDlls()
-   If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1) = vbYes Then
+   If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
       Dim AppPath
       AppPath = ExpandConstant("{app}") + "\"
       Dim fs 'As FileSystemObject
@@ -282,7 +282,7 @@ Sub AskForCopyDlls()
       Dim OneDll
       For Each OneDll In AllDlls
          If fs.FileExists(AppPath + OneDll) = False Then
-            Call MsgBox("Please build all msvcr14x dlls first!", vbCritical)
+            Call MsgBox("Please build all msvcr14x dlls first!", vbCritical, "msvcr14x")
             Exit Sub
          End If
       Next
@@ -312,7 +312,7 @@ Sub AskForCopyDlls()
             Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
         Next
       Else
-        MsgBox SysArch + " is a unsupported system architecture!", vbCritical
+        MsgBox SysArch + " is a unsupported system architecture!", vbCritical, "msvcr14x"
       End If
       
    End If
