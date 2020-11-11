@@ -13,11 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="stl">
+    <Filter Include="implib">
       <UniqueIdentifier>{e4a7445e-de7d-4937-9892-3e537912b099}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="atomic_wait">
-      <UniqueIdentifier>{dbb04914-dd41-4cad-80e4-cf53ff02e08e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,34 +30,25 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0_implib.cpp">
-      <Filter>stl</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\vector_algorithms.cpp">
-      <Filter>stl</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\nothrow.cpp">
-      <Filter>stl</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\sharedmutex.cpp">
-      <Filter>stl</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\special_math.cpp">
-      <Filter>stl</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xonce2.cpp">
-      <Filter>stl</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror_import_lib.cpp">
-      <Filter>stl</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesystem.cpp">
-      <Filter>stl</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\parallel_algorithms.cpp">
-      <Filter>atomic_wait</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic_wait.cpp">
-      <Filter>atomic_wait</Filter>
+      <Filter>implib</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

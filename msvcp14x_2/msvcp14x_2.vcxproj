@@ -20,36 +20,36 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E8586985-2CA5-4966-83B9-26847250E3E2}</ProjectGuid>
+    <ProjectGuid>{88045B01-ED4D-4C1D-BA24-A561A427BE07}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>msvcp140staticpart</RootNamespace>
+    <RootNamespace>concrt140</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -72,154 +72,145 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>MSVCP14X_2</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <TargetName>MSVCP14X_2D</TargetName>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <TargetName>MSVCP14X_2D</TargetName>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <TargetName>MSVCP14X_2</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_LIB;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <StringPooling>true</StringPooling>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>_ATL_XP_TARGETING;_CRTBLD;_BUILDING_SATELLITE_2;MSVCP14X_2EXPORTS;_WINDOWS;_USRDLL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x_2.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\msvcprt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <BaseAddress>0x50700000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
-    <Lib>
-      <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
-      <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_LIB;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ATL_XP_TARGETING;_CRTBLD;_BUILDING_SATELLITE_2;MSVCP14X_2EXPORTS;_WINDOWS;_USRDLL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SupportJustMyCode>false</SupportJustMyCode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x_2.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\msvcprtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <BaseAddress>0x40700000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
-    <Lib>
-      <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
-      <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ATL_XP_TARGETING;_CRTBLD;_BUILDING_SATELLITE_2;MSVCP14X_2EXPORTS;_WINDOWS;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SupportJustMyCode>false</SupportJustMyCode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x_2.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\msvcprtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <BaseAddress>0x407000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
-    <Lib>
-      <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
-      <StringPooling>true</StringPooling>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_ATL_XP_TARGETING;_CRTBLD;_BUILDING_SATELLITE_2;MSVCP14X_2EXPORTS;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>msvcp14x_2.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\msvcprt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <BaseAddress>0x507000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
-    <Lib>
-      <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0_implib.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\nothrow.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\sharedmutex.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\vector_algorithms.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesystem.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror_import_lib.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xonce2.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\special_math.cpp" />
+    <ClCompile Include="msvcp14x_2.cpp" />
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="msvcp14x_2.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

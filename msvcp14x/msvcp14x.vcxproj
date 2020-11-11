@@ -236,6 +236,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic_wait.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cerr.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cin.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\clog.cpp" />
@@ -243,6 +249,12 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cout.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cthread.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\excptptr.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesys.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesystem.cpp">
@@ -272,7 +284,12 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\mexcptptr.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -329,7 +346,12 @@
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\taskscheduler.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\thread0.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ulocale.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ulocale.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exception.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exceptions.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcerr.cpp" />
