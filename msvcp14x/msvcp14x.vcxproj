@@ -214,10 +214,8 @@
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.hpp" />
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.hpp" />
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.hpp" />
-    <ClInclude Include="ehdata.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="trnsctrl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\msvcr14X\win2000fix.cpp">

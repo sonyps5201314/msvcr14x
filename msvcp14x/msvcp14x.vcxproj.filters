@@ -24,12 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ehdata.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="trnsctrl.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\awint.hpp">
       <Filter>stl</Filter>
     </ClInclude>
@@ -86,7 +80,7 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.cpp">
       <Filter>stl</Filter>
     </ClCompile>
-   <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic_wait.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic_wait.cpp">
       <Filter>stl</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cerr.cpp">
