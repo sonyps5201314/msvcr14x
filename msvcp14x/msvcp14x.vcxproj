@@ -93,7 +93,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -122,7 +122,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -149,7 +149,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -178,7 +178,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
