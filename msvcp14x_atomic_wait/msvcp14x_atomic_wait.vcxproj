@@ -75,11 +75,11 @@
     <TargetName>MSVCP14X_ATOMIC_WAIT</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>MSVCP14X_ATOMIC_WAITD</TargetName>
+    <TargetName>MSVCP14XD_ATOMIC_WAIT</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>MSVCP14X_ATOMIC_WAITD</TargetName>
+    <TargetName>MSVCP14XD_ATOMIC_WAIT</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

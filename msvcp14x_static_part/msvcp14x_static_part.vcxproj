@@ -107,7 +107,7 @@
     </Link>
     <PostBuildEvent>
       <Command>cd $(OutDir)
-lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
+lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_1.lib msvcp14x_2.lib msvcp14x_atomic_wait.lib msvcp14x_codecvt_ids.lib msvcp14x_static_part.lib</Command>
     </PostBuildEvent>
     <Lib>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
@@ -133,7 +133,7 @@ lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command
     </Link>
     <PostBuildEvent>
       <Command>cd $(OutDir)
-lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
+lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_1d.lib msvcp14x_2d.lib msvcp14xd_atomic_wait.lib msvcp14xd_codecvt_ids.lib msvcp14x_static_part.lib</Command>
     </PostBuildEvent>
     <Lib>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
@@ -159,7 +159,7 @@ lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Comman
     </Link>
     <PostBuildEvent>
       <Command>cd $(OutDir)
-lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
+lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_1d.lib msvcp14x_2d.lib msvcp14xd_atomic_wait.lib msvcp14xd_codecvt_ids.lib msvcp14x_static_part.lib</Command>
     </PostBuildEvent>
     <Lib>
       <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
@@ -191,7 +191,7 @@ lib /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Comman
     </Link>
     <PostBuildEvent>
       <Command>cd $(OutDir)
-lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_static_part.lib</Command>
+lib /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_1.lib msvcp14x_2.lib msvcp14x_atomic_wait.lib msvcp14x_codecvt_ids.lib msvcp14x_static_part.lib</Command>
     </PostBuildEvent>
     <Lib>
       <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>

@@ -75,11 +75,11 @@
     <TargetName>MSVCP14X_CODECVT_IDS</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>MSVCP14X_CODECVT_IDSD</TargetName>
+    <TargetName>MSVCP14XD_CODECVT_IDS</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>MSVCP14X_CODECVT_IDSD</TargetName>
+    <TargetName>MSVCP14XD_CODECVT_IDS</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
