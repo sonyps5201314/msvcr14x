@@ -37,7 +37,7 @@ Sub CheckPrerequisite()
     Wend
     
     While fs.FolderExists("C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include") = False
-        If MsgBox("Please check 'Windows XP support for C++' in Visual Studio 2017 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+        If MsgBox("Please check 'Windows XP support for C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
