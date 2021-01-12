@@ -105,10 +105,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /IGNORE:4006 /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_1.lib msvcp14x_2.lib msvcp14x_atomic_wait.lib msvcp14x_codecvt_ids.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
     <Lib>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
       <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
@@ -131,10 +128,7 @@ lib /IGNORE:4006 /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_1.lib msvcp
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /IGNORE:4006 /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_1d.lib msvcp14x_2d.lib msvcp14xd_atomic_wait.lib msvcp14xd_codecvt_ids.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
     <Lib>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
       <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
@@ -157,10 +151,7 @@ lib /IGNORE:4006 /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_1d.lib msv
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /IGNORE:4006 /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_1d.lib msvcp14x_2d.lib msvcp14xd_atomic_wait.lib msvcp14xd_codecvt_ids.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
     <Lib>
       <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
       <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
@@ -189,10 +180,7 @@ lib /IGNORE:4006 /out:msvcprtd.lib msvcp14x_dynamic_part.lib msvcp14x_1d.lib msv
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PostBuildEvent>
-      <Command>cd $(OutDir)
-lib /IGNORE:4006 /out:msvcprt.lib msvcp14x_dynamic_part.lib msvcp14x_1.lib msvcp14x_2.lib msvcp14x_atomic_wait.lib msvcp14x_codecvt_ids.lib msvcp14x_static_part.lib</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
     <Lib>
       <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
       <AdditionalDependencies>std_init_once_begin_initialize.obj;std_init_once_complete.obj;%(AdditionalDependencies)</AdditionalDependencies>
