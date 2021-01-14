@@ -99,49 +99,49 @@
     <ClInclude Include="msvcr14x.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_big_integer.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_big_integer.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_fltintrn.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_fltintrn.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_lowio.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_lowio.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_mbstring.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_mbstring.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_securecrt.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_securecrt.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_simd.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_simd.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_stdio.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_stdio.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_stdio_input.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_stdio_input.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_stdio_output.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_stdio_output.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_string_templates.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_string_templates.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_strtox.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_strtox.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_time.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_time.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_traits.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_traits.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal_win32_buffer.h">
+    <ClInclude Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\corecrt_internal_win32_buffer.h">
       <Filter>ucrt\inc</Filter>
     </ClInclude>
     <ClInclude Include="inc\nt.h">
@@ -158,1348 +158,1348 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\memccpy.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\memccpy.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcat.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcat.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcmp.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcmp.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcspn.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcspn.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcspn.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strcspn.c">
       <Filter>ucrt\string\amd64</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncat.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncat.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncmp.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncmp.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncpy.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncpy.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnset.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strnset.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strpbrk.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strpbrk.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strpbrk.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strpbrk.c">
       <Filter>ucrt\string\amd64</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strrev.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strrev.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strset.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strset.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strspn.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strspn.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strspn.c">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strspn.c">
       <Filter>ucrt\string\amd64</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_ctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\_ctype.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_filbuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\_filbuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_file.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\_file.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_flsbuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\_flsbuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_fptostr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\_fptostr.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_freebuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\_freebuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_getbuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\_getbuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_mbslen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\_mbslen.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\_sftbuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\_sftbuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\_strerr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\_strerr.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\_wctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\_wctype.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\abort.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\abort.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\abs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\abs.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\access.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\access.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\align.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\align.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\dll\appcrt_dllmain.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\dll\appcrt_dllmain.cpp">
       <Filter>ucrt\dll</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_data.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\argv_data.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_parsing.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\argv_parsing.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_wildcards.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\argv_wildcards.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\argv_winmain.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\argv_winmain.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\asctime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\asctime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\assert.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\assert.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\atof.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\atof.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\atoldbl.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\atoldbl.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\atox.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\atox.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\bsearch.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\bsearch.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\bsearch_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\bsearch_s.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\byteswap.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\byteswap.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\c16rtomb.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\c16rtomb.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\c32rtomb.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\c32rtomb.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\calloc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\calloc.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\calloc_base.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\calloc_base.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\cenvarg.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\cenvarg.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\cfout.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\cfout.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cgets.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\cgets.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cgetws.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\cgetws.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\chdir.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\chdir.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\chmod.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\chmod.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\chsize.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\chsize.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\clearerr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\clearerr.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\clock.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\clock.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\clock_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\clock_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\close.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\close.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\closeall.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\closeall.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\commit.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\commit.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\CompareStringA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\CompareStringA.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\CompareStringW.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\CompareStringW.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\console_input_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\console_input_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\console_output_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\console_output_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cprintf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\cprintf.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cputs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\cputs.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cputws.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\cputws.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\creat.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\creat.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\CreateProcessA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\CreateProcessA.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\crtmbox.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\crtmbox.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\cscanf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\cscanf.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\ctime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\ctime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\ctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\ctype.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\cvt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\cvt.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\days.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\days.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\dbgrpt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\dbgrpt.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\dbgrptt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\dbgrptt.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\debug_fill_threshold.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\debug_fill_threshold.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\debug_heap.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\debug_heap.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\debug_heap_hook.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\debug_heap_hook.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\difftime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\difftime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\div.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\div.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\drive.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\drive.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\drivemap.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\drivemap.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\drivfree.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\drivfree.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\dup.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\dup.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\dup2.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\dup2.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\dll\empty.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\dll\empty.cpp">
       <Filter>ucrt\dll</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\environment_initialization.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\environment_initialization.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\eof.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\eof.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\errno.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\errno.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\exception_filter.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\exception_filter.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\exit.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\exit.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\expand.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\expand.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fclose.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fclose.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\fcvt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\fcvt.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fdopen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fdopen.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\feoferr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\feoferr.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fflush.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fflush.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgetc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fgetc.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgetpos.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fgetpos.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgets.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fgets.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fgetwc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fgetwc.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\filelength.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\filelength.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fileno.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fileno.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\findfile.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\findfile.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\fma3_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\fma3_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fopen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fopen.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\fp_flags.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\fp_flags.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fputc.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fputs.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputwc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fputwc.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fputws.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fputws.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fread.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fread.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\free.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\free.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\free_base.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\free_base.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\freopen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\freopen.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fseek.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fseek.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fsetpos.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fsetpos.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ftell.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\ftell.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\ftime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\ftime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\fullpath.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\fullpath.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\fwrite.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\fwrite.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\gcvt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\gcvt.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\get_environment_from_os.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\get_environment_from_os.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\get_qualified_locale.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\get_qualified_locale.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\getch.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\getch.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\getcwd.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\getcwd.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\getenv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\getenv.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\GetLocaleInfoA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\GetLocaleInfoA.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\GetModuleFileNameA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\GetModuleFileNameA.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\getpath.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\getpath.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\getpid.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\getpid.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\getproc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\getproc.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\getqloc_downlevel.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\getqloc_downlevel.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\gets.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\gets.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\GetStringTypeA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\GetStringTypeA.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\gettemppath.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\gettemppath.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\getw.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\getw.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\getwch.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\getwch.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\glstatus.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\glstatus.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\gmtime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\gmtime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heap_handle.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\heap_handle.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heapchk.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\heapchk.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heapmin.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\heapmin.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\heapwalk.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\heapwalk.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\imaxabs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\imaxabs.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\imaxdiv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\imaxdiv.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\initcon.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\initcon.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\initconin.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\initconin.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\initctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\initctype.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\initialization.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\initialization.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\initmon.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\initmon.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\initnum.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\initnum.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\initterm.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\initterm.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\inittime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\inittime.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\input.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\input.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\invalid_parameter.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\invalid_parameter.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\ioinit.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\ioinit.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\is_wctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\is_wctype.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\isatty.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\isatty.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\isctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\isctype.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbalnm.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbalnm.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbalph.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbalph.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbbyte.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbbyte.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbdgt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbdgt.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbgrph.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbgrph.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbknj.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbknj.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismblgl.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismblgl.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismblwr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismblwr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbprn.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbprn.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbpunc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbpunc.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbsle.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbsle.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbspc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbspc.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\ismbstr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\ismbstr.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\ismbupr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\ismbupr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\iswctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\iswctype.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\labs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\labs.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\lcidtoname_downlevel.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\lcidtoname_downlevel.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\LCMapStringA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\LCMapStringA.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\LCMapStringW.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\LCMapStringW.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\lconv_unsigned_char_initialization.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\lconv_unsigned_char_initialization.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\ldiv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\ldiv.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lfind.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\lfind.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lfind_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\lfind_s.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\llabs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\llabs.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lldiv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\lldiv.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\loaddll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\loaddll.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\LoadLibraryExA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\LoadLibraryExA.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\locale_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\locale_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\locale_refcounting.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\locale_refcounting.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\locale_update.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\locale_update.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\localeconv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\localeconv.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\localtime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\localtime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\locking.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\locking.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\locks.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\locks.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\loctotime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\loctotime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lsearch.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\lsearch.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lsearch_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\lsearch_s.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\lseek.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\lseek.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\makepath.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\makepath.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\malloc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\malloc.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\malloc_base.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\malloc_base.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbbtype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbbtype.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbccpy.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbccpy.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbccpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbccpy_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbccpy_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbccpy_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbclen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbclen.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbclevel.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbclevel.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbctype.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mblen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\mblen.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbrtoc16.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\mbrtoc16.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbrtoc32.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\mbrtoc32.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbrtowc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\mbrtowc.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsbtype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsbtype.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscat_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscat_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscat_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbschr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbschr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscmp.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscoll.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscpy_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscpy_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscpy_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbscspn.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbscspn.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsdec.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsdec.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsicmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsicmp.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsicoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsicoll.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsinc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsinc.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbslen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbslen.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbslen_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbslen_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbslwr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbslwr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcat.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcat.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcat_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcat_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcat_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcmp.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcnt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcnt.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcol.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcol.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcpy.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcpy.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcpy_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbcpy_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbcpy_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbicm.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbicm.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbico.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbico.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbset.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbset_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnbset_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnbset_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncat.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncat_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncat_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnccnt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnccnt.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncmp.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncoll.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncpy.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncpy_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncpy_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnextc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnextc.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnicmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnicmp.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnicol.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnicol.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsninc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsninc.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnset.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnset_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnset_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbspbrk.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbspbrk.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsrchr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsrchr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsrev.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsrev.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsset.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsset_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsset_s_l.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsset_s_l.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsspn.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsspn.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsspnp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsspnp.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsstr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsstr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbstok.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbstok.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbstok_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbstok_s.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbstowcs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\mbstowcs.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsupr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsupr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtohira.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbtohira.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtokata.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbtokata.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtolwr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbtolwr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbtoupr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbtoupr.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\mbtowc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\mbtowc.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\memcpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\memcpy_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\memicmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\memicmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\mkdir.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\mkdir.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\mktemp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\mktemp.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\mktime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\mktime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\msize.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\msize.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\multibyte_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\multibyte_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ncommode.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\ncommode.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\new_handler.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\new_handler.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\new_mode.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\new_mode.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\nlsdata.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\nlsdata.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\onexit.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\onexit.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\open.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\open.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\openfile.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\openfile.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\osfinfo.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\osfinfo.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\output.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\output.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\OutputDebugStringA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\OutputDebugStringA.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\per_thread_data.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\per_thread_data.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\perror.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\perror.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\pipe.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\pipe.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\popen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\popen.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\printf_count_output.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\printf_count_output.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\putch.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\putch.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\putenv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\putenv.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\puts.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\puts.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\putw.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\putw.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\conio\putwch.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\conio\putwch.cpp">
       <Filter>ucrt\conio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\putws.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\putws.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\qsort.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\qsort.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\qsort_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\qsort_s.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rand.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\rand.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rand_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\rand_s.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\read.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\read.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\realloc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\realloc.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\realloc_base.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\realloc_base.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\heap\recalloc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\heap\recalloc.cpp">
       <Filter>ucrt\heap</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\rename.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\rename.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\report_runtime_error.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\report_runtime_error.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\resetstk.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\resetstk.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\rewind.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\rewind.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\rmdir.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\rmdir.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\rmtmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\rmtmp.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rotl.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\rotl.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\rotr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdlib\rotr.cpp">
       <Filter>ucrt\stdlib</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\searchenv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\searchenv.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\set_error_mode.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\set_error_mode.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\setbuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\setbuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\SetCurrentDirectoryA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\SetCurrentDirectoryA.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\env\setenv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\env\setenv.cpp">
       <Filter>ucrt\env</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\SetEnvironmentVariableA.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\SetEnvironmentVariableA.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\seterrm.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\seterrm.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\setlocale.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\setlocale.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\setmaxf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\setmaxf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\setmode.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\setmode.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\setvbuf.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\setvbuf.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\shared_initialization.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\shared_initialization.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\signal.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\signal.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\slbeep.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\slbeep.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnl.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\spawnl.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnlp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\spawnlp.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnv.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\spawnv.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\spawnvp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\spawnvp.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\splitpath.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\splitpath.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\i386\sse2_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\i386\sse2_initializer.cpp">
       <Filter>ucrt\initializers\i386</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\stat.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\stat.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\stdio_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\stdio_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcat_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strcpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcpy_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\strdate.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\strdate.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strdup.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strdup.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\stream.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\stream.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\strerror.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\strerror.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\strftime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\strftime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\stricmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\stricmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\stricoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\stricoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strlwr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strlwr.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncat_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncnt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncnt.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strncpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncpy_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnicmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strnicmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnicol.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strnicol.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnlen.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strnlen.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strnset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strnset_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strset_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\strtime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\strtime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\strtod.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\strtod.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strtok.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strtok.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strtok_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strtok_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\strtox.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\strtox.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strupr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strupr.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\strxfrm.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strxfrm.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\swab.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\swab.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\syserr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\syserr.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\system.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\system.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\systime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\systime.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\tell.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\tell.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\telli64.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\telli64.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\tempnam.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\tempnam.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\terminate.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\terminate.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\startup\thread.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\startup\thread.cpp">
       <Filter>ucrt\startup</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\time.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\time.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\timeset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\timeset.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\timeset_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\timeset_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\tmpfile.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\tmpfile.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\tmpfile_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\tmpfile_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\tojisjms.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\tojisjms.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\tolower_toupper.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\tolower_toupper.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\tombbmbc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\tombbmbc.cpp">
       <Filter>ucrt\mbstring</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\towlower.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\towlower.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\towupper.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\towupper.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\txtmode.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\txtmode.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\tzset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\tzset.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\umask.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\umask.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ungetc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\ungetc.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdio\ungetwc.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\stdio\ungetwc.cpp">
       <Filter>ucrt\stdio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\unlink.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\unlink.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\utime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\utime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\waccess.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\waccess.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\exec\wait.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\exec\wait.cpp">
       <Filter>ucrt\exec</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wchmod.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\wchmod.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wcrtomb.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\wcrtomb.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscat.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscat.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscat_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscpy.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscpy.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscpy_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcscspn.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscspn.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsdup.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsdup.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\time\wcsftime.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\wcsftime.cpp">
       <Filter>ucrt\time</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsicmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsicmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsicoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsicoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcslwr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcslwr.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncat.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncat.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncat_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncat_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncnt.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncnt.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncoll.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncpy.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncpy.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsncpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncpy_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnicmp.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsnicmp.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnicol.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsnicol.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsnset.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsnset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsnset_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcspbrk.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcspbrk.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsrev.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsrev.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsset.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsset.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsset_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsset_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsspn.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsspn.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcstok.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcstok.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcstok_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcstok_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wcstombs.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\wcstombs.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsupr.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsupr.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wcsxfrm.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsxfrm.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wctomb.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\wctomb.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wctrans.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\wctrans.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\wctype.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\wctype.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\internal\winapi_thunks.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\winapi_thunks.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wmemcpy_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wmemcpy_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\wmemmove_s.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wmemmove_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wmkdir.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\wmkdir.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\misc\wperror.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\misc\wperror.cpp">
       <Filter>ucrt\misc</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wrename.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\wrename.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\lowio\write.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\lowio\write.cpp">
       <Filter>ucrt\lowio</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wrmdir.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\wrmdir.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\locale\wsetlocale.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\wsetlocale.cpp">
       <Filter>ucrt\locale</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\filesystem\wunlink.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\filesystem\wunlink.cpp">
       <Filter>ucrt\filesystem</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\convert\xtoa.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\convert\xtoa.cpp">
       <Filter>ucrt\convert</Filter>
     </ClCompile>
     <ClCompile Include="oswrappers.cpp">
@@ -1508,7 +1508,7 @@
     <ClCompile Include="exports.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\initializers\fmode_initializer.cpp">
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\fmode_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1516,16 +1516,16 @@
     <None Include="msvcr14x_x86.def">
       <Filter>源文件</Filter>
     </None>
-    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s.inl">
+    <None Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncat_s.inl">
       <Filter>ucrt\mbstring</Filter>
     </None>
-    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s.inl">
+    <None Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsncpy_s.inl">
       <Filter>ucrt\mbstring</Filter>
     </None>
-    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s.inl">
+    <None Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\mbstring\mbsnset_s.inl">
       <Filter>ucrt\mbstring</Filter>
     </None>
-    <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\i386\cruntime.inc">
+    <None Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\i386\cruntime.inc">
       <Filter>ucrt\inc\i386</Filter>
     </None>
     <None Include="msvcr14x_x64.def">
@@ -1533,67 +1533,67 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\_memicmp.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\_memicmp.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\_strnicm.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\_strnicm.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\memccpy.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\memccpy.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcat.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strcat.asm">
       <Filter>ucrt\string\amd64</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strcat.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strcat.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcmp.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strcmp.asm">
       <Filter>ucrt\string\amd64</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strcmp.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strcmp.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strcspn.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strcspn.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strlen.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strlen.asm">
       <Filter>ucrt\string\amd64</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strlen.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strlen.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strncat.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strncat.asm">
       <Filter>ucrt\string\amd64</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strncat.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strncat.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strncmp.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strncmp.asm">
       <Filter>ucrt\string\amd64</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strncmp.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strncmp.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strncpy.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\amd64\strncpy.asm">
       <Filter>ucrt\string\amd64</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strncpy.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strncpy.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strnset.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strnset.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strpbrk.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strpbrk.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strrev.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strrev.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strset.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strset.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
-    <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\i386\strspn.asm">
+    <MASM Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\i386\strspn.asm">
       <Filter>ucrt\string\i386</Filter>
     </MASM>
   </ItemGroup>
