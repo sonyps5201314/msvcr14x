@@ -20,8 +20,3 @@
 #include <vcruntime.h>
 #undef _VCRT_DEFINED_CRTIMP
 
-//临时这样处理，以后ucrt或者vc编译器版本升级后兼容了的话，就可以移除下面这段代码了
-#if _MSC_VER>=1920
-#include <stdlib.h>
-#pragma function(div, ldiv, lldiv)
-#endif

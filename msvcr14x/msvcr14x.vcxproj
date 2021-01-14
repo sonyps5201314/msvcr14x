@@ -584,15 +584,30 @@
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\bsearch.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\bsearch_s.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\byteswap.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\div.cpp" />
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\div.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IntrinsicFunctions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IntrinsicFunctions>
+    </ClCompile>
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\imaxabs.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\imaxdiv.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\labs.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\ldiv.cpp" />
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\ldiv.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IntrinsicFunctions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IntrinsicFunctions>
+    </ClCompile>
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lfind.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lfind_s.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\llabs.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lldiv.cpp" />
+    <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lldiv.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IntrinsicFunctions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IntrinsicFunctions>
+    </ClCompile>
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lsearch.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\lsearch_s.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\stdlib\qsort.cpp" />
