@@ -377,6 +377,12 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\WorkQueue.cpp">
       <Filter>concrt</Filter>
     </ClCompile>
+    <ClCompile Include="..\msvcr14x\nt5fix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\YY-Thunks\src\YY_Thunks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="concrt14x.def">

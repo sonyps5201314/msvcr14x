@@ -1,5 +1,8 @@
 WScript check_prerequisite.vbs
 git clone https://github.com/sonyps5201314/ntdll.git ../ntdll
+git pull -v --progress "origin"
+git clone https://github.com/sonyps5201314/YY-Thunks.git ../YY-Thunks
+git pull -v --progress "origin"
 WScript ../ntdll/setup.vbs
 expand ./first_time_build_need_files.cab . -F:*
 CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"

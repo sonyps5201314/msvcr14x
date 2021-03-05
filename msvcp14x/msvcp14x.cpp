@@ -16,8 +16,32 @@
 //由于无法修改winapisupp.cpp,所以目前通过下面这样来防止pinit的符号因我们的链接选项中指定了/OPT:REF而被剔除
 #include "winapisupp.cpp"
 #ifndef _WIN64
-#pragma comment(linker, "/include:?pinit_force_included@@3P6AHXZA")
+#pragma comment(linker, "/include:?force_included__winapisupp_pinit@@3P6AHXZA")
 #else
-#pragma comment(linker, "/include:?pinit_force_included@@3P6AHXZEA")
+#pragma comment(linker, "/include:?force_included__winapisupp_pinit@@3P6AHXZEA")
 #endif
-_CRTALLOC(".CRT$XIC") /*static*/ _PIFV pinit_force_included = initialize_pointers;
+_CRTALLOC(".CRT$XIC") /*static*/ _PIFV force_included__winapisupp_pinit = initialize_pointers;
+
+#ifndef _WIN64
+#define DllMain DllMain_Existence
+#include "dllmain.cpp"
+#undef DllMain
+extern "C"
+{
+	//导出一个外部弱符号，指示当前是否处于强行卸载模式。
+	BOOL __YY_Thunks_Process_Terminating;
+	BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
+	{
+		switch (dwReason)
+		{
+		case DLL_PROCESS_DETACH:
+			//我们可以通过 lpReserved != NULL 判断，当前是否处于强行卸载模式。
+			__YY_Thunks_Process_Terminating = lpReserved != NULL;
+			break;
+		}
+		return DllMain_Existence(hInstance, dwReason, lpReserved);
+	}
+}
+#else
+#include "dllmain.cpp"
+#endif

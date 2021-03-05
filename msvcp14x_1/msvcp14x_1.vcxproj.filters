@@ -32,11 +32,11 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp">
       <Filter>stl</Filter>
     </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
+      <Filter>stl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

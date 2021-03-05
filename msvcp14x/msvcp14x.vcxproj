@@ -107,7 +107,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
@@ -136,7 +136,7 @@
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
       <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -162,7 +162,7 @@
       <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
-      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
       <OptimizeReferences>true</OptimizeReferences>
@@ -194,7 +194,7 @@
       <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
-      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
       <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <BaseAddress>0x503000000</BaseAddress>
@@ -218,15 +218,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\msvcr14X\win2000fix.cpp">
+    <ClCompile Include="..\msvcr14X\nt5fix.cpp">
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ForcedIncludeFiles>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -246,7 +240,12 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cond.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cout.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cthread.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -456,6 +455,12 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_toupper.cpp" />
+    <ClCompile Include="..\..\YY-Thunks\src\YY_Thunks.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="atomic.cpp" />
     <ClCompile Include="msvcp14x.cpp" />
     <ClCompile Include="stdafx.cpp">

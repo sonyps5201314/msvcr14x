@@ -68,7 +68,7 @@
     <ClCompile Include="msvcp14x.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\msvcr14X\win2000fix.cpp">
+    <ClCompile Include="..\msvcr14X\nt5fix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.cpp">
@@ -486,6 +486,9 @@
       <Filter>stl</Filter>
     </ClCompile>
     <ClCompile Include="atomic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\YY-Thunks\src\YY_Thunks.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
