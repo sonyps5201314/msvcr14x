@@ -51,7 +51,7 @@ Sub CheckPrerequisite()
     Wend
     
     Dim boost_ROOT
-    boost_ROOT = objShell.Environment("System").Item("boost_ROOT")
+    boost_ROOT = objShell.Environment("User").Item("boost_ROOT")
     While Len(boost_ROOT) = 0 Or fs.FolderExists(boost_ROOT) = False
         If MsgBox("Please install Boost (1.74.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
@@ -59,7 +59,7 @@ Sub CheckPrerequisite()
         objShell.Run ("https://boostorg.jfrog.io/artifactory/main/release/1.74.0/source/")
         boost_ROOT = InputBox("Please input your Boost (1.74.0) root directory!", "Set boost_ROOT environment variable")
         If Len(boost_ROOT) > 0 And fs.FolderExists(boost_ROOT) Then
-            objShell.Environment("System").Item("boost_ROOT") = boost_ROOT
+            objShell.Environment("User").Item("boost_ROOT") = boost_ROOT
         End If
     Wend
 End Sub

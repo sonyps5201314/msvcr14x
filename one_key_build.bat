@@ -1,4 +1,7 @@
 WScript check_prerequisite.vbs
+if not defined boost_ROOT (
+    for /F "tokens=3* skip=2" %%P in ('reg query "HKCU\Environment" /v boost_ROOT') do @set "boost_ROOT=%%P %%Q"
+)
 git clone https://github.com/sonyps5201314/ntdll.git ../ntdll
 git pull -v --progress "origin"
 git clone https://github.com/sonyps5201314/YY-Thunks.git ../YY-Thunks
