@@ -29,6 +29,13 @@ Sub CheckPrerequisite()
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
     Wend
     
+    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC") = False
+        If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+            Exit Sub
+        End If
+        objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
+    Wend
+    
     While fs.FolderExists("C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt") = False
         If MsgBox("Please install Windows 10 SDK (10.0.19041.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
@@ -49,7 +56,7 @@ Sub CheckPrerequisite()
         If MsgBox("Please install Boost (1.74.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
-        objShell.Run ("https://dl.bintray.com/boostorg/release/1.74.0/source/")
+        objShell.Run ("https://boostorg.jfrog.io/artifactory/main/release/1.74.0/source/")
         boost_ROOT = InputBox("Please input your Boost (1.74.0) root directory!", "Set boost_ROOT environment variable")
         If Len(boost_ROOT) > 0 And fs.FolderExists(boost_ROOT) Then
             objShell.Environment("System").Item("boost_ROOT") = boost_ROOT
