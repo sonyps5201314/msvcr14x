@@ -3,9 +3,34 @@ Option Explicit
 Const adTypeBinary = 1
 Const adSaveCreateOverWrite = 2
 
-Function IIf( expr, truepart, falsepart )
-   IIf = falsepart
-   If expr Then IIf = truepart
+Function IIf(expr, truepart, falsepart)
+    IIf = falsepart
+    If expr Then IIf = truepart
+End Function
+
+Function CheckNeedOverWrite(ByVal FileName)
+    Dim fs 'As FileSystemObject
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    Dim ts_old 'As TextStream
+    Set ts_old = fs.OpenTextFile(FileName)
+    If Not VarIsNull(ts_old) Then
+        Dim text_old
+        text_old = ts_old.ReadAll()
+        ts_old.Close
+        Dim ts_new 'As TextStream
+        Set ts_new = fs.OpenTextFile(FileName & ".CheckNeedOverWrite")
+        Dim text_new
+        text_new = ts_new.ReadAll()
+        ts_new.Close
+        If text_new <> text_old Then
+            fs.DeleteFile (FileName)
+            fs.MoveFile FileName & ".CheckNeedOverWrite", FileName
+        Else
+            fs.DeleteFile (FileName & ".CheckNeedOverWrite")
+        End If
+    Else
+        fs.MoveFile FileName & ".CheckNeedOverWrite", FileName
+    End If
 End Function
 
 'https://stackoverflow.com/questions/6405236/forcing-msxml-to-format-xml-output-with-indents-and-newlines
@@ -38,15 +63,14 @@ Private Sub FormatDocToFile(ByVal Doc, ByVal FileName)
                 Set .contentHandler = wtrFormatted
                 Set .dtdHandler = wtrFormatted
                 Set .errorHandler = wtrFormatted
-                .putProperty "http://xml.org/sax/properties/lexical-handler", _
-                             wtrFormatted
-                .putProperty "http://xml.org/sax/properties/declaration-handler", _
-                             wtrFormatted
+                .putProperty "http://xml.org/sax/properties/lexical-handler", wtrFormatted
+                .putProperty "http://xml.org/sax/properties/declaration-handler", wtrFormatted
                 .parse Doc
             End With
         End With
-        .SaveToFile FileName, adSaveCreateOverWrite
+        .SaveToFile FileName & ".CheckNeedOverWrite", adSaveCreateOverWrite
         .Close
+        CheckNeedOverWrite (FileName)
     End With
 End Sub
 
@@ -64,6 +88,35 @@ Function DirExists(Folder)
     Dim fs 'As FileSystemObject
     Set fs = CreateObject("Scripting.FileSystemObject")
     DirExists = fs.FolderExists(Folder)
+End Function
+
+'本脚本修改自https://www.sqlservercentral.com/articles/creating-folders-using-vb-and-recursion
+Function CreateDir(FolderName)
+    Dim fs 'As Scripting.FileSystemObject
+    Dim iBreak
+    On Error Resume Next
+    
+    'search from right to find path
+    iBreak = InStrRev(FolderName, "\")
+    If iBreak > 0 Then
+        Call CreateDir(Left(FolderName, iBreak - 1))
+    End If
+    
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    If fs.FolderExists(FolderName) = False Then
+        CreateDir = VarIsNull(fs.CreateFolder(FolderName))
+    Else
+        CreateDir = True
+    End If
+End Function
+
+Function CreateTextFile(FileName, Text)
+    Dim fs 'As FileSystemObject
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    Dim ts 'As TextStream
+    Set ts = fs.CreateTextFile(FileName)
+    ts.Write (Text)
+    ts.Close
 End Function
 
 Function Pos(SubStr, S)
@@ -101,17 +154,28 @@ Sub UpdateString(dirList, Path, suffix)
 End Sub
 
 Private Sub ModifyProps(FileName, includefolder, dlibfolder, slibfolder)
-  Dim XMLDocument
-  Dim XMLParent, IdgNode, XMLNode, XMLNodes
-  Dim IncludeDirectoriesNode
-  Dim AdditionalIncludeDirectories
-  Dim DynamicLibraryDirectoriesNode
-  Dim AdditionalDynamicLibraryDirectories
-  Dim StaticLibraryDirectoriesNode
-  Dim AdditionalStaticLibraryDirectories
-  If (False = FileExists(FileName)) Then
-    Exit Sub
-  End If
+    Dim XMLDocument 'As DOMDocument
+    Dim XMLParent, IdgNode, XMLNode, XMLNodes
+    Dim IncludeDirectoriesNode
+    Dim AdditionalIncludeDirectories
+    Dim DynamicLibraryDirectoriesNode
+    Dim AdditionalDynamicLibraryDirectories
+    Dim StaticLibraryDirectoriesNode
+    Dim AdditionalStaticLibraryDirectories
+    If False = FileExists(FileName) Then
+      Dim XmlText
+      XmlText = XmlText & "<?xml version=""1.0"" encoding=""utf-8""?> " & vbCrLf
+      XmlText = XmlText & "<Project DefaultTargets=""Build"" ToolsVersion=""12.0"" xmlns=""http://schemas.microsoft.com/developer/msbuild/2003"">" & vbCrLf
+      XmlText = XmlText & "  <ImportGroup Label=""PropertySheets"">" & vbCrLf
+      XmlText = XmlText & "  </ImportGroup>" & vbCrLf
+      XmlText = XmlText & "  <PropertyGroup Label=""UserMacros"" />" & vbCrLf
+      XmlText = XmlText & "  <PropertyGroup />" & vbCrLf
+      XmlText = XmlText & "  <ItemDefinitionGroup />" & vbCrLf
+      XmlText = XmlText & "  <ItemGroup />" & vbCrLf
+      XmlText = XmlText & "</Project>" & vbCrLf
+    
+      Call CreateTextFile(FileName, XmlText)
+    End If
     Set XMLDocument = CreateObject("Msxml2.DOMDocument.3.0")
     XMLDocument.async = False
     XMLDocument.Load (FileName)
