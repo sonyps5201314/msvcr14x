@@ -6,6 +6,7 @@ Sub CheckPrerequisite()
       
     Dim fs 'As FileSystemObject
     Set fs = CreateObject("Scripting.FileSystemObject")
+    fs.DeleteFile("CheckPrerequisite_Result.txt")
     
     Dim ExeProc 'As WshExec
     Set ExeProc = objShell.Exec("git.exe")
@@ -15,21 +16,27 @@ Sub CheckPrerequisite()
         Exit Sub
     End If
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise") = False
-        If MsgBox("Please install Visual Studio 2019 Enterprise version first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+    Dim VS_EDITION
+    VS_EDITION = objShell.Environment("Process").Item("VS_EDITION")
+    If Len(VS_EDITION) = 0 then
+       VS_EDITION = "Enterprise"
+    End If
+    
+    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\" & VS_EDITION) = False
+        If MsgBox("Please install Visual Studio 2019 " & VS_EDITION & " edition first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
-        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=Enterprise&rel=16")
+        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&rel=16")
     Wend
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC") = False
+    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\" & VS_EDITION & "\VC\Tools\MSVC") = False
         If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
     Wend
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC") = False
+    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\" & VS_EDITION & "\VC\Tools\MSVC") = False
         If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
@@ -62,6 +69,11 @@ Sub CheckPrerequisite()
             objShell.Environment("User").Item("boost_ROOT") = boost_ROOT
         End If
     Wend
+    
+    Dim ts 'As TextStream
+    Set ts = fs.CreateTextFile("CheckPrerequisite_Result.txt")
+    ts.Write ("True")
+    ts.Close
 End Sub
 
 CheckPrerequisite
