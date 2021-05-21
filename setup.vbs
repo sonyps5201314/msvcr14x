@@ -292,14 +292,17 @@ Private Sub ModifyProps(FileName, includefolder, dlibfolder, slibfolder)
 End Sub
 
 Sub ModifyAllProps()
-  Dim objShell
-  Dim Path
-  Set objShell = CreateObject("WScript.Shell")
-  Path = objShell.Environment("Process").Item("LOCALAPPDATA") + "\Microsoft\MSBuild\v4.0\"
-  If (DirExists(Path)) Then
-    Call ModifyProps(Path + "Microsoft.Cpp.Win32.user.props", vbNullString, "$(msvcr14x_ROOT)\Release;$(msvcr14x_ROOT)\Debug", vbNullString)
-    Call ModifyProps(Path + "Microsoft.Cpp.x64.user.props", vbNullString, "$(msvcr14x_ROOT)\x64\Release;$(msvcr14x_ROOT)\x64\Debug", vbNullString)
-  End If
+    Dim objShell
+    Dim Path
+    Set objShell = CreateObject("WScript.Shell")
+    Path = objShell.Environment("Process").Item("LOCALAPPDATA") + "\Microsoft\MSBuild\v4.0\"
+    If Not DirExists(Path) Then
+        CreateDir (Path)
+    End If
+    If DirExists(Path) Then
+        Call ModifyProps(Path + "Microsoft.Cpp.Win32.user.props", vbNullString, "$(msvcr14x_ROOT)\Release;$(msvcr14x_ROOT)\Debug", vbNullString)
+        Call ModifyProps(Path + "Microsoft.Cpp.x64.user.props", vbNullString, "$(msvcr14x_ROOT)\x64\Release;$(msvcr14x_ROOT)\x64\Debug", vbNullString)
+    End If
 End Sub
 
 Sub SetEnvironment()
