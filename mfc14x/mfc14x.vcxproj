@@ -1,0 +1,2163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="AnsiDebug|Win32">
+      <Configuration>AnsiDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="AnsiDebug|x64">
+      <Configuration>AnsiDebug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="AnsiRelease|Win32">
+      <Configuration>AnsiRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="AnsiRelease|x64">
+      <Configuration>AnsiRelease</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f7550566-5dac-48d6-855f-c2494ce61bdf}</ProjectGuid>
+    <RootNamespace>mfc14x</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14XUD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14XD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14XU</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14X</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14XUD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14XD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14XU</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>MFC14X</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2nodbinfoprune -EHc -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>intel\mfc140ud.def</ModuleDefinitionFile>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <BaseAddress>0x41000000</BaseAddress>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2nodbinfoprune -EHc -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <ModuleDefinitionFile>intel\mfc140d.def</ModuleDefinitionFile>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <BaseAddress>0x41000000</BaseAddress>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2nodbinfoprune -EHc -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>intel\mfc140u.def</ModuleDefinitionFile>
+      <BaseAddress>0x51000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">
+    <ClCompile>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2nodbinfoprune -EHc -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>intel\mfc140.def</ModuleDefinitionFile>
+      <BaseAddress>0x51000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2guardehcont -d2nodbinfoprune -EHc6 -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <BaseAddress>0x410000000</BaseAddress>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>amd64\mfc140ud.def</ModuleDefinitionFile>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2guardehcont -d2nodbinfoprune -EHc6 -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <BaseAddress>0x410000000</BaseAddress>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>amd64\mfc140d.def</ModuleDefinitionFile>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2guardehcont -d2nodbinfoprune -EHc6 -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <BaseAddress>0x510000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ModuleDefinitionFile>amd64\mfc140u.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <ExceptionHandling>SyncCThrow</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+      <AdditionalOptions> -c -d2guardehcont -d2nodbinfoprune -EHc6 -guard:cf -std:c++17 -w15038 -w34640 -Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <BaseAddress>0x510000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <ModuleDefinitionFile>amd64\mfc140.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=140%
+COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
+LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
+LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+    </PostBuildEvent>
+    <Midl>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afx.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxacceleratorkey.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxacceleratorkeyassignctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxaccessibility.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxadv.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxanimationcontroller.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxanimationhelper.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxautohidebar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxautohidebutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxautohidedocksite.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxbasepane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxbaseribbonelement.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxbasetabbedpane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxbasetabctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxbasetoolbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcaptionbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcaptionbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcaptionmenubutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcmdusagecount.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcmn.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcoll.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolorbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolorbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolordialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolormenubutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolorpickerctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolorpopupmenu.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcolorpropertysheet.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcommandmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcom_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcontextmenumanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcontrolbarimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcontrolbars.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcontrolbarutil.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcontrolrenderer.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxconv.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxctl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxctrlcontainer.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcustomcolorspropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcustomizebutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcustomizemenubutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxcview.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdao.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdatarecovery.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdb.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdb_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdd_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdesktopalertdialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdesktopalertwnd.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdhtml.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdialogex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdialogimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdisp.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdlgs.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdllx.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdll_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdockablepane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdockablepaneadapter.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdockingmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdockingpanesrow.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdocksite.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdocob.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdragframeimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdrawmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdropdownlistbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdropdowntoolbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxdtctl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxeditbrowsectrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxext.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxfontcombobox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxframeimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxframewndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxfullscreenimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxglobals.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxglobalutils.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxheaderctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxhh.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxhtml.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afximageeditordialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afximagepaintarea.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxinet.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxkeyboardmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxkeymapdialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxlayout.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxlinkctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxlistctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmaskededit.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmdichildwndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmdiclientareawnd.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmdiframewndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmenubar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmenubutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmenuhash.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmenuimages.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmenutearoffmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmousemanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmousepropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmsg_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmt.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmultidoctemplateex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxmultipaneframewnd.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxocc.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxodlgs.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxole.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxolecntrframewndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoledb.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoledocipframewndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoleipframewndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoleserverdocex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoutlookbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoutlookbarpane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoutlookbarpaneadapter.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoutlookbarpanebutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxoutlookbartabctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpanecontainer.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpanecontainermanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpanedialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpanedivider.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpaneframewnd.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxplex_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpopupmenu.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpopupmenubar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpreviewviewex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpriv.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpriv2.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpropertygridctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpropertygridtooltipctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxpropertysheet.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxrebar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxrebarstate.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxrecentdocksiteinfo.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxregpath.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxrendertarget.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxres.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonbuttonsgroup.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncategory.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncheckbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncollector.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncolorbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncombobox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncommandslistbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonconstructor.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboncustomizedialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonedit.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboninfo.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribboninfoloader.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonkeyboardcustomizedialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonkeytip.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonlabel.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonlinkctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonmainpanel.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonminitoolbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonpalettegallery.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonpanel.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonpanelmenu.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonprogressbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonquickaccesstoolbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonres.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonslider.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonstatusbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonstatusbarpane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxribbonundobutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxrich.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsettingsstore.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxshelllistctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxshellmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxshelltreectrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxshowallbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsmartdockingguide.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsmartdockinghighlighterwnd.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsmartdockingmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsock.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsound.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxspinbuttonctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxsplitterwndex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxstandardcolorspropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxstatusbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxstat_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxstr.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtabbedpane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtabctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtabview.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtagmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtaskdialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtaskspane.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtaskspaneframewnd.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtempl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtls_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbar.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarbuttoncustomizedialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarbuttonslistbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarcomboboxbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbardatetimectrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbardropsource.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbardroptarget.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbareditboxbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarfontcombobox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarimages.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarmenubutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarmenubuttonsbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarnamedialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarscommandslistbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarscustomizedialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarskeyboardpropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarslistcheckbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarslistpropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarsmenupropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarsoptionspropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarspineditboxbutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarstoolspropertypage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtoolbarsystemmenubutton.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtooltipctrl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxtooltipmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxusertool.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxusertoolsmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxver_.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanageroffice2003.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanageroffice2007.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanagerofficexp.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanagervs2005.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanagervs2008.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanagerwindows.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvisualmanagerwindows7.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxvslistbox.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxv_cfg.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxv_dll.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxv_w32.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxwin.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxwinappex.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxwindowsmanagerdialog.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxwinforms.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\afxwinverapi.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlacc.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlalloc.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlbase.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlbuild.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlchecked.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlcoll.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlcom.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlcomcli.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\ATLComMem.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\ATLComTime.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlconv.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlcore.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlctl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlcur.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atldb.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atldbcli.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atldbgmem.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atldbsch.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atldef.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlenc.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlevent.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlexcept.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlfile.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlhandler.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlhandlerimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlhost.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atliface.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlimage.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlmem.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlpath.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlplus.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlpreviewctrlimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlrc.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsafe.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsecurity.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsimpcoll.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsimpstr.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsnap.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsocket.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlstdthunk.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlstr.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlsync.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlthunk.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atltime.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atltrace.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atltransactionmanager.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atltypes.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlutil.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlwin.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlwinverapi.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\atlxml.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\cstringt.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\ocdb.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\ocdbid.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\olebind.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\include\statreg.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\afximpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\daoimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dispimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\elements.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\fixalloc.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\occimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\olebind.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleimpl2.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\sockimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\stdafx.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\winhand_.h" />
+    <ClInclude Include="afxisapi.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxabort.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxacceleratorkey.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxacceleratorkeyassignctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxanimationcontroller.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxautohidebar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxautohidebutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxautohidedocksite.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxbasepane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxbaseribbonelement.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxbasetabbedpane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxbasetabctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxbasetoolbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcaptionbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcaptionbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcaptionmenubutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcmdusagecount.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolorbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolorbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolordialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolormenubutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolorpickerctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolorpopupmenu.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcolorpropertysheet.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcommandmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcontextmenumanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcontrolbarimpl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcontrolrenderer.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcrit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxctrlcontainer.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxctrlcontainer2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcustomcolorspropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcustomizebutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxcustomizemenubutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdatarecovery.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdbcs.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdesktopalertdialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdesktopalertwnd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdialogex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdialogimpl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdockablepane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdockablepaneadapter.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdockingmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdockingpanesrow.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdocksite.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdragframeimpl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdrawmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdropdownlistbox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxdropdowntoolbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxeditbrowsectrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxfontcombobox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxframeimpl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxframewndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxfullscreenimpl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxglobals.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxglobalutils.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxheaderctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afximageeditordialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afximagepaintarea.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxinl1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxinl2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxinl3.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxinl4.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxjumplist.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxkeyboardmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxkeymapdialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxlayout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxlinkctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxlistctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmaskededit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmdichildwndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmdiclientareawnd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmdiframewndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmem.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmenubar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmenubutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmenuhash.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmenuimages.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmenutearoffmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmousemanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmousepropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxmultipaneframewnd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxolecntrframewndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoledocipframewndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoleipframewndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoleserverdocex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoutlookbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoutlookbarpane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoutlookbarpaneadapter.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoutlookbarpanebutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxoutlookbartabctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpanecontainer.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpanecontainermanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpanedialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpanedivider.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpaneframewnd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpopupmenu.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpopupmenubar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpreviewviewex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpropertygridctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpropertygridtooltipctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxpropertysheet.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxrebar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxrebarstate.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxrecentdocksiteinfo.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxregpath.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxrendertarget.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonbuttonsgroup.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncategory.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncheckbox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncollector.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncolorbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncombobox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncommandslistbox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonconstructor.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboncustomizedialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonedit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboninfo.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboninfo2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribboninfoloader.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonkeyboardcustomizedialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonkeytip.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonlabel.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonlinkctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonmainpanel.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonminitoolbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonpalettegallery.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonpanel.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonpanelmenu.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonprogressbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonquickaccesstoolbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonslider.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonstatusbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonstatusbarpane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxribbonundobutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxrichpreviewctrlimpl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxsettingsstore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxshelllistctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxshellmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxshelltreectrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxshowallbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxsmartdockingguide.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxsmartdockinghighlighterwnd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxsmartdockingmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxsound.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxspinbuttonctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxsplitterwndex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxstandardcolorspropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxstate.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxstatusbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtabbedpane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtabctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtabview.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtagmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtaskdialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtaskspane.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtaskspaneframewnd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtls.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarbuttoncustomizedialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarbuttonslistbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarcomboboxbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbardatetimectrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbardropsource.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbardroptarget.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbareditboxbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarfontcombobox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarimages.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarmenubutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarmenubuttonsbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarnamedialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarscommandslistbox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarscustomizedialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarskeyboardpropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarslistcheckbox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarslistpropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarsmenupropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarsoptionspropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarspineditboxbutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarstoolspropertypage.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtoolbarsystemmenubutton.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtooltipctrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtooltipmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxtrace.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxusertool.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxusertoolsmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanager.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanageroffice2003.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanageroffice2007.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanagerofficexp.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanagervs2005.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanagervs2008.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanagerwindows.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvisualmanagerwindows7.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxvslistbox.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxwinappex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxwindowsmanagerdialog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxwinverapi.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appdlg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\apphelp.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\apphelpx.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appinit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appmodul.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appprnt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appterm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appui.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appui1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appui2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\appui3.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\arccore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\arcex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\arcobj.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\arcstrm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_b.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_d.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_o.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_p.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_s.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_u.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\array_w.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\auxdata.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\barcool.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\barcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\bardlg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\bardock.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\barstat.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\bartool.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ccdata.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\cmdtarg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlcache.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlconn.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctldata.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlevent.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlfont.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlframe.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlinl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlinplc.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctllic.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlmodul.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlnownd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlobj.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlpbag.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlpict.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlppg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlprop.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlpropx.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlpset.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlpstg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlpstm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlquick.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlrefl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlreg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctltrack.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\ctlview.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\daocore.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\daodfx.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\daoview.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbflt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dblong.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbrfx.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbvar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbview.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dcmeta.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dcprev.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgclr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgcomm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgdata.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgdhtml.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgfile.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgfloat.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgfnt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgfr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprnt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprntx.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprop.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgtempl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllinit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllmodul.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\doccore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dockcont.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dockstat.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\docmapi.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\docmgr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\docmulti.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\docsingl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\doctempl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dumpcont.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dumpflt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dumpinit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dumpout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dumpstak.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\except.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filecore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filefind.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filelist.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filemem.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\fileshrd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filest.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filetxt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\filex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\fixalloc.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\inet.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\inetcall.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">afxisapi.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">afxisapi.h</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">afxisapi.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">afxisapi.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">afxisapi.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">afxisapi.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">afxisapi.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">afxisapi.h</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\list_o.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\list_p.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\list_s.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_pp.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_pw.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_so.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_sp.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_ss.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_wo.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\map_wp.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\mtcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\mtex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\nolib.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\objcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occcont.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occddx.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occddxf.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occdlg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occevent.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occlock.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occmgr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\occsite.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleasmon.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olebar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olecall.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olecli1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olecli2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olecli3.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olecnvrt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleconn.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledata.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledisp1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledisp2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledlgs1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledlgs2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledlgs3.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledll.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledobj1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledobj2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledoc1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledoc2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledoccl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledocip.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledocob.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledoctg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledocvw.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledrop1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oledrop2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleenum.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleexp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olefact.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleinit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleipfrm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olelink.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olelock.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olemisc.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olemon.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olemsgf.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olepset.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olereg.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olestrm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olesvr1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olesvr2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oletsvr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oletyplb.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleui1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleui2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleunk.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olevar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\olevar1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\oleverb.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\plex.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\rawdllmainproxy.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\sockcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\sockexp.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\strcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\thrdcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\timecore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\tooltip.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\trckrect.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\validadd.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewcmn.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewcore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewedit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewform.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewhtml.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewoled.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewprev.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewprnt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewrich.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\viewscrl.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winbtn.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\wincore.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\wincore2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl1.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl3.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl4.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl5.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl6.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl7.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winctrl8.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winfrm.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winfrm2.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winfrmx.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\wingdi.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\wingdix.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winhand.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winmain.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winmdi.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winmenu.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winmini.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winocc.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winsplit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winstr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="amd64\mfc140.def" />
+    <None Include="amd64\mfc140d.def" />
+    <None Include="amd64\mfc140u.def" />
+    <None Include="amd64\mfc140ud.def" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afx.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxcmn.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxcmn2.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxcmn3.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxcoll.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxctl.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxcview.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxdao.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxdb.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxdlgs.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxdtctl.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxext.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxhelp.hm" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxhtml.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxinet.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxmt.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxole.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxrich.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxsock.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxwin1.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxwin2.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxwin3.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxwin4.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\afxwinforms.inl" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\color-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\copy-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\delete-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\ellipse-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\fill-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\hand-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\help.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_orgh.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_orghv.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_orgv.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_pane.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_panh.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_panhv.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_pann.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_panne.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_pannw.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_pans.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_panse.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_pansw.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_panv.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\im_panw.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\line-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\magnify.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\move-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\move4way.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\movetab.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\nodrop.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\nomovetab.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\pen-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\rect-pro.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyle2007Aqua.rc2" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyle2007Black.rc2" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyle2007Blue.rc2" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyle2007Silver.rc2" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyleWindows7.rc2" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\sarrows.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\splith.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\splitv.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\trck4way.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\trcknesw.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\trckns.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\trcknwse.cur" />
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\trckwe.cur" />
+    <MASM Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\inetcal_.s">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </MASM>
+    <MASM Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\olecall_.s">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MASM>
+    <None Include="intel\mfc140.def" />
+    <None Include="intel\mfc140d.def" />
+    <None Include="intel\mfc140u.def" />
+    <None Include="intel\mfc140ud.def" />
+    <MASM Include="olecall_.s">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\about_.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxctl.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxdb.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxolecl.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxolesv.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxprint.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxres.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\afxribbon.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\atlres.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\ver_.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\indicate.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\mfcdll.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\mfcintl.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\prompts.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Style.xml" />
+    <Xml Include="$(VCToolsInstallDir)atlmfc\include\Black\Style.xml" />
+    <Xml Include="$(VCToolsInstallDir)atlmfc\include\Blue\Style.xml" />
+    <Xml Include="$(VCToolsInstallDir)atlmfc\include\Silver\Style.xml" />
+    <Xml Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\help.rsc">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\magnify.rsc">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="$(VCToolsInstallDir)atlmfc\include\res\split.rsc">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Close.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Close_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Maximize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Maximize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Minimize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Minimize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Restore.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\AppCaption\SysBtn_Restore_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\MainWnd\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\MainWnd\BorderCaption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\MainWnd\BorderMDIChild.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\MenuBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\Gripper.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\Item_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\Item_Marker_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\Item_Marker_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\MenuHighlight.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\MenuHighlightDisabled.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\MenuScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\ResizeBar.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\ResizeBar_HV.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\ResizeBar_HVT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\ResizeBar_V.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\PopupBar\Tear.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Border_Floaty.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Check.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Default_Image.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Default_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Default_QAT_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\GroupMenu_F_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\GroupMenu_F_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\GroupMenu_L_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\GroupMenu_L_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\GroupMenu_M_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\GroupMenu_M_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Group_F.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Group_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Group_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Group_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Launch_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Main_Panel.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Menu_H_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Menu_H_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Menu_V_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Menu_V_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Normal_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Normal_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Page_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Page_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Palette_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Palette_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\Palette_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Buttons\StatusPane.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Caption_QA.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Caption_QA_Glass.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Blue\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Blue\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Blue\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Blue\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Green\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Green\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Green\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Green\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Indigo\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Indigo\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Indigo\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Indigo\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Orange\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Orange\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Orange\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Orange\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Red\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Red\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Red\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Red\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Violet\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Violet\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Violet\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Violet\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Yellow\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Yellow\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Yellow\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Context\Yellow\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Category_Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\KeyTip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Progress\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Progress\Infinity.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Progress\Normal.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Progress\Normal_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Slider\Minus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Slider\Plus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Ribbon\Slider\Thumb.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\StatusBar\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\StatusBar\Back_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\StatusBar\PaneBorder.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\StatusBar\SizeGrip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Tab\3D.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\Tab\Flat.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\TaskPane\ScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\ToolBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Aqua\ToolBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Close.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Close_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Maximize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Maximize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Minimize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Minimize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Restore.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\AppCaption\SysBtn_Restore_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\ComboBox\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\MainWnd\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\MainWnd\BorderCaption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\MainWnd\BorderMDIChild.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\MenuBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\OutlookWnd\BarBack.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\OutlookWnd\BtnPage.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\Gripper.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\Item_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\Item_Marker_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\Item_Marker_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\MenuButton.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\MenuHighlight.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\MenuHighlightDisabled.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\MenuScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\ResizeBar.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\ResizeBar_HV.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\ResizeBar_HVT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\ResizeBar_V.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\PopupBar\Tear.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Border_Floaty.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Border_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Check.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Default_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Default_Image.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Default_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Default_QAT_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\GroupMenu_F_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\GroupMenu_F_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\GroupMenu_L_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\GroupMenu_L_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\GroupMenu_M_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\GroupMenu_M_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Group_F.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Group_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Group_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Group_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Launch.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Launch_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Main_Panel.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Menu_H_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Menu_H_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Menu_V_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Menu_V_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Normal_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Normal_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Page_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Page_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Palette_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Palette_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\Palette_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Buttons\StatusPane.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Caption_QA.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Caption_QA_Glass.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Blue\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Blue\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Blue\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Blue\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Green\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Green\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Green\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Green\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Indigo\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Indigo\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Indigo\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Indigo\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Orange\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Orange\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Orange\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Orange\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Red\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Red\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Red\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Red\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Violet\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Violet\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Violet\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Violet\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Yellow\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Yellow\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Yellow\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Context\Yellow\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Category_Tab_Sep.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\KeyTip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Panel_Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Panel_Main_Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Panel_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Progress\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Progress\Infinity.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Progress\Normal.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Progress\Normal_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Slider\Minus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Slider\Plus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Ribbon\Slider\Thumb.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\StatusBar\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\StatusBar\Back_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\StatusBar\PaneBorder.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\StatusBar\SizeGrip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Tab\3D.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\Tab\Flat.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\TaskPane\ScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\ToolBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Black\ToolBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Close.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Close_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Maximize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Maximize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Minimize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Minimize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Restore.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\AppCaption\SysBtn_Restore_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\ComboBox\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\MainWnd\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\MainWnd\BorderCaption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\MainWnd\BorderMDIChild.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\MenuBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\OutlookWnd\BarBack.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\OutlookWnd\BtnPage.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\Gripper.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\Item_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\Item_Marker_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\Item_Marker_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\MenuButton.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\MenuHighlight.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\MenuHighlightDisabled.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\MenuScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\ResizeBar.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\ResizeBar_HV.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\ResizeBar_HVT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\ResizeBar_V.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\PopupBar\Tear.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Border_Floaty.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Border_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Check.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Default_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Default_Image.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Default_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Default_QAT_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\GroupMenu_F_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\GroupMenu_F_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\GroupMenu_L_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\GroupMenu_L_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\GroupMenu_M_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\GroupMenu_M_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Group_F.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Group_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Group_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Group_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Launch.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Launch_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Main_Panel.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Menu_H_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Menu_H_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Menu_V_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Menu_V_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Normal_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Normal_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Page_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Page_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Palette_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Palette_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\Palette_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Buttons\StatusPane.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Caption_QA.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Caption_QA_Glass.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Blue\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Blue\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Blue\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Blue\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Green\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Green\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Green\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Green\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Indigo\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Indigo\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Indigo\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Indigo\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Orange\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Orange\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Orange\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Orange\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Red\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Red\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Red\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Red\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Violet\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Violet\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Violet\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Violet\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Yellow\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Yellow\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Yellow\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Context\Yellow\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Category_Tab_Sep.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\KeyTip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Panel_Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Panel_Main_Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Panel_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Progress\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Progress\Infinity.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Progress\Normal.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Progress\Normal_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Slider\Minus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Slider\Plus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Ribbon\Slider\Thumb.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\StatusBar\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\StatusBar\Back_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\StatusBar\PaneBorder.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\StatusBar\SizeGrip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Tab\3D.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\Tab\Flat.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\TaskPane\ScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\ToolBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Blue\ToolBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\95check.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\browse.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\browse32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\colors.ico" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\copy-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\copy-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\delete-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\delete-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\down-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\down-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\font-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\help-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\help-pro.ico" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\help-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\link.ico" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\menuimg-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\menuimg-pro24.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\minifwnd.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\new-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\new-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\palette-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\palette-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\picker.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\print-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\print-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\PrintPreview-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\PrintPreview-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonPrintL.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonPrintS.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008base.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008bottom.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008bottomh.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008center.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008centerh.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008left.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008lefth.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008right.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008righth.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008top.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SD2008toph.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SDbottom.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SDleft.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SDmiddle.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SDright.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\SDtop.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\taskpane.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\taskpane32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\tool-pro.ico" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\truetype.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\up-pro.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\res\up-pro32.bmp" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Close.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Close_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Maximize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Maximize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Minimize.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Minimize_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Restore.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\AppCaption\SysBtn_Restore_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\ComboBox\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\MainWnd\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\MainWnd\BorderCaption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\MainWnd\BorderMDIChild.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\MenuBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\OutlookWnd\BarBack.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\OutlookWnd\BtnPage.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\Gripper.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\Item_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\Item_Marker_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\Item_Marker_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\MenuButton.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\MenuHighlight.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\MenuHighlightDisabled.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\MenuScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\ResizeBar.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\ResizeBar_HV.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\ResizeBar_HVT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\ResizeBar_V.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\PopupBar\Tear.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Border_Floaty.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Border_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Check.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Default_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Default_Image.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Default_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Default_QAT_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\GroupMenu_F_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\GroupMenu_F_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\GroupMenu_L_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\GroupMenu_L_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\GroupMenu_M_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\GroupMenu_M_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Group_F.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Group_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Group_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Group_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Launch.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Launch_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Main_Panel.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Menu_H_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Menu_H_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Menu_V_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Menu_V_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Normal_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Normal_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Page_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Page_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Palette_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Palette_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\Palette_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Buttons\StatusPane.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Caption_QA.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Caption_QA_Glass.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Blue\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Blue\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Blue\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Blue\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Green\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Green\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Green\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Green\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Indigo\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Indigo\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Indigo\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Indigo\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Orange\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Orange\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Orange\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Orange\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Red\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Red\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Red\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Red\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Violet\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Violet\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Violet\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Violet\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Yellow\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Yellow\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Yellow\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Context\Yellow\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Category_Tab_Sep.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\KeyTip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Panel_Back_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Panel_Back_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Panel_Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Panel_Main_Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Panel_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Progress\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Progress\Infinity.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Progress\Normal.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Progress\Normal_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Slider\Minus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Slider\Plus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Ribbon\Slider\Thumb.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\StatusBar\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\StatusBar\Back_Ext.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\StatusBar\PaneBorder.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\StatusBar\SizeGrip.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Tab\3D.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\Tab\Flat.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\TaskPane\ScrollBtn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\ToolBar\Border.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Silver\ToolBar\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\ComboBox\Btn.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\PopupBar\Item_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\PopupBar\Item_Marker_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\PopupBar\Item_Marker_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\PopupBar\MenuHighlight.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\PopupBar\MenuHighlightDisabled.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Border_Panel.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Border_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Default.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Default_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Default_Image.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Default_QAT.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\GroupMenu_F_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\GroupMenu_F_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\GroupMenu_L_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\GroupMenu_L_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\GroupMenu_M_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\GroupMenu_M_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Group_F.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Group_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Group_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Group_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Launch.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Launch_Icon.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Main_Panel.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Menu_H_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Menu_H_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Menu_V_C.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Menu_V_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Normal_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Normal_S.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Page_L.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Page_R.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Palette_B.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Palette_M.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\Palette_T.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Buttons\StatusPane.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Caption_QA.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Blue\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Blue\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Blue\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Green\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Green\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Green\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Indigo\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Indigo\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Indigo\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Orange\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Orange\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Orange\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Red\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Red\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Red\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Separator.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Violet\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Violet\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Violet\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Yellow\Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Yellow\Caption.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Context\Yellow\Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Tab.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Category_Tab_Sep.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Panel_Back.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Panel_Back_Sep.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Panel_Main.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Slider\Minus.png" />
+    <Image Include="$(VCToolsInstallDir)atlmfc\include\Windows7\Ribbon\Slider\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="$(VCToolsInstallDir)atlmfc\include\atliface.idl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

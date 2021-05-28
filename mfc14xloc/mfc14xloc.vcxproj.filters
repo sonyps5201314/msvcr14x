@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="atlmfc">
+      <UniqueIdentifier>{AF2C0CDC-A47B-4821-B10D-E623C306E999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src">
+      <UniqueIdentifier>{1194259E-6025-4510-9407-F8A1F79690CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc">
+      <UniqueIdentifier>{0BEECAF6-DAE7-414D-84BB-A425D1508A2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.chs">
+      <UniqueIdentifier>{94C187EE-B338-4DF6-B71A-E78EFDA70563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.cht">
+      <UniqueIdentifier>{EEA6F1F1-57F2-4FCD-81BC-7107154801C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.deu">
+      <UniqueIdentifier>{9DE53CBF-38F7-4EA3-87EA-C6FC61146517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.esn">
+      <UniqueIdentifier>{30B1B354-9AF4-4608-B460-1563AD3566EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.fra">
+      <UniqueIdentifier>{5FC8AE20-B731-4704-9A6E-88C5F2FD0B85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.ita">
+      <UniqueIdentifier>{035F66DA-667B-4088-82BE-7A0FC50B5E70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.jpn">
+      <UniqueIdentifier>{FAA390AD-BE84-4D32-9463-C96BA6BCE11E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.kor">
+      <UniqueIdentifier>{0435A5C4-B228-47CA-BCFE-6F8605111291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="atlmfc\src\mfc\l.rus">
+      <UniqueIdentifier>{07D1F15C-E39E-492B-ABD0-2607EE85483A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mfcintl.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.chs\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.chs</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.chs\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.chs</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.cht\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.cht</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.cht\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.cht</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\indicate.rc">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.deu\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.deu</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.esn\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.esn</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.fra\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.fra</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.ita\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.ita</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.jpn\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.jpn</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.kor\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.kor</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.rus\indicate.rc">
+      <Filter>atlmfc\src\mfc\l.rus</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.deu\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.deu</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.esn\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.esn</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.fra\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.fra</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.ita\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.ita</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.jpn\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.jpn</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.kor\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.kor</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.rus\prompts.rc">
+      <Filter>atlmfc\src\mfc\l.rus</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\prompts.rc">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

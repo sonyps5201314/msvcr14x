@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{7077DA3C-5889-4D6C-9E1F-4903CD40433F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
+    <NMakeBuildCommandLine>set PLATFORM=AMD64
+cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
+mklink /d %PLATFORM% "$(OutDir)"
+mklink mfcintl.mak "$(ProjectDir)mfcintl.mak"
+nmake /NOLOGO /f mfcintl.mak fra
+nmake /NOLOGO /f mfcintl.mak deu
+nmake /NOLOGO /f mfcintl.mak jpn
+nmake /NOLOGO /f mfcintl.mak ita
+nmake /NOLOGO /f mfcintl.mak esn
+nmake /NOLOGO /f mfcintl.mak chs
+nmake /NOLOGO /f mfcintl.mak cht
+nmake /NOLOGO /f mfcintl.mak kor
+nmake /NOLOGO /f mfcintl.mak rus
+nmake /NOLOGO /f mfcintl.mak enu
+rmdir %PLATFORM%</NMakeBuildCommandLine>
+    <NMakeOutput>mfc14xloc.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>$(SolutionDir)\mfc14x;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
+    <NMakeBuildCommandLine>set PLATFORM=INTEL
+cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
+mklink /d %PLATFORM% "$(OutDir)"
+mklink mfcintl.mak "$(ProjectDir)mfcintl.mak"
+nmake /NOLOGO /f mfcintl.mak fra
+nmake /NOLOGO /f mfcintl.mak deu
+nmake /NOLOGO /f mfcintl.mak jpn
+nmake /NOLOGO /f mfcintl.mak ita
+nmake /NOLOGO /f mfcintl.mak esn
+nmake /NOLOGO /f mfcintl.mak chs
+nmake /NOLOGO /f mfcintl.mak cht
+nmake /NOLOGO /f mfcintl.mak kor
+nmake /NOLOGO /f mfcintl.mak rus
+nmake /NOLOGO /f mfcintl.mak enu
+rmdir %PLATFORM%</NMakeBuildCommandLine>
+    <NMakeOutput>mfc14xloc.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>$(SolutionDir)\mfc14x;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="mfcintl.mak" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.chs\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.chs\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.cht\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.cht\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.deu\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.deu\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.esn\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.esn\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.fra\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.fra\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.ita\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.ita\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.jpn\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.jpn\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.kor\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.kor\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.rus\indicate.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\l.rus\prompts.rc" />
+    <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\prompts.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

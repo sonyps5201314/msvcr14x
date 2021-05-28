@@ -300,8 +300,8 @@ Sub ModifyAllProps()
         CreateDir (Path)
     End If
     If DirExists(Path) Then
-        Call ModifyProps(Path + "Microsoft.Cpp.Win32.user.props", vbNullString, "$(msvcr14x_ROOT)\Release;$(msvcr14x_ROOT)\Debug", vbNullString)
-        Call ModifyProps(Path + "Microsoft.Cpp.x64.user.props", vbNullString, "$(msvcr14x_ROOT)\x64\Release;$(msvcr14x_ROOT)\x64\Debug", vbNullString)
+        Call ModifyProps(Path + "Microsoft.Cpp.Win32.user.props", vbNullString, "$(msvcr14x_ROOT)\Release;$(msvcr14x_ROOT)\Debug;$(msvcr14x_ROOT)\AnsiRelease;$(msvcr14x_ROOT)\AnsiDebug", vbNullString)
+        Call ModifyProps(Path + "Microsoft.Cpp.x64.user.props", vbNullString, "$(msvcr14x_ROOT)\x64\Release;$(msvcr14x_ROOT)\x64\Debug;$(msvcr14x_ROOT)\x64\AnsiRelease;$(msvcr14x_ROOT)\x64\AnsiDebug", vbNullString)
     End If
 End Sub
 
@@ -317,41 +317,78 @@ Sub AskForCopyDlls()
       AppPath = ExpandConstant("{app}") + "\"
       Dim fs 'As FileSystemObject
       Set fs = CreateObject("Scripting.FileSystemObject")
-      Dim AllDlls(27)
-      AllDlls(0) = "Debug\MSVCR14XD.dll"
-      AllDlls(1) = "Debug\MSVCP14XD.dll"
-      AllDlls(2) = "Debug\MSVCP14X_1D.dll"
-      AllDlls(3) = "Debug\MSVCP14X_2D.dll"
-      AllDlls(4) = "Debug\MSVCP14XD_ATOMIC_WAIT.dll"
-      AllDlls(5) = "Debug\MSVCP14XD_CODECVT_IDS.dll"
-      AllDlls(6) = "Debug\CONCRT14XD.dll"
-      AllDlls(7) = "Release\MSVCR14X.dll"
-      AllDlls(8) = "Release\MSVCP14X.dll"
-      AllDlls(9) = "Release\MSVCP14X_1.dll"
-      AllDlls(10) = "Release\MSVCP14X_2.dll"
-      AllDlls(11) = "Release\MSVCP14X_ATOMIC_WAIT.dll"
-      AllDlls(12) = "Release\MSVCP14X_CODECVT_IDS.dll"
-      AllDlls(13) = "Release\CONCRT14X.dll"
-      AllDlls(14) = "x64\Debug\MSVCR14XD.dll"
-      AllDlls(15) = "x64\Debug\MSVCP14XD.dll"
-      AllDlls(16) = "x64\Debug\MSVCP14X_1D.dll"
-      AllDlls(17) = "x64\Debug\MSVCP14X_2D.dll"
-      AllDlls(18) = "x64\Debug\MSVCP14XD_ATOMIC_WAIT.dll"
-      AllDlls(19) = "x64\Debug\MSVCP14XD_CODECVT_IDS.dll"
-      AllDlls(20) = "x64\Debug\CONCRT14XD.dll"
-      AllDlls(21) = "x64\Release\MSVCR14X.dll"
-      AllDlls(22) = "x64\Release\MSVCP14X.dll"
-      AllDlls(23) = "x64\Release\MSVCP14X_1.dll"
-      AllDlls(24) = "x64\Release\MSVCP14X_2.dll"
-      AllDlls(25) = "x64\Release\MSVCP14X_ATOMIC_WAIT.dll"
-      AllDlls(26) = "x64\Release\MSVCP14X_CODECVT_IDS.dll"
-      AllDlls(27) = "x64\Release\CONCRT14X.dll"
-      Dim OneDll
-      For Each OneDll In AllDlls
-         If fs.FileExists(AppPath + OneDll) = False Then
-            Call MsgBox("Please build all msvcr14x dlls first!", vbCritical, "msvcr14x")
-            Exit Sub
-         End If
+      Dim AllDlls(3,8)
+      AllDlls(0,0) = "Debug\MSVCR14XD.dll"
+      AllDlls(0,1) = "Debug\MSVCP14XD.dll"
+      AllDlls(0,2) = "Debug\MSVCP14X_1D.dll"
+      AllDlls(0,3) = "Debug\MSVCP14X_2D.dll"
+      AllDlls(0,4) = "Debug\MSVCP14XD_ATOMIC_WAIT.dll"
+      AllDlls(0,5) = "Debug\MSVCP14XD_CODECVT_IDS.dll"
+      AllDlls(0,6) = "Debug\CONCRT14XD.dll"
+      AllDlls(0,7) = "Debug\MFC14XUD.dll"
+      AllDlls(0,8) = "AnsiDebug\MFC14XD.dll"
+      AllDlls(1,0) = "Release\MSVCR14X.dll"
+      AllDlls(1,1) = "Release\MSVCP14X.dll"
+      AllDlls(1,2) = "Release\MSVCP14X_1.dll"
+      AllDlls(1,3) = "Release\MSVCP14X_2.dll"
+      AllDlls(1,4) = "Release\MSVCP14X_ATOMIC_WAIT.dll"
+      AllDlls(1,5) = "Release\MSVCP14X_CODECVT_IDS.dll"
+      AllDlls(1,6) = "Release\CONCRT14X.dll"
+      AllDlls(1,7) = "Release\MFC14XU.dll"
+      AllDlls(1,8) = "AnsiRelease\MFC14X.dll"
+      AllDlls(2,0) = "x64\Debug\MSVCR14XD.dll"
+      AllDlls(2,1) = "x64\Debug\MSVCP14XD.dll"
+      AllDlls(2,2) = "x64\Debug\MSVCP14X_1D.dll"
+      AllDlls(2,3) = "x64\Debug\MSVCP14X_2D.dll"
+      AllDlls(2,4) = "x64\Debug\MSVCP14XD_ATOMIC_WAIT.dll"
+      AllDlls(2,5) = "x64\Debug\MSVCP14XD_CODECVT_IDS.dll"
+      AllDlls(2,6) = "x64\Debug\CONCRT14XD.dll"
+      AllDlls(2,7) = "x64\Debug\MFC14XUD.dll"
+      AllDlls(2,8) = "x64\AnsiDebug\MFC14XD.dll"
+      AllDlls(3,0) = "x64\Release\MSVCR14X.dll"
+      AllDlls(3,1) = "x64\Release\MSVCP14X.dll"
+      AllDlls(3,2) = "x64\Release\MSVCP14X_1.dll"
+      AllDlls(3,3) = "x64\Release\MSVCP14X_2.dll"
+      AllDlls(3,4) = "x64\Release\MSVCP14X_ATOMIC_WAIT.dll"
+      AllDlls(3,5) = "x64\Release\MSVCP14X_CODECVT_IDS.dll"
+      AllDlls(3,6) = "x64\Release\CONCRT14X.dll"
+      AllDlls(3,7) = "x64\Release\MFC14XU.dll"
+      AllDlls(3,8) = "x64\AnsiRelease\MFC14X.dll"
+      
+      Dim AllResDlls(1,9)
+      AllResDlls(0,0) = "Release\MFC14XCHS.DLL"
+      AllResDlls(0,1) = "Release\MFC14XCHT.DLL"
+      AllResDlls(0,2) = "Release\MFC14XDEU.DLL"
+      AllResDlls(0,3) = "Release\MFC14XENU.DLL"
+      AllResDlls(0,4) = "Release\MFC14XESN.DLL"
+      AllResDlls(0,5) = "Release\MFC14XFRA.DLL"
+      AllResDlls(0,6) = "Release\MFC14XITA.DLL"
+      AllResDlls(0,7) = "Release\MFC14XJPN.DLL"
+      AllResDlls(0,8) = "Release\MFC14XKOR.DLL"
+      AllResDlls(0,9) = "Release\MFC14XRUS.DLL"
+      AllResDlls(1,0) = "x64\Release\MFC14XCHS.DLL"
+      AllResDlls(1,1) = "x64\Release\MFC14XCHT.DLL"
+      AllResDlls(1,2) = "x64\Release\MFC14XDEU.DLL"
+      AllResDlls(1,3) = "x64\Release\MFC14XENU.DLL"
+      AllResDlls(1,4) = "x64\Release\MFC14XESN.DLL"
+      AllResDlls(1,5) = "x64\Release\MFC14XFRA.DLL"
+      AllResDlls(1,6) = "x64\Release\MFC14XITA.DLL"
+      AllResDlls(1,7) = "x64\Release\MFC14XJPN.DLL"
+      AllResDlls(1,8) = "x64\Release\MFC14XKOR.DLL"
+      AllResDlls(1,9) = "x64\Release\MFC14XRUS.DLL"
+	  
+      Dim DllArrays(1)
+      DllArrays(0) = AllDlls
+      DllArrays(1) = AllResDlls
+      Dim DllArray
+      For Each DllArray In DllArrays
+          Dim OneDll
+          For Each OneDll In DllArray
+             If fs.FileExists(AppPath + OneDll) = False Then
+                Call MsgBox("Please build all msvcr14x dlls first!", vbCritical, "msvcr14x")
+                Exit Sub
+             End If
+          Next
       Next
       
       Dim objShell
@@ -363,20 +400,26 @@ Sub AskForCopyDlls()
       Dim SysArch
       SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
       If SysArch = "AMD64" Then
-        For Each OneDll In AllDlls
-          If Left(OneDll, 3) = "x64" Then
-            If ProcArch = "x86" Then
-                Call fs.CopyFile(AppPath + OneDll, windir + "\sysnative\")
-            Else
-                Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
-            End If
-          Else
-            Call fs.CopyFile(AppPath + OneDll, windir + "\syswow64\")
-          End If
-        Next
+	      For Each DllArray In DllArrays
+	        For Each OneDll In DllArray
+	          If Left(OneDll, 3) = "x64" Then
+	            If ProcArch = "x86" Then
+	                Call fs.CopyFile(AppPath + OneDll, windir + "\sysnative\")
+	            Else
+	                Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
+	            End If
+	          Else
+	            Call fs.CopyFile(AppPath + OneDll, windir + "\syswow64\")
+	          End If
+	        Next
+	      Next
       ElseIf SysArch = "x86" Then
-        For Each OneDll In AllDlls
-            Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
+      	For Each DllArray In DllArrays
+            For Each OneDll In DllArray
+                If Left(OneDll, 3) <> "x64" Then
+		   Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
+                End If
+            Next
         Next
       Else
         MsgBox SysArch + " is a unsupported system architecture!", vbCritical, "msvcr14x"

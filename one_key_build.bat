@@ -40,6 +40,10 @@ if "%TO_EXPAND%" NEQ "" (
 
 CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86
+msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x86
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x86
+msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiRelease;Platform=x86
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x64
+msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x64
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x64
+msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiRelease;Platform=x64
