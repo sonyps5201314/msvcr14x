@@ -42,43 +42,79 @@
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
     <NMakeBuildCommandLine>set PLATFORM=AMD64
 cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
-mklink /d %PLATFORM% "$(OutDir)"
-mklink mfcintl.mak "$(ProjectDir)mfcintl.mak"
-nmake /NOLOGO /f mfcintl.mak fra
-nmake /NOLOGO /f mfcintl.mak deu
-nmake /NOLOGO /f mfcintl.mak jpn
-nmake /NOLOGO /f mfcintl.mak ita
-nmake /NOLOGO /f mfcintl.mak esn
-nmake /NOLOGO /f mfcintl.mak chs
-nmake /NOLOGO /f mfcintl.mak cht
-nmake /NOLOGO /f mfcintl.mak kor
-nmake /NOLOGO /f mfcintl.mak rus
-nmake /NOLOGO /f mfcintl.mak enu
-rmdir %PLATFORM%</NMakeBuildCommandLine>
+dir /S *.rc|findstr ".rc \"&gt;"$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog"
+fc "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog"&gt;"$(ProjectDir)$(IntDir)fc_result.tlog"
+if errorlevel==1 (
+  mklink /d %PLATFORM% "$(OutDir)"
+  mklink mfcintl.%PLATFORM%.mak "$(ProjectDir)mfcintl.mak"
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak fra
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak deu
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak jpn
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak ita
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak esn
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak chs
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak cht
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak kor
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak rus
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak enu
+  del mfcintl.%PLATFORM%.mak
+  rmdir %PLATFORM%
+  copy "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog" /Y
+)</NMakeBuildCommandLine>
     <NMakeOutput>mfc14xloc.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <IncludePath>$(SolutionDir)\mfc14x;$(IncludePath)</IncludePath>
+    <NMakeCleanCommandLine>del $(IntDir)*.tlog
+cd $(OutDir)
+del MFC14XFRA.DLL
+del MFC14XDEU.DLL
+del MFC14XJPN.DLL
+del MFC14XITA.DLL
+del MFC14XESN.DLL
+del MFC14XCHS.DLL
+del MFC14XCHT.DLL
+del MFC14XKOR.DLL
+del MFC14XRUS.DLL
+del MFC14XENU.DLL</NMakeCleanCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
     <NMakeBuildCommandLine>set PLATFORM=INTEL
 cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
-mklink /d %PLATFORM% "$(OutDir)"
-mklink mfcintl.mak "$(ProjectDir)mfcintl.mak"
-nmake /NOLOGO /f mfcintl.mak fra
-nmake /NOLOGO /f mfcintl.mak deu
-nmake /NOLOGO /f mfcintl.mak jpn
-nmake /NOLOGO /f mfcintl.mak ita
-nmake /NOLOGO /f mfcintl.mak esn
-nmake /NOLOGO /f mfcintl.mak chs
-nmake /NOLOGO /f mfcintl.mak cht
-nmake /NOLOGO /f mfcintl.mak kor
-nmake /NOLOGO /f mfcintl.mak rus
-nmake /NOLOGO /f mfcintl.mak enu
-rmdir %PLATFORM%</NMakeBuildCommandLine>
+dir /S *.rc|findstr ".rc \"&gt;"$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog"
+fc "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog"&gt;"$(ProjectDir)$(IntDir)fc_result.tlog"
+if errorlevel==1 (
+  mklink /d %PLATFORM% "$(OutDir)"
+  mklink mfcintl.%PLATFORM%.mak "$(ProjectDir)mfcintl.mak"
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak fra
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak deu
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak jpn
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak ita
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak esn
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak chs
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak cht
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak kor
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak rus
+  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak enu
+  del mfcintl.%PLATFORM%.mak
+  rmdir %PLATFORM%
+  copy "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog" /Y
+)</NMakeBuildCommandLine>
     <NMakeOutput>mfc14xloc.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <IncludePath>$(SolutionDir)\mfc14x;$(IncludePath)</IncludePath>
+    <NMakeCleanCommandLine>del $(IntDir)*.tlog
+cd $(OutDir)
+del MFC14XFRA.DLL
+del MFC14XDEU.DLL
+del MFC14XJPN.DLL
+del MFC14XITA.DLL
+del MFC14XESN.DLL
+del MFC14XCHS.DLL
+del MFC14XCHT.DLL
+del MFC14XKOR.DLL
+del MFC14XRUS.DLL
+del MFC14XENU.DLL</NMakeCleanCommandLine>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>

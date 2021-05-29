@@ -191,9 +191,15 @@
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -233,9 +239,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -274,9 +286,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -315,9 +333,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -353,9 +377,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -391,9 +421,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -432,9 +468,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
@@ -473,9 +515,15 @@ LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /M
       <Command>CD "$(OutDir)"
 SET TargetName=$(TargetName)
 SET DST_NAME=%TargetName:14X=140%
-COPY "$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib" $(TargetName)_static_part.lib /Y
-LIB /NOLOGO /REMOVE:%DST_NAME%.dll $(TargetName)_static_part.lib
-LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)" </Command>
+SET COPY_SRC_LIB="$(VCToolsInstallDir)atlmfc\lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
     </PostBuildEvent>
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>

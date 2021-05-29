@@ -20,14 +20,24 @@ if not defined boost_ROOT (
     for /F "tokens=3* skip=2" %%P in ('reg query "HKCU\Environment" /v boost_ROOT') do @set "boost_ROOT=%%P %%Q"
 )
 
-@ECHO ON
-git clone https://github.com/sonyps5201314/ntdll.git ../ntdll
 git pull -v --progress "origin"
-git clone https://github.com/sonyps5201314/YY-Thunks.git ../YY-Thunks
-git pull -v --progress "origin"
+
+:check_ntdll
+if not exist ../ntdll (
+  git clone https://github.com/sonyps5201314/ntdll.git ../ntdll
+  goto :check_ntdll
+)
+git -C ../ntdll pull -v --progress "origin"
+
+:check_YY-Thunks
+if not exist ../YY-Thunks (
+  git clone https://github.com/sonyps5201314/YY-Thunks.git ../YY-Thunks
+  goto :check_YY-Thunks
+)
+git -C ../YY-Thunks pull -v --progress "origin"
+
 WScript ../ntdll/setup.vbs
 
-@ECHO OFF
 FOR %%a in (Debug\CONCRT14XD.lib Release\CONCRT14X.lib x64\Debug\CONCRT14XD.lib x64\Release\CONCRT14X.lib) DO IF not exist %%a (
     SET TO_EXPAND=TRUE
     goto :CHECK_FOR_EXECUTE_EXPAND

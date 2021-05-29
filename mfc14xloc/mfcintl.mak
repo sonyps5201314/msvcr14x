@@ -32,13 +32,13 @@
 #
 # Examples:
 #   // build for LANG=ENGLISH
-#   nmake LANG=ENU LANGID=0409 /f mfcintl.mak
+#   nmake LANG=ENU LANGID=0409 /f mfcintl.$(PLATFORM).mak
 #
 #   // build for LANG=FRENCH
-#   nmake LANG=FRA LANGID=040C /f mfcintl.mak
+#   nmake LANG=FRA LANGID=040C /f mfcintl.$(PLATFORM).mak
 #
 #   // build for LANG=JAPANESE
-#   nmake LANG=JPN LANGID=0411 CP=932 CPHEX=03A4 /f mfcintl.mak
+#   nmake LANG=JPN LANGID=0411 CP=932 CPHEX=03A4 /f mfcintl.$(PLATFORM).mak
 #       (Note: you must have codepage 932 installed)
 #
 
@@ -47,7 +47,7 @@ MFC_VER=14X
 !endif
 
 # Name of this makefile for use in recursion
-MAKNAME=mfcintl.mak
+MAKNAME=mfcintl.$(PLATFORM).mak
 
 !ifndef CP
 # Default to "Windows, Multilingual" codepage (ANSI)
@@ -85,6 +85,7 @@ LFLAGS=$(LFLAGS) /machine:i386
 !endif
 !if "$(PLATFORM)" == "AMD64"
 LFLAGS=$(LFLAGS) /machine:x64
+LFLAGS=$(LFLAGS) /base:0x5d3600000
 !endif
 !if "$(PLATFORM)" == "IA64"
 LFLAGS=$(LFLAGS) /machine:ia64
