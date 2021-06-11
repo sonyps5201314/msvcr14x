@@ -460,6 +460,10 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="atomic.cpp" />
     <ClCompile Include="msvcp14x.cpp" />

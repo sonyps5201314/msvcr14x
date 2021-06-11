@@ -338,6 +338,10 @@
       </ForcedIncludeFiles>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\YY-Thunks;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\msvcr14x\nt5fix.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
