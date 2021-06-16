@@ -107,12 +107,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
-      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Configuration)\ucrt.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
-      <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
       <BaseAddress>0x50300000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
@@ -136,8 +135,7 @@
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
-      <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Configuration)\ucrtd.lib</AdditionalDependencies>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x40300000</BaseAddress>
@@ -161,8 +159,7 @@
       <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
-      <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
-      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
       <OptimizeReferences>true</OptimizeReferences>
@@ -193,8 +190,7 @@
       <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
-      <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
-      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
       <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <BaseAddress>0x503000000</BaseAddress>

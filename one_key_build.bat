@@ -38,14 +38,6 @@ git -C ../YY-Thunks pull -v --progress "origin"
 
 WScript ../ntdll/setup.vbs
 
-FOR %%a in (Debug\CONCRT14XD.lib Release\CONCRT14X.lib x64\Debug\CONCRT14XD.lib x64\Release\CONCRT14X.lib) DO IF not exist %%a (
-    SET TO_EXPAND=TRUE
-    goto :CHECK_FOR_EXECUTE_EXPAND
-)
-:CHECK_FOR_EXECUTE_EXPAND
-if "%TO_EXPAND%" NEQ "" (
-    expand ./first_time_build_need_files.cab . -F:*
-)
 @ECHO ON
 
 CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
