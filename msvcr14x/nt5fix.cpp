@@ -2,6 +2,7 @@
 
 //#include "awint.hpp"
 #include <internal_shared.h>
+#include <assert.h>
 
 // 下面的代码修改自老版本的awint.hpp
 // Use this macro for caching a function pointer from a DLL
@@ -28,6 +29,7 @@ enum wrapKERNEL32Functions {
 	eFreeLibraryWhenCallbackReturns,
 	eCreateThreadpoolWork,
 	eSubmitThreadpoolWork,
+	eWaitForThreadpoolWorkCallbacks,
 	eCloseThreadpoolWork,
 	eCompareStringW,
 	eLCMapStringEx,
@@ -46,6 +48,7 @@ using PFNFLUSHPROCESSWRITEBUFFERS = VOID(WINAPI*)();
 using PFNFREELIBRARYWHENCALLBACKRETURNS = VOID(WINAPI*)(PTP_CALLBACK_INSTANCE, HMODULE);
 using PFNCREATETHREADPOOLWORK = PTP_WORK(WINAPI*)(PTP_WORK_CALLBACK, PVOID, PTP_CALLBACK_ENVIRON);
 using PFNSUBMITTHREADPOOLWORK = VOID(WINAPI*)(PTP_WORK);
+using PFNWAITFORTHREADPOOLWORKCALLBACKS = VOID(WINAPI*)(PTP_WORK, BOOL);
 using PFNCLOSETHREADPOOLWORK = VOID(WINAPI*)(PTP_WORK);
 using PFNLCMAPSTRINGEX = int(WINAPI*)(LPCWSTR, DWORD, LPCWSTR, int, LPWSTR, int, LPNLSVERSIONINFO, LPVOID, LPARAM);
 using PFNCOMPARESTRINGW = int(WINAPI*)(__in LCID Locale, __in DWORD dwCmpFlags, __in_ecount(cchCount1) PCNZWCH lpString1, __in int cchCount1, __in_ecount(cchCount2) PCNZWCH lpString2, __in int cchCount2);
@@ -198,7 +201,9 @@ extern "C" VOID WINAPI FlushProcessWriteBuffers() {
 //并不代表Windows内部也一定是和它们一样
 struct _TP_CALLBACK_INSTANCE
 {
+	LIST_ENTRY Link;
 	PTP_WORK Work;//目前仅支持了线程池Work
+	BOOL Finished;
 	struct
 	{
 		//CRITICAL_SECTION* critical_section;
@@ -214,6 +219,10 @@ struct _TP_WORK
 	PVOID CallbackParameter;
 	PTP_WORK_CALLBACK WorkCallback;
 	PTP_CALLBACK_ENVIRON CallbackEnvironment;
+
+	LONG refcount;
+	LIST_ENTRY CallbackInstances;
+	RTL_CRITICAL_SECTION cs;
 };
 
 extern "C" VOID WINAPI FreeLibraryWhenCallbackReturns(
@@ -222,11 +231,12 @@ extern "C" VOID WINAPI FreeLibraryWhenCallbackReturns(
 	IFDYNAMICGETCACHEDFUNCTION(
 		PFNFREELIBRARYWHENCALLBACKRETURNS, FreeLibraryWhenCallbackReturns, pfFreeLibraryWhenCallbackReturns) {
 		pfFreeLibraryWhenCallbackReturns(pci, mod);
+		return;
 	}
 
 	if (!pci || !mod || mod == INVALID_HANDLE_VALUE || pci->cleanup.library)
 	{
-		_ASSERT(FALSE);
+		assert(FALSE);
 		SetLastError(ERROR_INVALID_PARAMETER);
 	}
 	else
@@ -240,51 +250,176 @@ extern "C" PTP_WORK WINAPI CreateThreadpoolWork(
 	IFDYNAMICGETCACHEDFUNCTION(PFNCREATETHREADPOOLWORK, CreateThreadpoolWork, pfCreateThreadpoolWork) {
 		return pfCreateThreadpoolWork(pfnwk, pv, pcbe);
 	}
-	// the only caller is taskscheduler.cpp
+	// the only two callers are taskscheduler.cpp and parallel_algorithms.cpp
 	PTP_WORK work = (PTP_WORK)calloc(1, sizeof(TP_WORK));
 	if (work)
 	{
 		work->WorkCallback = pfnwk;
 		work->CallbackParameter = pv;
 		work->CallbackEnvironment = pcbe;
+
+		work->refcount = 1;
+		InitializeListHead(&work->CallbackInstances);
+		if (!InitializeCriticalSectionAndSpinCount(&work->cs, 4000))
+		{
+			assert(FALSE);
+			free(work);
+			work = NULL;
+		}
 	}
-	else
+	if (!work)
 	{
-		_ASSERT(work);
+		assert(work);
 	}
 	return work;
 }
 
+void ReleaseThreadpoolWork(PTP_WORK pwk)
+{
+	if (InterlockedDecrement(&pwk->refcount) == 0)
+	{
+		DeleteCriticalSection(&pwk->cs);
+		free(pwk);
+		pwk = NULL;
+	}
+}
+
 //本函数参考了wine的tp_object_execute函数
 DWORD __stdcall _Task_scheduler_callback_xp(LPVOID _Args) noexcept {
-	const auto pwk = static_cast<PTP_WORK>(_Args);
-	TP_CALLBACK_INSTANCE instance = { 0 };
-	instance.Work = pwk;
-	pwk->WorkCallback(&instance, pwk->CallbackParameter, pwk);
-	if (instance.cleanup.library)
+	const auto instance = static_cast<PTP_CALLBACK_INSTANCE>(_Args);
+
+	EnterCriticalSection(&instance->Work->cs);
+	if (!instance->Finished)
 	{
-		FreeLibrary(instance.cleanup.library);
+		instance->Finished = TRUE;
+		instance->Work->WorkCallback(instance, instance->Work->CallbackParameter, instance->Work);
+		if (instance->cleanup.library)
+		{
+			FreeLibrary(instance->cleanup.library);
+		}
 	}
+	RemoveEntryList(&instance->Link);
+	LeaveCriticalSection(&instance->Work->cs);
+
+	ReleaseThreadpoolWork(instance->Work);
+	free(instance);
 	return 0;
 }
 extern "C" VOID WINAPI SubmitThreadpoolWork(_Inout_ PTP_WORK const pwk) {
 	IFDYNAMICGETCACHEDFUNCTION(PFNSUBMITTHREADPOOLWORK, SubmitThreadpoolWork, pfSubmitThreadpoolWork) {
 		return pfSubmitThreadpoolWork(pwk);
 	}
-	// the only caller is taskscheduler.cpp
-	if (QueueUserWorkItem(_Task_scheduler_callback_xp, pwk, WT_EXECUTEDEFAULT) == 0) {
-		_ASSERT(FALSE);
+	// the only two callers are taskscheduler.cpp and parallel_algorithms.cpp
+	PTP_CALLBACK_INSTANCE callbackInstance = (PTP_CALLBACK_INSTANCE)calloc(1, sizeof(TP_CALLBACK_INSTANCE));
+	if (callbackInstance)
+	{
+		InterlockedIncrement(&pwk->refcount);
+		callbackInstance->Work = pwk;
+		callbackInstance->Finished = FALSE;
+
+		EnterCriticalSection(&pwk->cs);
+		InsertTailList(&pwk->CallbackInstances, &callbackInstance->Link);
+		BOOL bResult = QueueUserWorkItem(_Task_scheduler_callback_xp, callbackInstance, WT_EXECUTEDEFAULT);
+		if (!bResult) {
+			assert(FALSE);
+			RemoveEntryList(&callbackInstance->Link);
+		}
+		LeaveCriticalSection(&pwk->cs);
+
+		if (!bResult)
+		{
+			free(callbackInstance);
+			callbackInstance = NULL;
+
+			ReleaseThreadpoolWork(pwk);
+		}
 	}
+}
+
+extern "C" VOID
+WINAPI
+WaitForThreadpoolWorkCallbacks(
+	_Inout_ PTP_WORK pwk,
+	_In_ BOOL fCancelPendingCallbacks
+)
+{
+	// use WaitForThreadpoolWorkCallbacks if it is available (only on Windows Vista+)...
+	IFDYNAMICGETCACHEDFUNCTION(
+		PFNWAITFORTHREADPOOLWORKCALLBACKS, WaitForThreadpoolWorkCallbacks, pfWaitForThreadpoolWorkCallbacks) {
+		pfWaitForThreadpoolWorkCallbacks(pwk, fCancelPendingCallbacks);
+		return;
+	}
+
+	// the only two callers are taskscheduler.cpp and parallel_algorithms.cpp
+	if (fCancelPendingCallbacks)
+	{
+		EnterCriticalSection(&pwk->cs);
+		PTP_CALLBACK_INSTANCE info = NULL;
+		LIST_ENTRY* lptr = NULL;
+		for (lptr = pwk->CallbackInstances.Flink; lptr != &pwk->CallbackInstances; lptr = lptr->Flink)
+		{
+			info = CONTAINING_RECORD(lptr, TP_CALLBACK_INSTANCE, Link);
+			info->Finished = TRUE;
+		}
+		LeaveCriticalSection(&pwk->cs);
+	}
+	else
+	{
+		while (TRUE)
+		{
+			BOOL bFindPendingCallbacks = FALSE;
+			EnterCriticalSection(&pwk->cs);
+			PTP_CALLBACK_INSTANCE info = NULL;
+			LIST_ENTRY* lptr = NULL;
+			for (lptr = pwk->CallbackInstances.Flink; lptr != &pwk->CallbackInstances; lptr = lptr->Flink)
+			{
+				info = CONTAINING_RECORD(lptr, TP_CALLBACK_INSTANCE, Link);
+				if (!info->Finished)
+				{
+					bFindPendingCallbacks = TRUE;
+					break;
+				}
+			}
+			LeaveCriticalSection(&pwk->cs);
+
+			if (bFindPendingCallbacks)
+			{
+				Sleep(10);
+			}
+			else
+			{
+				break;
+			}
+		}
+	}
+	return;
 }
 
 extern "C" VOID WINAPI CloseThreadpoolWork(_Inout_ PTP_WORK const pwk) {
 	IFDYNAMICGETCACHEDFUNCTION(PFNCLOSETHREADPOOLWORK, CloseThreadpoolWork, pfCloseThreadpoolWork) {
 		return pfCloseThreadpoolWork(pwk);
 	}
-	// the only caller is taskscheduler.cpp
+	// the only two callers are taskscheduler.cpp and parallel_algorithms.cpp
 	if (pwk)
 	{
-		free(pwk);
+		BOOL bFindPendingCallbacks = FALSE;
+		EnterCriticalSection(&pwk->cs);
+		PTP_CALLBACK_INSTANCE info = NULL;
+		LIST_ENTRY* lptr = NULL;
+		for (lptr = pwk->CallbackInstances.Flink; lptr != &pwk->CallbackInstances; lptr = lptr->Flink)
+		{
+			info = CONTAINING_RECORD(lptr, TP_CALLBACK_INSTANCE, Link);
+			if (!info->Finished)
+			{
+				bFindPendingCallbacks = TRUE;
+				break;
+			}
+		}
+		LeaveCriticalSection(&pwk->cs);
+
+		assert(!bFindPendingCallbacks);
+
+		ReleaseThreadpoolWork(pwk);
 	}
 }
 
@@ -296,16 +431,20 @@ static int __cdecl initialize_pointers() {
 	STOREFUNCTIONPOINTER(hKernel32, SetThreadpoolTimer);
 	STOREFUNCTIONPOINTER(hKernel32, WaitForThreadpoolTimerCallbacks);
 	STOREFUNCTIONPOINTER(hKernel32, CloseThreadpoolTimer);
+
 	STOREFUNCTIONPOINTER(hKernel32, CreateThreadpoolWait);
 	STOREFUNCTIONPOINTER(hKernel32, SetThreadpoolWait);
 	STOREFUNCTIONPOINTER(hKernel32, CloseThreadpoolWait);
+
 	STOREFUNCTIONPOINTER(hKernel32, FlushProcessWriteBuffers);
 	STOREFUNCTIONPOINTER(hKernel32, FreeLibraryWhenCallbackReturns);
 
 	STOREFUNCTIONPOINTER(hKernel32, CreateThreadpoolWork);
 	STOREFUNCTIONPOINTER(hKernel32, SubmitThreadpoolWork);
+	STOREFUNCTIONPOINTER(hKernel32, WaitForThreadpoolWorkCallbacks);
 	STOREFUNCTIONPOINTER(hKernel32, CloseThreadpoolWork);
 
+	STOREFUNCTIONPOINTER(hKernel32, CompareStringW);
 	STOREFUNCTIONPOINTER(hKernel32, LCMapStringEx);
 
 	return 0;
