@@ -119,6 +119,15 @@ extern "C++"
 			{
 				return _value[__crt_state_management::get_current_state_index()];
 			}
+			T& value_explicit(const size_t current_global_state_index)
+			{
+				return _value[current_global_state_index];
+			}
+			__if_exists(__crt_cached_ptd_host)
+			{
+				T& value(__crt_cached_ptd_host& ptd) throw();
+				T const& value(__crt_cached_ptd_host& ptd) const throw();
+			}
 		};
 	}
 
