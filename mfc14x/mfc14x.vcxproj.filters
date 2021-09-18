@@ -22,6 +22,9 @@
     <Filter Include="atlmfc\src\mfc">
       <UniqueIdentifier>{D758957F-DE83-4BAE-88DD-F06E0C5F0D39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="atlmfc\src\mfc\arm64">
+      <UniqueIdentifier>{7d9e16c4-5416-4693-8de6-93fec545e9d5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="atlmfc\src\mfc\x64">
       <UniqueIdentifier>{32B8C684-8C3C-4DC8-A11F-5B369C3839CB}</UniqueIdentifier>
     </Filter>
@@ -4682,11 +4685,11 @@
     <MASM Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\inetcal_.s">
       <Filter>atlmfc\src\mfc\x64</Filter>
     </MASM>
-    <MASM Include="olecall_.s">
+    <MASM Include="olecall_.asm">
       <Filter>源文件</Filter>
     </MASM>
-    <MASM Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\olecall_.s">
+    <CustomBuild Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\olecall_.s">
       <Filter>atlmfc\src\mfc\x64</Filter>
-    </MASM>
+    </CustomBuild>
   </ItemGroup>
 </Project>

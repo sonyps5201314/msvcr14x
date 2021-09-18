@@ -1424,28 +1424,35 @@ if "%~t1" NEQ "%~t2" (
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
       <FileType>Document</FileType>
     </MASM>
-    <MASM Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\olecall_.s">
+    <CustomBuild Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\olecall_.s">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <GeneratePreprocessedSourceListing Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GeneratePreprocessedSourceListing>
+      <GeneratePreprocessedSourceListing Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</GeneratePreprocessedSourceListing>
+      <GeneratePreprocessedSourceListing Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GeneratePreprocessedSourceListing>
+      <GeneratePreprocessedSourceListing Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</GeneratePreprocessedSourceListing>
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl.exe /EP "%(Identity)" &gt; %(Filename).asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).asm</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">cl.exe /EP "%(Identity)" &gt; %(Filename).asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">%(Filename).asm</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl.exe /EP "%(Identity)" &gt; %(Filename).asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).asm</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">cl.exe /EP "%(Identity)" &gt; %(Filename).asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">%(Filename).asm</Outputs>
+    </CustomBuild>
+    <MASM Include="olecall_.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
     </MASM>
     <None Include="intel\mfc140.def" />
     <None Include="intel\mfc140d.def" />
     <None Include="intel\mfc140u.def" />
     <None Include="intel\mfc140ud.def" />
-    <MASM Include="olecall_.s">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </MASM>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(VCToolsInstallDir)atlmfc\include\about_.rc">
