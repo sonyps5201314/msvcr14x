@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+   <Filter Include="x64">
+      <UniqueIdentifier>{A5A4438A-1824-413E-9733-CD91376CA62A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x64\Debug">
+      <UniqueIdentifier>{432BC61B-A9C1-4968-A95D-BC23AC146DD1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x64\Release">
+      <UniqueIdentifier>{8B6A4259-7E24-4AA9-8AEF-CB5D857A4D00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x64\AnsiDebug">
+      <UniqueIdentifier>{1509EE12-E8B5-4BDB-B52A-0022855E2F57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x64\AnsiRelease">
+      <UniqueIdentifier>{A6501A31-B0F5-42BD-BF46-1E4D9D95485F}</UniqueIdentifier>
+    </Filter>
     <Filter Include="atlmfc">
       <UniqueIdentifier>{02E84D0C-886B-4867-8F25-938303A83B42}</UniqueIdentifier>
     </Filter>
@@ -4685,11 +4700,20 @@
     <MASM Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\inetcal_.s">
       <Filter>atlmfc\src\mfc\x64</Filter>
     </MASM>
-    <MASM Include="olecall_.asm">
-      <Filter>源文件</Filter>
-    </MASM>
     <CustomBuild Include="$(VCToolsInstallDir)atlmfc\src\mfc\x64\olecall_.s">
       <Filter>atlmfc\src\mfc\x64</Filter>
     </CustomBuild>
+    <MASM Include="x64\Debug\olecall_.asm">
+      <Filter>x64\Debug</Filter>
+    </MASM>
+    <MASM Include="x64\Release\olecall_.asm">
+      <Filter>x64\Release</Filter>
+    </MASM>
+    <MASM Include="x64\AnsiDebug\olecall_.asm">
+      <Filter>x64\AnsiDebug</Filter>
+    </MASM>
+    <MASM Include="x64\AnsiRelease\olecall_.asm">
+      <Filter>x64\AnsiRelease</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
