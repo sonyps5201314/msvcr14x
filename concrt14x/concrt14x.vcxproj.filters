@@ -380,7 +380,7 @@
     <ClCompile Include="..\msvcr14x\nt5fix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\YY-Thunks\src\YY_Thunks.cpp">
+    <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

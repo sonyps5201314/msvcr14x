@@ -41,6 +41,8 @@ WScript ../ntdll/setup.vbs
 @ECHO ON
 
 CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
+msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
+
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x86
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x86
