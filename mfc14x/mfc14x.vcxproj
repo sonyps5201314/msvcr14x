@@ -183,6 +183,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -231,6 +232,7 @@ if "%~t1" NEQ "%~t2" (
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -281,6 +283,7 @@ if "%~t1" NEQ "%~t2" (
       <BaseAddress>0x51000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -328,6 +331,7 @@ if "%~t1" NEQ "%~t2" (
       <BaseAddress>0x51000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -372,6 +376,7 @@ if "%~t1" NEQ "%~t2" (
       <ModuleDefinitionFile>amd64\mfc140ud.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -416,6 +421,7 @@ if "%~t1" NEQ "%~t2" (
       <ModuleDefinitionFile>amd64\mfc140d.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -463,6 +469,7 @@ if "%~t1" NEQ "%~t2" (
       <ModuleDefinitionFile>amd64\mfc140u.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -510,6 +517,7 @@ if "%~t1" NEQ "%~t2" (
       <ModuleDefinitionFile>amd64\mfc140.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
