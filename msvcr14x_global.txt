@@ -1,6 +1,6 @@
 目标目录：
 C:\Program Files (x86)\Windows Kits\10\Lib\x.x.x.x\ucrt\xxx
-C:\Program Files (x86)\Microsoft Visual Studio\2019\xxx\VC\Tools\MSVC\14.x.x\lib\xxx
-C:\Program Files (x86)\Microsoft Visual Studio\2019\xxx\VC\Tools\MSVC\14.x.x\atlmfc\lib\xxx
+C:\Program Files\Microsoft Visual Studio\2022\xxx\VC\Tools\MSVC\14.x.x\lib\xxx
+C:\Program Files\Microsoft Visual Studio\2022\xxx\VC\Tools\MSVC\14.x.x\atlmfc\lib\xxx
 先备份复制原目标，将对应的lib复制并替换到目标目录下
 不需要用时就还原回来

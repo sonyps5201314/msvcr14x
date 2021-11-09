@@ -1,7 +1,7 @@
 @ECHO OFF
 GOTO MENU
 :MENU
-ECHO.Which Visual Studio 2019 Edition do you want to use?
+ECHO.Which Visual Studio 2022 Edition do you want to use?
 ECHO.1.Enterprise
 ECHO.2.Professional
 ECHO.3.Community
@@ -40,7 +40,7 @@ WScript ../ntdll/setup.vbs
 
 @ECHO ON
 
-CALL "C:\Program Files (x86)\Microsoft Visual Studio\2019\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
+CALL "C:\Program Files\Microsoft Visual Studio\2022\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
 msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
 
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86

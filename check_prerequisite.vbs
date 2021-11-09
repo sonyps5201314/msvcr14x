@@ -22,22 +22,22 @@ Sub CheckPrerequisite()
        VS_EDITION = "Enterprise"
     End If
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\" & VS_EDITION) = False
-        If MsgBox("Please install Visual Studio 2019 " & VS_EDITION & " edition first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION) = False
+        If MsgBox("Please install Visual Studio 2022 " & VS_EDITION & " edition first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
-        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&rel=16")
+        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&rel=17")
     Wend
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\" & VS_EDITION & "\VC\Tools\MSVC") = False
-        If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC") = False
+        If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
     Wend
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft Visual Studio\2019\" & VS_EDITION & "\VC\Tools\MSVC") = False
-        If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC") = False
+        If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
@@ -51,7 +51,7 @@ Sub CheckPrerequisite()
     Wend
     
     While fs.FolderExists("C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include") = False
-        If MsgBox("Please check 'Windows XP support for C++' in Visual Studio 2019 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+        If MsgBox("Please check 'Windows XP support for C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
@@ -60,11 +60,11 @@ Sub CheckPrerequisite()
     Dim boost_ROOT
     boost_ROOT = objShell.Environment("User").Item("boost_ROOT")
     While Len(boost_ROOT) = 0 Or fs.FolderExists(boost_ROOT) = False
-        If MsgBox("Please install Boost (1.74.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+        If MsgBox("Please install Boost (1.77.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
-        objShell.Run ("https://boostorg.jfrog.io/artifactory/main/release/1.74.0/source/")
-        boost_ROOT = InputBox("Please input your Boost (1.74.0) root directory!", "Set boost_ROOT environment variable")
+        objShell.Run ("https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/")
+        boost_ROOT = InputBox("Please input your Boost (1.77.0) root directory!", "Set boost_ROOT environment variable")
         If Len(boost_ROOT) > 0 And fs.FolderExists(boost_ROOT) Then
             objShell.Environment("User").Item("boost_ROOT") = boost_ROOT
         End If
