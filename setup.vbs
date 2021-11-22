@@ -220,7 +220,7 @@ Private Sub ModifyProps(FileName, includefolder, dlibfolder, slibfolder)
           Set XMLParent = IdgNode.appendChild(XMLNode)
         End If
         Dim s_value
-        s_value = "'$(PlatformToolset)' == 'v142' or '$(PlatformToolset)' == 'v141' or '$(PlatformToolset)' == 'v141_xp' or '$(PlatformToolset)' == 'v140' or '$(PlatformToolset)' == 'v140_xp'"
+        s_value = "'$(PlatformToolset)' == 'v143' or '$(PlatformToolset)' == 'v142' or '$(PlatformToolset)' == 'v141' or '$(PlatformToolset)' == 'v141_xp' or '$(PlatformToolset)' == 'v140' or '$(PlatformToolset)' == 'v140_xp'"
         Set XMLNodes = XMLParent.selectNodes("//b:Link/b:AdditionalLibraryDirectories[@Condition=""" + s_value + """]")
         If (XMLNodes.length > 0) Then
           Set DynamicLibraryDirectoriesNode = XMLNodes.Item(0)
