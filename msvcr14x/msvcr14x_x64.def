@@ -508,15 +508,7 @@ EXPORTS
 	wcsstr
 
 	;msvcrt.dll中已经有的其他函数
-	_iob DATA 
-
-	;cpp相关功能函数
-	??_U@YAPEAX_K@Z
-	??_U@YAPEAX_KHPEBDH@Z
-	??_V@YAXPEAX@Z
-	??_V@YAXPEAXHPEBDH@Z
-	??_7type_info@@6B@
-
+	_iob DATA
 
 	;其他可以导出的函数
 	__acrt_InitializeCriticalSectionEx
@@ -524,4 +516,3 @@ EXPORTS
 	_CallMemberFunction0
 	_CallMemberFunction1
 	_CallMemberFunction2
-	_alloca_probe2
