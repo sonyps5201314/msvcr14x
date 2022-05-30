@@ -1511,6 +1511,12 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\initializers\fmode_initializer.cpp">
       <Filter>ucrt\initializers</Filter>
     </ClCompile>
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\peb_access.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\win_policies.cpp">
+      <Filter>ucrt\internal</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcr14x_x86.def">

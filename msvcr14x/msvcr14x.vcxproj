@@ -356,11 +356,13 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\LoadLibraryExA.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\locks.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\OutputDebugStringA.cpp" />
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\peb_access.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\per_thread_data.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\report_runtime_error.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\SetCurrentDirectoryA.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\SetEnvironmentVariableA.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\shared_initialization.cpp" />
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\win_policies.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\winapi_thunks.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\CompareStringA.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\locale\CompareStringW.cpp" />
