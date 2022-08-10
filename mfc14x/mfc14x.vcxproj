@@ -1352,6 +1352,10 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winsplit.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winstr.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winutil.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_delete_array.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_delete_scalar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_array.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="amd64\mfc140.def" />

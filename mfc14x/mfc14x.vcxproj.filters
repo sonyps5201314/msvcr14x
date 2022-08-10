@@ -2588,6 +2588,18 @@
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\winutil.cpp">
       <Filter>atlmfc\src\mfc</Filter>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_delete_array.cpp">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_delete_scalar.cpp">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_array.cpp">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar.cpp">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyleWindows7.rc2">
