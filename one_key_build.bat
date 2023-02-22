@@ -1,12 +1,16 @@
 @ECHO OFF
 GOTO MENU
 :MENU
-ECHO.Which Visual Studio 2022 Edition do you want to use?
-ECHO.1.Enterprise
-ECHO.2.Professional
-ECHO.3.Community
-echo.Please enter the order number of your selected item:
-set /p  ID=
+set ID=%1
+if not defined ID (
+  ECHO.Which Visual Studio 2022 Edition do you want to use?
+  ECHO.1.Enterprise
+  ECHO.2.Professional
+  ECHO.3.Community
+  echo.Please enter the order number of your selected item:
+  
+  set /p ID=
+)
 if "%id%"=="1" SET VS_EDITION=Enterprise
 if "%id%"=="2" SET VS_EDITION=Professional
 if "%id%"=="3" SET VS_EDITION=Community
