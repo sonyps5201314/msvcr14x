@@ -384,6 +384,9 @@
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dispimpl.h">
       <Filter>atlmfc\src\mfc</Filter>
     </ClInclude>
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dispimpl_supporting.h">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ClInclude>
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\elements.h">
       <Filter>atlmfc\src\mfc</Filter>
     </ClInclude>
@@ -2598,6 +2601,9 @@
       <Filter>atlmfc\src\mfc</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar.cpp">
+      <Filter>atlmfc\src\mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar_dbg.cpp">
       <Filter>atlmfc\src\mfc</Filter>
     </ClCompile>
   </ItemGroup>

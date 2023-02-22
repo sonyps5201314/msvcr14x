@@ -838,6 +838,7 @@ if "%~t1" NEQ "%~t2" (
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\daoimpl.h" />
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dbimpl.h" />
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dispimpl.h" />
+    <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\dispimpl_supporting.h" />
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\elements.h" />
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\fixalloc.h" />
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\occimpl.h" />
@@ -1356,6 +1357,7 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_delete_scalar.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_array.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar_dbg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="amd64\mfc140.def" />
