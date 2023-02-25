@@ -1,35 +1,36 @@
 @ECHO OFF
 cd /d %~dp0
-GOTO MENU
-:MENU
+GOTO find_vs
+:find_vs
 setlocal enabledelayedexpansion
 REM Visual Studio 2022
+set VSWHERE_EXE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe
 set vsversion=17.0
 set vscount=0
 set VS_PATH=
 echo Installed visual studio instances: 
-for /f "usebackq tokens=1,* delims=: " %%i in (`vswhere -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
-  if "%%i"=="installationPath" set /a vscount=vscount+1 && echo     !vscount!.%%j && set VS_PATH=%%j
+for /f "usebackq tokens=1,* delims=: " %%i in (`"%VSWHERE_EXE%" -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
+  if "%%i"=="installationPath" set /a vscount=vscount+1 && echo     !vscount!.%%j && set VS_PATH!vscount!=%%j
 )
 
 if %vscount% LSS 1 echo "The Visual Studio 2022 not installed." && goto :eof
 
-if %vscount% GEQ 2 (
+if %vscount% EQU 1 (
+  set ID=1
+) else (
   ECHO.Which Visual Studio 2022 Edition do you want to use, default is 1:
   set /p ID=
   if not defined ID set ID=1
-  set index=0
-  for /f "usebackq tokens=1,* delims=: " %%i in (`vswhere -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
-    if "%%i"=="installationPath" (
-      set /a index=index+1
-      if !index! EQU !ID! echo set VS_PATH=%%j && goto :start_build
-    )
-  )
+  set VS_PATH=!VS_PATH%ID%!
 )
 
-:start_build
+set VS_PATH=!VS_PATH%ID%!
+
+if not exist "%VS_PATH%"  echo Invalid input ID. && goto :eof
 
 for /F "delims=" %%i in ("%VS_PATH%") do set VS_EDITION=%%~ni
+
+:start_build
 
 WScript check_prerequisite.vbs
 set /P CheckPrerequisite_Result=<CheckPrerequisite_Result.txt
