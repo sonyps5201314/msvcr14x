@@ -1,4 +1,5 @@
 @ECHO OFF
+cd /d %~dp0
 GOTO MENU
 :MENU
 setlocal enabledelayedexpansion
