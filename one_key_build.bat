@@ -1,20 +1,34 @@
 @ECHO OFF
 GOTO MENU
 :MENU
-set ID=%1
-if not defined ID (
-  ECHO.Which Visual Studio 2022 Edition do you want to use?
-  ECHO.1.Enterprise
-  ECHO.2.Professional
-  ECHO.3.Community
-  echo.Please enter the order number of your selected item:
-  
-  set /p ID=
+setlocal enabledelayedexpansion
+REM Visual Studio 2022
+set vsversion=17.0
+set vscount=0
+set VS_PATH=
+echo Installed visual studio instances: 
+for /f "usebackq tokens=1,* delims=: " %%i in (`vswhere -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
+  if "%%i"=="installationPath" set /a vscount=vscount+1 && echo     !vscount!.%%j && set VS_PATH=%%j
 )
-if "%id%"=="1" SET VS_EDITION=Enterprise
-if "%id%"=="2" SET VS_EDITION=Professional
-if "%id%"=="3" SET VS_EDITION=Community
-if not defined VS_EDITION EXIT
+
+if %vscount% LSS 1 echo "The Visual Studio 2022 not installed." && goto :eof
+
+if %vscount% GEQ 2 (
+  ECHO.Which Visual Studio 2022 Edition do you want to use, default is 1:
+  set /p ID=
+  if not defined ID set ID=1
+  set index=0
+  for /f "usebackq tokens=1,* delims=: " %%i in (`vswhere -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
+    if "%%i"=="installationPath" (
+      set /a index=index+1
+      if !index! EQU !ID! echo set VS_PATH=%%j && goto :start_build
+    )
+  )
+)
+
+:start_build
+
+for /F "delims=" %%i in ("%VS_PATH%") do set VS_EDITION=%%~ni
 
 WScript check_prerequisite.vbs
 set /P CheckPrerequisite_Result=<CheckPrerequisite_Result.txt
@@ -44,7 +58,7 @@ WScript ../ntdll/setup.vbs
 
 @ECHO ON
 
-CALL "C:\Program Files\Microsoft Visual Studio\2022\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
+CALL "%VS_PATH%\VC\Auxiliary\Build\vcvars32.bat"
 msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
 
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86
