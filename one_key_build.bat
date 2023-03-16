@@ -1,20 +1,45 @@
 @ECHO OFF
-GOTO MENU
-:MENU
-set ID=%1
-if not defined ID (
-  ECHO.Which Visual Studio 2022 Edition do you want to use?
-  ECHO.1.Enterprise
-  ECHO.2.Professional
-  ECHO.3.Community
-  echo.Please enter the order number of your selected item:
-  
-  set /p ID=
+cd /d %~dp0
+setlocal enabledelayedexpansion
+GOTO find_vs
+:find_vs
+REM Visual Studio 2022
+set vsversion=17.0
+set vscount=0
+set VS_PATH=
+set VSWHERE_EXE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe
+if not exist "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" goto :check_vs
+
+echo Installed visual studio instances: 
+for /f "usebackq tokens=1,* delims=: " %%i in (`"%VSWHERE_EXE%" -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
+  if "%%i"=="installationPath" set /a vscount=vscount+1 && echo     !vscount!.%%j && set VS_PATH!vscount!=%%j
 )
-if "%id%"=="1" SET VS_EDITION=Enterprise
-if "%id%"=="2" SET VS_EDITION=Professional
-if "%id%"=="3" SET VS_EDITION=Community
-if not defined VS_EDITION EXIT
+
+:check_vs
+if %vscount% LSS 1 (
+  echo "The Visual Studio 2022 not installed."
+  explorer https://visualstudio.microsoft.com/zh-hans/downloads/
+  echo "After Visual Studio 2022 installed, please press any key to continue..." & pause>nul
+  goto :find_vs
+)
+
+:choose_vs
+if %vscount% EQU 1 (
+  set ID=1
+) else (
+  ECHO.Which Visual Studio 2022 Edition do you want to use, default is 1:
+  set /p ID=
+  if not defined ID set ID=1
+  set VS_PATH=!VS_PATH%ID%!
+)
+
+set VS_PATH=!VS_PATH%ID%!
+
+if not exist "%VS_PATH%"  echo Invalid input ID. && goto :choose_vs
+
+for /F "delims=" %%i in ("%VS_PATH%") do set VS_EDITION=%%~ni
+
+:start_build
 
 WScript check_prerequisite.vbs
 set /P CheckPrerequisite_Result=<CheckPrerequisite_Result.txt
