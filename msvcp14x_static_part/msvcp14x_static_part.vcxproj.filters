@@ -50,5 +50,34 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesystem.cpp">
       <Filter>implib</Filter>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xcharconv_tables_float.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xcharconv_tables_double.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xcharconv_ryu_tables.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\asan_noop.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\charconv.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\format.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\stacktrace.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="$(VCToolsInstallDir)\crt\src\stl\alias_init_once_begin_initialize.asm">
+      <Filter>implib</Filter>
+    </MASM>
+    <MASM Include="$(VCToolsInstallDir)\crt\src\stl\alias_init_once_complete.asm">
+      <Filter>implib</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
