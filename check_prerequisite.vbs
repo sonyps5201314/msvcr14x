@@ -16,27 +16,17 @@ Sub CheckPrerequisite()
         Exit Sub
     End If
     
-    Dim VS_EDITION
-    VS_EDITION = objShell.Environment("Process").Item("VS_EDITION")
-    If Len(VS_EDITION) = 0 then
-       VS_EDITION = "Enterprise"
-    End If
+    Dim VS_PATH
+    VS_PATH = objShell.Environment("Process").Item("VS_PATH")
     
-    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION) = False
-        If MsgBox("Please install Visual Studio 2022 " & VS_EDITION & " edition first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
-            Exit Sub
-        End If
-        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&rel=17")
-    Wend
-    
-    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC") = False
+    While fs.FolderExists(VS_PATH & "\VC\Tools\MSVC") = False
         If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
     Wend
     
-    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC") = False
+    While fs.FolderExists(VS_PATH & "\VC\Tools\MSVC") = False
         If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
