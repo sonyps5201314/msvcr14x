@@ -11,7 +11,7 @@ set VSWHERE_EXE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.ex
 if not exist "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" goto :check_vs
 
 echo Installed visual studio instances: 
-for /f "usebackq tokens=1,* delims=: " %%i in (`"%VSWHERE_EXE%" -version %vsversion% -requires Microsoft.Component.MSBuild`) do (
+for /f "usebackq tokens=1,* delims=: " %%i in (`"%VSWHERE_EXE%" -version %vsversion%`) do (
   if "%%i"=="installationPath" set /a vscount=vscount+1 && echo     !vscount!.%%j && set VS_PATH!vscount!=%%j
 )
 
