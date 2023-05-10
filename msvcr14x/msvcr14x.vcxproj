@@ -142,6 +142,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x401000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -199,6 +200,7 @@
       <ModuleDefinitionFile>msvcr14x_x64.def</ModuleDefinitionFile>
       <BaseAddress>0x501000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalLibraryDirectories>lib\amd64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -783,7 +785,30 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\tzset.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\utime.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\time\wcsftime.cpp" />
+    <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K;_CRTBLD</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K;_CRTBLD</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">YY_Thunks_Support_Version=NTDDI_WS03;_CRTBLD</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">YY_Thunks_Support_Version=NTDDI_WS03;_CRTBLD</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="exports.cpp" />
+    <ClCompile Include="msvcr14x.cpp" />
     <ClCompile Include="oswrappers.cpp" />
   </ItemGroup>
   <ItemGroup>

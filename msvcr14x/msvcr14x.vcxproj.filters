@@ -1517,6 +1517,12 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\internal\win_policies.cpp">
       <Filter>ucrt\internal</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="msvcr14x.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcr14x_x86.def">
