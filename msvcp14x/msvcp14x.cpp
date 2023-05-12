@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 
+
 #ifdef _M_IX86
 #pragma comment(lib,"win2k_KERNEL32.lib")
 #pragma comment(lib,"win2k_kernl32p.lib")
@@ -43,3 +44,8 @@ extern "C"
 #else
 #include "dllmain.cpp"
 #endif
+
+extern "C"
+{
+	const void* __acrt_atexit_table;
+}
