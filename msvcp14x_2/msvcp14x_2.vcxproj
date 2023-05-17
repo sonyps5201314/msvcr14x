@@ -98,7 +98,7 @@
       <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
@@ -125,7 +125,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SupportJustMyCode>false</SupportJustMyCode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
@@ -150,7 +150,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <SupportJustMyCode>false</SupportJustMyCode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
@@ -178,7 +178,7 @@
       <AdditionalIncludeDirectories>.;..\msvcp14X;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;$(boost_ROOT);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <ForcedIncludeFiles>pch.h</ForcedIncludeFiles>
     </ClCompile>
