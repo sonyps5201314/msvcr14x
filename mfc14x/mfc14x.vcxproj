@@ -159,10 +159,10 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
@@ -177,13 +177,14 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>intel\mfc140ud.def</ModuleDefinitionFile>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <BaseAddress>0x41000000</BaseAddress>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -208,10 +209,10 @@ if "%~t1" NEQ "%~t2" (
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
@@ -226,13 +227,14 @@ if "%~t1" NEQ "%~t2" (
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>intel\mfc140d.def</ModuleDefinitionFile>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <BaseAddress>0x41000000</BaseAddress>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -259,10 +261,10 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>Full</Optimization>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -278,12 +280,13 @@ if "%~t1" NEQ "%~t2" (
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <ModuleDefinitionFile>intel\mfc140u.def</ModuleDefinitionFile>
       <BaseAddress>0x51000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -307,10 +310,10 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>Full</Optimization>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -326,12 +329,13 @@ if "%~t1" NEQ "%~t2" (
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <ModuleDefinitionFile>intel\mfc140.def</ModuleDefinitionFile>
       <BaseAddress>0x51000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -354,10 +358,10 @@ if "%~t1" NEQ "%~t2" (
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
@@ -369,14 +373,15 @@ if "%~t1" NEQ "%~t2" (
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <BaseAddress>0x410000000</BaseAddress>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>amd64\mfc140ud.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -399,10 +404,10 @@ if "%~t1" NEQ "%~t2" (
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
@@ -414,14 +419,15 @@ if "%~t1" NEQ "%~t2" (
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <BaseAddress>0x410000000</BaseAddress>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>amd64\mfc140d.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -446,10 +452,10 @@ if "%~t1" NEQ "%~t2" (
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>Full</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -463,13 +469,14 @@ if "%~t1" NEQ "%~t2" (
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <BaseAddress>0x510000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ModuleDefinitionFile>amd64\mfc140u.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -494,10 +501,10 @@ if "%~t1" NEQ "%~t2" (
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MFC_FILENAME_VER="14X";MFC14X_EXPORTS;_KERNEL32_;_WINDOWS;_ATL_ENABLE_PTM_WARNING;_ATL_XP_TARGETING;_AFX_DISABLE_DEPRECATED;_WINSOCK_DEPRECATED_NO_WARNINGS;_USING_V110_SDK71_;_AFXDLL;_MFC_BLD;_MFC_DLL_BLD;_AFX_MONOLITHIC;_AFX_CORE_IMPL;_AFX_OLE_IMPL;_AFX_DB_IMPL;_AFX_NET_IMPL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <Optimization>Full</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -511,13 +518,14 @@ if "%~t1" NEQ "%~t2" (
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>UxTheme.lib;windowscodecs.lib;Htmlhelp.lib;Winspool.lib</AdditionalDependencies>
       <BaseAddress>0x510000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ModuleDefinitionFile>amd64\mfc140.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
-      <AdditionalLibraryDirectories>$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -1156,7 +1164,16 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprntx.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprop.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgtempl.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllinit.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllinit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllmodul.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
@@ -1358,6 +1375,51 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_array.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar_dbg.cpp" />
+    <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">YY_Thunks_Support_Version=NTDDI_WS03</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">YY_Thunks_Support_Version=NTDDI_WIN2K</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\msvcr14x\nt5fix.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="mfc14x.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="amd64\mfc140.def" />

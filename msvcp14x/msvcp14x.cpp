@@ -5,7 +5,7 @@
 
 
 #ifdef _M_IX86
-#pragma comment(lib,"win2k_KERNEL32.lib")
+#pragma comment(lib,"KERNEL32.lib")
 #pragma comment(lib,"win2k_kernl32p.lib")
 #elif defined(_M_X64)
 #pragma comment(lib,"win2k3_KERNEL32.lib")

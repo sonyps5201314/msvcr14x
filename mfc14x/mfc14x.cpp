@@ -1,8 +1,9 @@
-// msvcr14x.cpp: 定义 DLL 应用程序的导出函数。
+// mfc14x.cpp: 定义 DLL 应用程序的导出函数。
 //
 
 #include "stdafx.h"
 
+#include "..\msvcr14x\stdafx.c"
 
 #ifdef _M_IX86
 #pragma comment(lib,"KERNEL32.lib")
@@ -12,17 +13,15 @@
 #pragma comment(lib,"win2k3_kernl32p.lib")
 #endif
 
-#pragma comment(linker, "/ENTRY:__acrt_DllMain")
-
 #ifndef _WIN64
-#define __acrt_DllMain DllMain_Existence
-#include "..\..\ucrt\dll\appcrt_dllmain.cpp"
-#undef __acrt_DllMain
+#define DllMain DllMain_Existence
+#include "..\atlmfc\src\mfc\dllinit.cpp"
+#undef DllMain
 extern "C"
 {
 	//导出一个外部弱符号，指示当前是否处于强行卸载模式。
 	BOOL __YY_Thunks_Process_Terminating;
-	BOOL WINAPI __acrt_DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
+	BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 	{
 		switch (dwReason)
 		{
@@ -35,5 +34,10 @@ extern "C"
 	}
 }
 #else
-#include "..\..\ucrt\dll\appcrt_dllmain.cpp"
+#include "..\atlmfc\src\mfc\dllinit.cpp"
 #endif
+
+extern "C"
+{
+	const void* __acrt_atexit_table;
+}

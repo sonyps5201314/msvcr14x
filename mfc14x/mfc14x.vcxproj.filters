@@ -2606,6 +2606,15 @@
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afx_new_scalar_dbg.cpp">
       <Filter>atlmfc\src\mfc</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\msvcr14x\nt5fix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mfc14x.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(VCToolsInstallDir)atlmfc\include\res\RibbonStyleWindows7.rc2">
