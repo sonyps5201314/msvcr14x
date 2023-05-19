@@ -1523,9 +1523,6 @@
     <ClCompile Include="msvcr14x.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\msvcr14x\nt5fix.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.c">
       <Filter>源文件</Filter>
     </ClCompile>

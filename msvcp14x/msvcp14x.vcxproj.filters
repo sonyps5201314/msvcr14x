@@ -68,9 +68,6 @@
     <ClCompile Include="msvcp14x.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\msvcr14X\nt5fix.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.cpp">
       <Filter>stl</Filter>
     </ClCompile>

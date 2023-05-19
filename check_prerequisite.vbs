@@ -50,13 +50,6 @@ Sub CheckPrerequisite()
         objShell.Run ("https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/")
     Wend
     
-    While fs.FolderExists("C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include") = False
-        If MsgBox("Please check 'Windows XP support for C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
-            Exit Sub
-        End If
-        objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
-    Wend
-    
     Dim boost_ROOT
     boost_ROOT = objShell.Environment("User").Item("boost_ROOT")
     While Len(boost_ROOT) = 0 Or fs.FolderExists(boost_ROOT) = False
