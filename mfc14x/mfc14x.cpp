@@ -1,4 +1,4 @@
-// mfc14x.cpp: ¶¨Òå DLL Ó¦ÓÃ³ÌĞòµÄµ¼³öº¯Êı¡£
+ï»¿// mfc14x.cpp: å®šä¹‰ DLL åº”ç”¨ç¨‹åºçš„å¯¼å‡ºå‡½æ•°ã€‚
 //
 
 #include "stdafx.h"
@@ -19,14 +19,14 @@
 #undef DllMain
 extern "C"
 {
-	//µ¼³öÒ»¸öÍâ²¿Èõ·ûºÅ£¬Ö¸Ê¾µ±Ç°ÊÇ·ñ´¦ÓÚÇ¿ĞĞĞ¶ÔØÄ£Ê½¡£
+	//YY-Thunkså†…éƒ¨ä½¿ç”¨å¤–éƒ¨å¼±ç¬¦å·ï¼ŒæŒ‡ç¤ºå½“å‰æ˜¯å¦å¤„äºå¼ºè¡Œå¸è½½æ¨¡å¼ã€‚
 	BOOL __YY_Thunks_Process_Terminating;
 	BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 	{
 		switch (dwReason)
 		{
 		case DLL_PROCESS_DETACH:
-			//ÎÒÃÇ¿ÉÒÔÍ¨¹ı lpReserved != NULL ÅĞ¶Ï£¬µ±Ç°ÊÇ·ñ´¦ÓÚÇ¿ĞĞĞ¶ÔØÄ£Ê½¡£
+			//æˆ‘ä»¬å¯ä»¥é€šè¿‡ lpReserved != NULL åˆ¤æ–­ï¼Œå½“å‰æ˜¯å¦å¤„äºå¼ºè¡Œå¸è½½æ¨¡å¼ã€‚
 			__YY_Thunks_Process_Terminating = lpReserved != NULL;
 			break;
 		}
@@ -36,8 +36,3 @@ extern "C"
 #else
 #include "..\atlmfc\src\mfc\dllinit.cpp"
 #endif
-
-extern "C"
-{
-	const void* __acrt_atexit_table;
-}

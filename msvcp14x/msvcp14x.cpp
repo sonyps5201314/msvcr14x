@@ -27,7 +27,7 @@ _CRTALLOC(".CRT$XIC") /*static*/ _PIFV force_included__winapisupp_pinit = initia
 #undef DllMain
 extern "C"
 {
-	//导出一个外部弱符号，指示当前是否处于强行卸载模式。
+	//YY-Thunks内部使用外部弱符号，指示当前是否处于强行卸载模式。
 	BOOL __YY_Thunks_Process_Terminating;
 	BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 	{
@@ -44,8 +44,3 @@ extern "C"
 #else
 #include "dllmain.cpp"
 #endif
-
-extern "C"
-{
-	const void* __acrt_atexit_table;
-}
