@@ -32,26 +32,17 @@ if not exist ../ntdll (
   goto :check_ntdll
 )
 git -C ../ntdll pull -v --progress "origin"
-
-:check_YY-Thunks
-if not exist ../YY-Thunks (
-  git clone https://github.com/sonyps5201314/YY-Thunks.git ../YY-Thunks
-  goto :check_YY-Thunks
-)
-git -C ../YY-Thunks pull -v --progress "origin"
-
 WScript ../ntdll/setup.vbs
 
 @ECHO ON
 
 CALL "C:\Program Files\Microsoft Visual Studio\2022\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
-msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
 
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiRelease;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x64
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x64
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x64
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiRelease;Platform=x64
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=Debug;Platform=x86
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=AnsiDebug;Platform=x86
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=Release;Platform=x86
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=AnsiRelease;Platform=x86
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=Debug;Platform=x64
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=AnsiDebug;Platform=x64
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=Release;Platform=x64
+msbuild /m msvcr14x.sln /r /t:Build /p:Configuration=AnsiRelease;Platform=x64

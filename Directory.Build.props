@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+项目的全局配置
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--开启nuget PR支持-->
+  <PropertyGroup Condition="'$(MSBuildProjectExtension)' == '.vcxproj'">
+    <!--指定自己的体系为native-->
+    <NuGetTargetMoniker Condition="'$(NuGetTargetMoniker)' == ''">native,Version=v0.0</NuGetTargetMoniker>
+    <!--如果不指定这一行，那么arm64平台会找不到RID而失败-->
+    <RuntimeIdentifiers Condition="'$(RuntimeIdentifiers)' == ''">win;win-x86;win-x64;win-arm;win-arm64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup>
+    <YY_Thunks_File Condition="'$(Platform)' == 'Win32'">YY_Thunks_for_Win2K.obj</YY_Thunks_File>
+    <YY_Thunks_File Condition="'$(Platform)' == 'x64'">YY_Thunks_for_WinXP.obj</YY_Thunks_File>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--向上匹配最新Beta版 YY-Thunks-->
+    <PackageReference Include="YY-Thunks" Version="*-*" />
+  </ItemGroup>
+  <!--从兼容性考虑，继续向上搜索 Directory.Build.props-->
+  <PropertyGroup>
+    <DirectoryBuildPropsPath>$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))</DirectoryBuildPropsPath>
+  </PropertyGroup>
+  <Import Project="$(DirectoryBuildPropsPath)" Condition="'$(DirectoryBuildPropsPath)' != ''"/>
+</Project>
