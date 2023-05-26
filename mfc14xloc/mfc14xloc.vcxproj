@@ -45,8 +45,8 @@ cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
 dir /S *.rc|findstr ".rc \"&gt;"$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog"
 fc "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog"&gt;"$(ProjectDir)$(IntDir)fc_result.tlog"
 if errorlevel==1 (
-  mklink /d %PLATFORM% "$(OutDir)"
-  mklink mfcintl.%PLATFORM%.mak "$(ProjectDir)mfcintl.mak"
+  mklink /j %PLATFORM% "$(OutDir)"
+  copy "$(ProjectDir)mfcintl.mak" mfcintl.%PLATFORM%.mak
   nmake /NOLOGO /f mfcintl.%PLATFORM%.mak fra
   nmake /NOLOGO /f mfcintl.%PLATFORM%.mak deu
   nmake /NOLOGO /f mfcintl.%PLATFORM%.mak jpn
@@ -84,8 +84,8 @@ cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
 dir /S *.rc|findstr ".rc \"&gt;"$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog"
 fc "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog"&gt;"$(ProjectDir)$(IntDir)fc_result.tlog"
 if errorlevel==1 (
-  mklink /d %PLATFORM% "$(OutDir)"
-  mklink mfcintl.%PLATFORM%.mak "$(ProjectDir)mfcintl.mak"
+  mklink /j %PLATFORM% "$(OutDir)"
+  copy "$(ProjectDir)mfcintl.mak" mfcintl.%PLATFORM%.mak
   nmake /NOLOGO /f mfcintl.%PLATFORM%.mak fra
   nmake /NOLOGO /f mfcintl.%PLATFORM%.mak deu
   nmake /NOLOGO /f mfcintl.%PLATFORM%.mak jpn
