@@ -300,8 +300,8 @@ Sub ModifyAllProps()
         CreateDir (Path)
     End If
     If DirExists(Path) Then
-        Call ModifyProps(Path + "Microsoft.Cpp.Win32.user.props", vbNullString, "$(msvcr14x_ROOT)\Release;$(msvcr14x_ROOT)\Debug;$(msvcr14x_ROOT)\AnsiRelease;$(msvcr14x_ROOT)\AnsiDebug", vbNullString)
-        Call ModifyProps(Path + "Microsoft.Cpp.x64.user.props", vbNullString, "$(msvcr14x_ROOT)\x64\Release;$(msvcr14x_ROOT)\x64\Debug;$(msvcr14x_ROOT)\x64\AnsiRelease;$(msvcr14x_ROOT)\x64\AnsiDebug", vbNullString)
+        Call ModifyProps(Path + "Microsoft.Cpp.Win32.user.props", vbNullString, "$(msvcr14x_ROOT)\Release;$(msvcr14x_ROOT)\Debug", vbNullString)
+        Call ModifyProps(Path + "Microsoft.Cpp.x64.user.props", vbNullString, "$(msvcr14x_ROOT)\x64\Release;$(msvcr14x_ROOT)\x64\Debug", vbNullString)
     End If
 End Sub
 
@@ -326,7 +326,7 @@ Sub AskForCopyDlls()
       AllDlls(0,5) = "Debug\MSVCP14XD_CODECVT_IDS.dll"
       AllDlls(0,6) = "Debug\CONCRT14XD.dll"
       AllDlls(0,7) = "Debug\MFC14XUD.dll"
-      AllDlls(0,8) = "AnsiDebug\MFC14XD.dll"
+      AllDlls(0,8) = "Debug\MFC14XD.dll"
       AllDlls(1,0) = "Release\MSVCR14X.dll"
       AllDlls(1,1) = "Release\MSVCP14X.dll"
       AllDlls(1,2) = "Release\MSVCP14X_1.dll"
@@ -335,7 +335,7 @@ Sub AskForCopyDlls()
       AllDlls(1,5) = "Release\MSVCP14X_CODECVT_IDS.dll"
       AllDlls(1,6) = "Release\CONCRT14X.dll"
       AllDlls(1,7) = "Release\MFC14XU.dll"
-      AllDlls(1,8) = "AnsiRelease\MFC14X.dll"
+      AllDlls(1,8) = "Release\MFC14X.dll"
       AllDlls(2,0) = "x64\Debug\MSVCR14XD.dll"
       AllDlls(2,1) = "x64\Debug\MSVCP14XD.dll"
       AllDlls(2,2) = "x64\Debug\MSVCP14X_1D.dll"
@@ -344,7 +344,7 @@ Sub AskForCopyDlls()
       AllDlls(2,5) = "x64\Debug\MSVCP14XD_CODECVT_IDS.dll"
       AllDlls(2,6) = "x64\Debug\CONCRT14XD.dll"
       AllDlls(2,7) = "x64\Debug\MFC14XUD.dll"
-      AllDlls(2,8) = "x64\AnsiDebug\MFC14XD.dll"
+      AllDlls(2,8) = "x64\Debug\MFC14XD.dll"
       AllDlls(3,0) = "x64\Release\MSVCR14X.dll"
       AllDlls(3,1) = "x64\Release\MSVCP14X.dll"
       AllDlls(3,2) = "x64\Release\MSVCP14X_1.dll"
@@ -353,7 +353,7 @@ Sub AskForCopyDlls()
       AllDlls(3,5) = "x64\Release\MSVCP14X_CODECVT_IDS.dll"
       AllDlls(3,6) = "x64\Release\CONCRT14X.dll"
       AllDlls(3,7) = "x64\Release\MFC14XU.dll"
-      AllDlls(3,8) = "x64\AnsiRelease\MFC14X.dll"
+      AllDlls(3,8) = "x64\Release\MFC14X.dll"
       
       Dim AllResDlls(1,9)
       AllResDlls(0,0) = "Release\MFC14XCHS.DLL"

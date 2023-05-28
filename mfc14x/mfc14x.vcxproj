@@ -132,6 +132,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14XD</TargetName>
+    <OutDir>$(SolutionDir)Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -140,6 +141,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14X</TargetName>
+    <OutDir>$(SolutionDir)Release\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -148,6 +150,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14XD</TargetName>
+    <OutDir>$(SolutionDir)$(Platform)\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -156,6 +159,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>MFC14X</TargetName>
+    <OutDir>$(SolutionDir)$(Platform)\Release\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -182,7 +186,7 @@
       <BaseAddress>0x41000000</BaseAddress>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -199,8 +203,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -232,7 +236,7 @@ if "%~t1" NEQ "%~t2" (
       <BaseAddress>0x41000000</BaseAddress>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -249,8 +253,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -284,7 +288,7 @@ if "%~t1" NEQ "%~t2" (
       <ModuleDefinitionFile>intel\mfc140u.def</ModuleDefinitionFile>
       <BaseAddress>0x51000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -298,8 +302,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -333,7 +337,7 @@ if "%~t1" NEQ "%~t2" (
       <ModuleDefinitionFile>intel\mfc140.def</ModuleDefinitionFile>
       <BaseAddress>0x51000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -347,8 +351,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -379,7 +383,7 @@ if "%~t1" NEQ "%~t2" (
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>amd64\mfc140ud.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -393,8 +397,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -425,7 +429,7 @@ if "%~t1" NEQ "%~t2" (
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>amd64\mfc140d.def</ModuleDefinitionFile>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -439,8 +443,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -473,7 +477,7 @@ if "%~t1" NEQ "%~t2" (
       <BaseAddress>0x510000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ModuleDefinitionFile>amd64\mfc140u.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
@@ -488,8 +492,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
@@ -522,7 +526,7 @@ if "%~t1" NEQ "%~t2" (
       <BaseAddress>0x510000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ModuleDefinitionFile>amd64\mfc140.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)mfc14x_dynamic_part.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
@@ -537,8 +541,8 @@ call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
 :smile
 if "%~t1" NEQ "%~t2" (
   COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
-  LIB /OUT:$(TargetName)_static_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
-  LIB /OUT:%DST_NAME%.lib mfc14x_dynamic_part.lib $(TargetName)_static_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_NAME%.dll %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
 )</Command>
     </PostBuildEvent>
     <Midl>
