@@ -132,42 +132,6 @@
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Trace.h">
       <Filter>concrt</Filter>
     </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\Transmogrificator.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\TransmogrifiedPrimary.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSBackgroundPoller.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeThreadProxy.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeVirtualProcessorRoot.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulerProxy.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulingContext.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadInternalContext.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadProxy.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadScheduler.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadVirtualProcessor.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
-    <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\UMSWrapper.h">
-      <Filter>concrt</Filter>
-    </ClInclude>
     <ClInclude Include="$(VCToolsInstallDir)\crt\src\concrt\utils.h">
       <Filter>concrt</Filter>
     </ClInclude>
@@ -324,42 +288,6 @@
       <Filter>concrt</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Trace.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Transmogrificator.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\TransmogrifiedPrimary.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSBackgroundPoller.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeThreadProxy.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSFreeVirtualProcessorRoot.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulerProxy.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSSchedulingContext.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadInternalContext.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadProxy.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadScheduler.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSThreadVirtualProcessor.cpp">
-      <Filter>concrt</Filter>
-    </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\UMSWrapper.cpp">
       <Filter>concrt</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\utils.cpp">
