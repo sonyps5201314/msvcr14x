@@ -38,6 +38,9 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
       <Filter>stl</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcp14x_codecvt_ids.def">
