@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7dbf1bd9-5efe-4531-b158-05b5d6a48894}</ProjectGuid>
+    <RootNamespace>vccorlib14x</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>VCCORLIB14X</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>VCCORLIB14X</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>VCCORLIB14XD</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>VCCORLIB14XD</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>VCWINRT_DLL;VCCORLIB14X_EXPORTS;_WINDOWS;_USRDLL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(VCIDEInstallDir)vcpackages;$(WindowsSDK_UnionMetadataPath)</AdditionalUsingDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>runtimeobject.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=%
+SET DST_DLL_NAME=%TargetName:14X=140%
+SET COPY_SRC_LIB="$(VCToolsInstallDir)lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+SET Configuration=$(Configuration)
+for %%i in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do call set Configuration=%%Configuration:%%i=%%i%%
+SET CONF_SHORT=%Configuration:~0,1%
+SET NEED_DEL_OBJ_PATH=D:\a\_work\1\s\Intermediate\winrt\vccorlib\%Configuration%_kernel32\vccorlib.nativeproj\obj%CONF_SHORT%\$(ProcessorArchitecture)
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_DLL_NAME%.dll /REMOVE:%NEED_DEL_OBJ_PATH%\activation.obj /REMOVE:%NEED_DEL_OBJ_PATH%\climain.obj /REMOVE:%NEED_DEL_OBJ_PATH%\compiler.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexportsimpl.obj /REMOVE:%NEED_DEL_OBJ_PATH%\init.obj /REMOVE:%NEED_DEL_OBJ_PATH%\main.obj /REMOVE:%NEED_DEL_OBJ_PATH%\serverexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmmta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmsta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\winmain.obj %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib vccorlib14x_static_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>VCWINRT_DLL;VCCORLIB14X_EXPORTS;_WINDOWS;_USRDLL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(VCIDEInstallDir)vcpackages;$(WindowsSDK_UnionMetadataPath)</AdditionalUsingDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>runtimeobject.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=%
+SET DST_DLL_NAME=%TargetName:14X=140%
+SET COPY_SRC_LIB="$(VCToolsInstallDir)lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+SET Configuration=$(Configuration)
+for %%i in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do call set Configuration=%%Configuration:%%i=%%i%%
+SET CONF_SHORT=%Configuration:~0,1%
+SET NEED_DEL_OBJ_PATH=D:\a\_work\1\s\Intermediate\winrt\vccorlib\%Configuration%_kernel32\vccorlib.nativeproj\obj%CONF_SHORT%\$(ProcessorArchitecture)
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_DLL_NAME%.dll /REMOVE:%NEED_DEL_OBJ_PATH%\activation.obj /REMOVE:%NEED_DEL_OBJ_PATH%\climain.obj /REMOVE:%NEED_DEL_OBJ_PATH%\compiler.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexportsimpl.obj /REMOVE:%NEED_DEL_OBJ_PATH%\init.obj /REMOVE:%NEED_DEL_OBJ_PATH%\main.obj /REMOVE:%NEED_DEL_OBJ_PATH%\serverexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmmta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmsta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\winmain.obj %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib vccorlib14x_static_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>VCWINRT_DLL;VCCORLIB14X_EXPORTS;_WINDOWS;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(VCIDEInstallDir)vcpackages;$(WindowsSDK_UnionMetadataPath)</AdditionalUsingDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>runtimeobject.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=%
+SET DST_DLL_NAME=%TargetName:14X=140%
+SET COPY_SRC_LIB="$(VCToolsInstallDir)lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+SET Configuration=$(Configuration)
+for %%i in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do call set Configuration=%%Configuration:%%i=%%i%%
+SET CONF_SHORT=%Configuration:~0,1%
+SET NEED_DEL_OBJ_PATH=D:\a\_work\1\s\Intermediate\winrt\vccorlib\%Configuration%_kernel32\vccorlib.nativeproj\obj%CONF_SHORT%\$(ProcessorArchitecture)
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_DLL_NAME%.dll /REMOVE:%NEED_DEL_OBJ_PATH%\activation.obj /REMOVE:%NEED_DEL_OBJ_PATH%\climain.obj /REMOVE:%NEED_DEL_OBJ_PATH%\compiler.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexportsimpl.obj /REMOVE:%NEED_DEL_OBJ_PATH%\init.obj /REMOVE:%NEED_DEL_OBJ_PATH%\main.obj /REMOVE:%NEED_DEL_OBJ_PATH%\serverexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmmta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmsta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\winmain.obj %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib vccorlib14x_static_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>VCWINRT_DLL;VCCORLIB14X_EXPORTS;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <AdditionalUsingDirectories>$(VCIDEInstallDir)vcpackages;$(WindowsSDK_UnionMetadataPath)</AdditionalUsingDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>runtimeobject.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>CD "$(OutDir)"
+SET TargetName=$(TargetName)
+SET DST_NAME=%TargetName:14X=%
+SET DST_DLL_NAME=%TargetName:14X=140%
+SET COPY_SRC_LIB="$(VCToolsInstallDir)lib\$(PlatformTarget)\%DST_NAME%.lib"
+SET COPY_DST_LIB=%DST_NAME%_offical_original.lib
+SET Configuration=$(Configuration)
+for %%i in (a b c d e f g h i j k l m n o p q r s t u v w x y z) do call set Configuration=%%Configuration:%%i=%%i%%
+SET CONF_SHORT=%Configuration:~0,1%
+SET NEED_DEL_OBJ_PATH=D:\a\_work\1\s\Intermediate\winrt\vccorlib\%Configuration%_kernel32\vccorlib.nativeproj\obj%CONF_SHORT%\$(ProcessorArchitecture)
+call :smile %COPY_SRC_LIB% %COPY_DST_LIB%
+:smile
+if "%~t1" NEQ "%~t2" (
+  COPY %COPY_SRC_LIB% %COPY_DST_LIB% /Y
+  LIB /OUT:$(TargetName)_static_weak_part.lib /NOLOGO /REMOVE:%DST_DLL_NAME%.dll /REMOVE:%NEED_DEL_OBJ_PATH%\activation.obj /REMOVE:%NEED_DEL_OBJ_PATH%\climain.obj /REMOVE:%NEED_DEL_OBJ_PATH%\compiler.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\dllexportsimpl.obj /REMOVE:%NEED_DEL_OBJ_PATH%\init.obj /REMOVE:%NEED_DEL_OBJ_PATH%\main.obj /REMOVE:%NEED_DEL_OBJ_PATH%\serverexports.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmmta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\tmsta.obj /REMOVE:%NEED_DEL_OBJ_PATH%\winmain.obj %COPY_DST_LIB%
+  LIB /OUT:%DST_NAME%.lib $(TargetName)_dynamic_part.lib vccorlib14x_static_part.lib $(TargetName)_static_weak_part.lib /MACHINE:$(PlatformTarget) /NOLOGO /LIBPATH:"$(OutDir)"
+)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\agile.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\attribute.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\basetypes.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\box.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\console.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\delegate.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\eventsource.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\exceptions.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\heap.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\object.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\outofprocmodule.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\sizet.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\string.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\type.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\vccorlib.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\vcwinrt.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\vccorlib\weakreference.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
