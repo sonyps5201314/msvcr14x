@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 // ==++==
 //
 //   
@@ -31,11 +31,11 @@
 
 #if 	(rup == 0)
 
-#define VERSION_STR1(a,b,c) 		#a "." rmmpad #b
+#define VERSION_STR1(a,b,c,d) 		#a "." rmmpad #b
 
 #else	/* !(rup == 0) */
 
-#define VERSION_STR1(a,b,c) 		#a "." rmmpad #b "." ruppad #c
+#define VERSION_STR1(a,b,c,d) 		#a "." rmmpad #b "." ruppad #c "." #d
 
 #if 	(rup < 10)
 #define ruppad "000"
@@ -49,16 +49,17 @@
 
 #endif	/* !(rup == 0) */
 
-#define VERSION_STR2(a,b,c) 		VERSION_STR1(a,b,c)
-#define VER_PRODUCTVERSION_STR		VERSION_STR2(rmj,rmm,rup)
-#define VER_PRODUCTVERSION			rmj,rmm,0,rup
+#define VERSION_STR2(a,b,c,d) 		VERSION_STR1(a,b,c,d)
+#define VER_PRODUCTVERSION_STR		VERSION_STR2(rmj,rmm,rup,rev)
+#define VER_PRODUCTVERSION			rmj,rmm,rup,rev
 
 /*--------------------------------------------------------------*/
 /* the following section defines values used in the version 	*/
 /* data structure for all files, and which do not change.		*/
 /*--------------------------------------------------------------*/
+#define _SHIP
 
-#if defined(_SHIP)
+#if defined(_SHIP) && !defined(_DEBUG)
 #define VER_DEBUG					0
 #else
 #define VER_DEBUG					VS_FF_DEBUG
@@ -84,5 +85,5 @@
 #endif
 #define VER_FILEFLAGS				(VER_PRIVATEBUILD|VER_PRERELEASE|VER_DEBUG)
 
-#define VER_COMPANYNAME_STR 		"Microsoft Corporation"
-#define VER_PRODUCTNAME_STR		"Microsoft (R) Developer Studio"
+#define VER_COMPANYNAME_STR			"Microsoft Corporation"
+#define VER_PRODUCTNAME_STR			"Microsoft® Visual Studio®"

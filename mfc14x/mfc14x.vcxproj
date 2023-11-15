@@ -191,7 +191,7 @@
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <ResourceCompile>
-      <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -241,7 +241,7 @@ if "%~t1" NEQ "%~t2" (
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <ResourceCompile>
-      <PreprocessorDefinitions>VER_LANGID=0x409;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -404,6 +404,9 @@ if "%~t1" NEQ "%~t2" (
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
     </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">
     <ClCompile>
@@ -450,6 +453,9 @@ if "%~t1" NEQ "%~t2" (
     <Midl>
       <OutputDirectory>$(IntDir)</OutputDirectory>
     </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -861,6 +867,7 @@ if "%~t1" NEQ "%~t2" (
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\winhand_.h" />
     <ClInclude Include="afxisapi.h" />
     <ClInclude Include="version.h" />
+    <ClInclude Include="verstamp.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxabort.cpp" />
