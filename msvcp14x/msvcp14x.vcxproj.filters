@@ -482,9 +482,6 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.cpp">
       <Filter>stl</Filter>
     </ClCompile>
-    <ClCompile Include="atomic.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\YY-Thunks\src\Thunks\YY_Thunks.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
