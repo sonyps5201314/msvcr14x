@@ -32,13 +32,13 @@
 #
 # Examples:
 #   // build for LANG=ENGLISH
-#   nmake LANG=ENU LANGID=0409 /f mfcintl.$(PLATFORM).mak
+#   nmake LANG=ENU LANGID=0409 /f mfcintl.mak
 #
 #   // build for LANG=FRENCH
-#   nmake LANG=FRA LANGID=040C /f mfcintl.$(PLATFORM).mak
+#   nmake LANG=FRA LANGID=040C /f mfcintl.mak
 #
 #   // build for LANG=JAPANESE
-#   nmake LANG=JPN LANGID=0411 CP=932 CPHEX=03A4 /f mfcintl.$(PLATFORM).mak
+#   nmake LANG=JPN LANGID=0411 CP=932 CPHEX=03A4 /f mfcintl.mak
 #       (Note: you must have codepage 932 installed)
 #
 
@@ -47,7 +47,9 @@ MFC_VER=14X
 !endif
 
 # Name of this makefile for use in recursion
-MAKNAME=mfcintl.$(PLATFORM).mak
+!if "$(MAKNAME)" == ""
+MAKNAME=mfcintl.mak
+!endif
 
 !ifndef CP
 # Default to "Windows, Multilingual" codepage (ANSI)
@@ -116,53 +118,53 @@ dll_goal: $(PLATFORM)\$(TARG).dll
 # Build target
 
 $(PLATFORM)\$(TARG).res: mfcintl.rc ..\..\include\atlbuild.h
-	rc /r $(RC_CODEPAGE) $(RC_DEFINES) /fo $(PLATFORM)\$(TARG).res mfcintl.rc
+	rc /r $(RC_CODEPAGE) $(RC_DEFINES) /fo "$(OUTDIR)\$(TARG).res" mfcintl.rc
 
 $(PLATFORM)\$(TARG).dll: $(PLATFORM)\$(TARG).res
-	$(LINK32) $(LFLAGS) /out:$(PLATFORM)\$(TARG).DLL $(PLATFORM)\$(TARG).res
-	-del $(PLATFORM)\$(TARG).res
+	$(LINK32) $(LFLAGS) /out:"$(OUTDIR)\$(TARG).DLL" "$(OUTDIR)\$(TARG).res"
+	-del "$(OUTDIR)\$(TARG).res"
 
 #############################################################################
 # Predefined locales
 
 # Chinese (PRC)
 chs:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=CHS LANGID=0804 CP=936 CPHEX=03A8
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=CHS LANGID=0804 CP=936 CPHEX=03A8
 
 # Chinese (Traditional)
 cht:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=CHT LANGID=0404 CP=950 CPHEX=03B6
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=CHT LANGID=0404 CP=950 CPHEX=03B6
 
 # English (American)
 enu:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=ENU LANGID=0409
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=ENU LANGID=0409
 
 # French (Standard)
 fra:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=FRA LANGID=040C
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=FRA LANGID=040C
 
 # German (Standard)
 deu:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=DEU LANGID=0407
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=DEU LANGID=0407
 
 # Italian (standard)
 ita:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=ITA LANGID=0410
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=ITA LANGID=0410
 
 # Korean
 kor:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=KOR LANGID=0412 CP=949 CPHEX=03B5
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=KOR LANGID=0412 CP=949 CPHEX=03B5
 
 # Japanese
 jpn:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=JPN LANGID=0411 CP=932 CPHEX=03A4
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=JPN LANGID=0411 CP=932 CPHEX=03A4
 
 # Spanish (International Sort)
 esn:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=ESN LANGID=0C0A
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=ESN LANGID=0C0A
 
 # Russian
 rus:
-	$(MAKE) -$(MAKEFLAGS) -f $(MAKNAME) LANG=RUS LANGID=0419 CP=1251 CPHEX=04E3
+	$(MAKE) -$(MAKEFLAGS) -f "$(MAKNAME)" LANG=RUS LANGID=0419 CP=1251 CPHEX=04E3
 
 #############################################################################

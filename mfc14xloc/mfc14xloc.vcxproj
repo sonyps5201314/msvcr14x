@@ -41,24 +41,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
     <NMakeBuildCommandLine>set PLATFORM=AMD64
+set MAKNAME=$(ProjectDir)mfcintl.mak
+set OUTDIR=$(OutDir)
 cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
 dir /S *.rc|findstr ".rc \"&gt;"$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog"
 fc "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog"&gt;"$(ProjectDir)$(IntDir)fc_result.tlog"
 if errorlevel==1 (
-  mklink /j %PLATFORM% "$(OutDir)"
-  copy "$(ProjectDir)mfcintl.mak" mfcintl.%PLATFORM%.mak
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak fra
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak deu
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak jpn
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak ita
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak esn
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak chs
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak cht
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak kor
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak rus
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak enu
-  del mfcintl.%PLATFORM%.mak
-  rmdir %PLATFORM%
+  nmake /NOLOGO /f "%MAKNAME%" fra
+  nmake /NOLOGO /f "%MAKNAME%" deu
+  nmake /NOLOGO /f "%MAKNAME%" jpn
+  nmake /NOLOGO /f "%MAKNAME%" ita
+  nmake /NOLOGO /f "%MAKNAME%" esn
+  nmake /NOLOGO /f "%MAKNAME%" chs
+  nmake /NOLOGO /f "%MAKNAME%" cht
+  nmake /NOLOGO /f "%MAKNAME%" kor
+  nmake /NOLOGO /f "%MAKNAME%" rus
+  nmake /NOLOGO /f "%MAKNAME%" enu
   copy "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog" /Y
 )</NMakeBuildCommandLine>
     <NMakeOutput>mfc14xloc.exe</NMakeOutput>
@@ -80,24 +78,22 @@ del MFC14XENU.DLL</NMakeCleanCommandLine>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
     <NMakeBuildCommandLine>set PLATFORM=INTEL
+set MAKNAME=$(ProjectDir)mfcintl.mak
+set OUTDIR=$(OutDir)
 cd /d "$(VCToolsInstallDir)atlmfc\src\mfc"
 dir /S *.rc|findstr ".rc \"&gt;"$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog"
 fc "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog"&gt;"$(ProjectDir)$(IntDir)fc_result.tlog"
 if errorlevel==1 (
-  mklink /j %PLATFORM% "$(OutDir)"
-  copy "$(ProjectDir)mfcintl.mak" mfcintl.%PLATFORM%.mak
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak fra
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak deu
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak jpn
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak ita
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak esn
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak chs
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak cht
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak kor
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak rus
-  nmake /NOLOGO /f mfcintl.%PLATFORM%.mak enu
-  del mfcintl.%PLATFORM%.mak
-  rmdir %PLATFORM%
+  nmake /NOLOGO /f "%MAKNAME%" fra
+  nmake /NOLOGO /f "%MAKNAME%" deu
+  nmake /NOLOGO /f "%MAKNAME%" jpn
+  nmake /NOLOGO /f "%MAKNAME%" ita
+  nmake /NOLOGO /f "%MAKNAME%" esn
+  nmake /NOLOGO /f "%MAKNAME%" chs
+  nmake /NOLOGO /f "%MAKNAME%" cht
+  nmake /NOLOGO /f "%MAKNAME%" kor
+  nmake /NOLOGO /f "%MAKNAME%" rus
+  nmake /NOLOGO /f "%MAKNAME%" enu
   copy "$(ProjectDir)$(IntDir)now_build_rc_file_times.tlog" "$(ProjectDir)$(IntDir)last_build_rc_file_times.tlog" /Y
 )</NMakeBuildCommandLine>
     <NMakeOutput>mfc14xloc.exe</NMakeOutput>
