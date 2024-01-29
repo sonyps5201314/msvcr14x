@@ -5,8 +5,6 @@
 
 #pragma once
 
-//基于最新的vc2017版本及最新的windows10sdk制造
-
 #include "targetver.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
@@ -23,5 +21,3 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <tchar.h>
-
-EXTERN_C WORD GetWindowsVersionEx(BOOL bRetrieveServicePackVersion);
