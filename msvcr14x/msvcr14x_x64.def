@@ -477,8 +477,8 @@ EXPORTS
 	__std_type_info_name
 	__telemetry_main_invoke_trigger
 	__telemetry_main_return_trigger
-	;__unDName
-	;__unDNameEx
+	__unDName
+	__unDNameEx
 	__uncaught_exception
 	__uncaught_exceptions
 	__vcrt_GetModuleFileNameW
@@ -506,6 +506,11 @@ EXPORTS
 	wcschr
 	wcsrchr
 	wcsstr
+
+	;vcruntime140_1.dll中的导出函数
+	__CxxFrameHandler4
+	__NLG_Dispatch2
+	__NLG_Return2
 
 	;msvcrt.dll中已经有的其他函数
 	_iob DATA

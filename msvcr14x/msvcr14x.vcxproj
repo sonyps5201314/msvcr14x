@@ -109,7 +109,7 @@
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr14x_x86.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
-      <AdditionalDependencies>chandler4.obj;exsup4.obj;Certidl.lib</AdditionalDependencies>
+      <AdditionalDependencies>Certidl.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
@@ -167,7 +167,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr14x_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>chandler4.obj;exsup4.obj;Certidl.lib</AdditionalDependencies>
+      <AdditionalDependencies>Certidl.lib</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)ucrt.lib</ImportLibrary>
@@ -811,6 +811,10 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\YY-Thunks\src\;..\..\YY-Thunks\src\Shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\i386\chandler4.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="exports.cpp" />
     <ClCompile Include="msvcr14x.cpp" />

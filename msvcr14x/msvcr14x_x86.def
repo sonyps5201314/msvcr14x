@@ -130,7 +130,7 @@ EXPORTS
 	_except1
 	_except_handler2
 	_except_handler3
-	_except_handler4_common=_except_handler4_common_downlevel
+	_except_handler4_common
 	_fd_int
 	_fdclass
 	_fdexp
@@ -514,8 +514,8 @@ EXPORTS
 	__std_type_info_name
 	__telemetry_main_invoke_trigger
 	__telemetry_main_return_trigger
-	;__unDName
-	;__unDNameEx
+	__unDName
+	__unDNameEx
 	__uncaught_exception
 	__uncaught_exceptions
 	__vcrt_GetModuleFileNameW
@@ -525,7 +525,7 @@ EXPORTS
 	_chkesp
 	_except_handler2
 	_except_handler3
-	;_except_handler4_common
+	_except_handler4_common
 	_get_purecall_handler
 	_get_unexpected
 	_global_unwind2

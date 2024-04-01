@@ -88,6 +88,9 @@
     <Filter Include="inc">
       <UniqueIdentifier>{e93ba7aa-89a8-4bb3-87ea-2b6394fc1316}</UniqueIdentifier>
     </Filter>
+    <Filter Include="i386">
+      <UniqueIdentifier>{58ebcc52-74b3-4a24-8bf7-49858a8a6745}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -1525,6 +1528,9 @@
     </ClCompile>
     <ClCompile Include="stdafx.c">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\i386\chandler4.c">
+      <Filter>i386</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
