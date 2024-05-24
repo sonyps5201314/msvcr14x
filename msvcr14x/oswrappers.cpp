@@ -40,21 +40,23 @@ typedef int(__cdecl* proc_address_type)();
 
 namespace __crt_state_management
 {
+	bool is_teb_slot_available;
+
 	template <typename F, typename... Arguments>
 	auto wrapped_invoke(F fp, Arguments... arguments)
 	{
-		__crt_state_management::enter_os_call();
+		bool useTeb = __crt_state_management::enter_os_call();
 		auto ret = fp(arguments...);
-		__crt_state_management::leave_os_call();
+		__crt_state_management::leave_os_call(useTeb);
 		return ret;
 	}
 
 	template <typename F, typename... Arguments>
 	void wrapped_invoke_void(F fp, Arguments... arguments)
 	{
-		__crt_state_management::enter_os_call();
+		bool useTeb = __crt_state_management::enter_os_call();
 		fp(arguments...);
-		__crt_state_management::leave_os_call();
+		__crt_state_management::leave_os_call(useTeb);
 	}
 }
 

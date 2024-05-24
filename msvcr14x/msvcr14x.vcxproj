@@ -96,7 +96,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NTDDI_VERSION=NTDDI_WIN7;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -125,7 +125,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NTDDI_VERSION=NTDDI_WIN7;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -152,7 +152,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NTDDI_VERSION=NTDDI_WIN7;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
@@ -182,7 +182,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NTDDI_VERSION=NTDDI_WIN7;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>msvcr14x.h</ForcedIncludeFiles>
@@ -656,12 +656,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcat_s.cpp" />
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcmp.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcoll.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcpy_s.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcspn.c">
@@ -681,12 +675,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncat_s.cpp" />
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncmp.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncnt.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncoll.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncpy.c">
@@ -741,7 +729,6 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strxfrm.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscat.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscat_s.cpp" />
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscmp.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscoll.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscpy.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscpy_s.cpp" />
@@ -827,7 +814,8 @@
     <ClCompile Include="exports.cpp" />
     <ClCompile Include="msvcr14x.cpp" />
     <ClCompile Include="oswrappers.cpp" />
-    <ClCompile Include="stdafx.c" />
+    <ClCompile Include="oswrappers_nt.cpp" />
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc\i386\cruntime.inc" />

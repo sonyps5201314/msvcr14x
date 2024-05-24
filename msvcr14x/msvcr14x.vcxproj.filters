@@ -167,9 +167,6 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcat.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcmp.c">
-      <Filter>ucrt\string</Filter>
-    </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strcspn.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
@@ -177,9 +174,6 @@
       <Filter>ucrt\string\amd64</Filter>
     </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncat.c">
-      <Filter>ucrt\string</Filter>
-    </ClCompile>
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncmp.c">
       <Filter>ucrt\string</Filter>
     </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\strncpy.c">
@@ -1370,9 +1364,6 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscat_s.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscmp.cpp">
-      <Filter>ucrt\string</Filter>
-    </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcscoll.cpp">
       <Filter>ucrt\string</Filter>
     </ClCompile>
@@ -1526,11 +1517,14 @@
     <ClCompile Include="msvcr14x.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.c">
+    <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\i386\chandler4.c">
       <Filter>i386</Filter>
+    </ClCompile>
+    <ClCompile Include="oswrappers_nt.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@
 
 #include "stdafx.h"
 
-#include "..\msvcr14x\stdafx.c"
+#include "..\msvcr14x\stdafx.cpp"
 
 #ifdef _M_IX86
 #pragma comment(lib,"KERNEL32.lib")
