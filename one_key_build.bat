@@ -48,9 +48,10 @@ git -C ../YY-Thunks pull -v --progress "origin"
 
 WScript ../ntdll/setup.vbs
 
-@ECHO ON
+for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product.%VS_EDITION%') do set "VS_PATH=%%i"
 
-CALL "C:\Program Files\Microsoft Visual Studio\2022\%VS_EDITION%\VC\Auxiliary\Build\vcvars32.bat"
+@ECHO ON
+CALL "%VS_PATH%\VC\Auxiliary\Build\vcvars32.bat"
 msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
 
 msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86

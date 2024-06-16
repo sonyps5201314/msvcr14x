@@ -19,17 +19,25 @@ Sub CheckPrerequisite()
     Dim VS_EDITION
     VS_EDITION = objShell.Environment("Process").Item("VS_EDITION")
     If Len(VS_EDITION) = 0 Then
-       VS_EDITION = "Enterprise"
+        VS_EDITION = "Enterprise"
     End If
     
-    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION) = False
+    Dim VS_PATH
+    Do
+        Set ExeProc = objShell.Exec("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product." & VS_EDITION)
+        If ExeProc Is Not Null Then
+            VS_PATH = ExeProc.StdOut.ReadLine()
+            If fs.FolderExists(VS_PATH) Then
+                Exit Do
+            End If
+        End If
         If MsgBox("Please install Visual Studio 2022 " & VS_EDITION & " edition first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&rel=17")
-    Wend
+    Loop
     
-    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC") = False
+    While fs.FolderExists(VS_PATH & "\VC\Tools\MSVC") = False
         If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
@@ -37,12 +45,12 @@ Sub CheckPrerequisite()
     Wend
     
     Dim ts 'As TextStream
-    Set ts = fs.OpenTextFile("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.txt")
+    Set ts = fs.OpenTextFile(VS_PATH & "\VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.txt")
     Dim VersionNum
     VersionNum = ts.ReadLine()
     ts.Close
     
-    While fs.FileExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC\" & VersionNum & "\atlmfc\lib\x64\mfc140ud.lib") = False
+    While fs.FileExists(VS_PATH & "\VC\Tools\MSVC\" & VersionNum & "\atlmfc\lib\x64\mfc140ud.lib") = False
         If MsgBox("Please check 'C++ MFC for latest v143 build tools (x86 & x64)' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
