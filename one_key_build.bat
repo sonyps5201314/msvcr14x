@@ -20,9 +20,6 @@ WScript check_prerequisite.vbs
 set /P CheckPrerequisite_Result=<CheckPrerequisite_Result.txt
 DEL CheckPrerequisite_Result.txt
 if "%CheckPrerequisite_Result%" NEQ "True" EXIT
-if not defined boost_ROOT (
-    for /F "tokens=3* skip=2" %%P in ('reg query "HKCU\Environment" /v boost_ROOT') do @set "boost_ROOT=%%P %%Q"
-)
 
 git pull -v --progress "origin"
 
@@ -33,6 +30,15 @@ if not exist ../ntdll (
 )
 git -C ../ntdll pull -v --progress "origin"
 
+:check_boost-math
+if not exist ../boost-math (
+  git clone https://github.com/boostorg/math.git ../boost-math
+  goto :check_boost-math
+)
+cd ../boost-math
+git checkout 4d0885ae44f7d4ce94568339b2ae5501eb234e8f
+cd %~dp0
+  
 :check_YY-Thunks
 if not exist ../YY-Thunks (
   git clone https://github.com/sonyps5201314/YY-Thunks.git ../YY-Thunks

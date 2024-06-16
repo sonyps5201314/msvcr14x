@@ -50,19 +50,6 @@ Sub CheckPrerequisite()
         objShell.Run ("https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/")
     Wend
     
-    Dim boost_ROOT
-    boost_ROOT = objShell.Environment("User").Item("boost_ROOT")
-    While Len(boost_ROOT) = 0 Or fs.FolderExists(boost_ROOT) = False
-        If MsgBox("Please install Boost (1.77.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
-            Exit Sub
-        End If
-        objShell.Run ("https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/")
-        boost_ROOT = InputBox("Please input your Boost (1.77.0) root directory!", "Set boost_ROOT environment variable")
-        If Len(boost_ROOT) > 0 And fs.FolderExists(boost_ROOT) Then
-            objShell.Environment("User").Item("boost_ROOT") = boost_ROOT
-        End If
-    Wend
-    
     Dim ts 'As TextStream
     Set ts = fs.CreateTextFile("CheckPrerequisite_Result.txt")
     ts.Write ("True")
