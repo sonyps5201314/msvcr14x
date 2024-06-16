@@ -43,8 +43,8 @@ Sub CheckPrerequisite()
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
     Wend
     
-    While fs.FolderExists("C:\Program Files (x86)\Windows Kits\10\Source\10.0.22621.0\ucrt") = False
-        If MsgBox("Please install Windows 11 SDK (10.0.22621.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+    While fs.FolderExists("C:\Program Files (x86)\Windows Kits\10\Source\10.0.26100.0\ucrt") = False
+        If MsgBox("Please install Windows 11 SDK (10.0.26100.0) first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Run ("https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/")
