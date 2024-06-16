@@ -6,7 +6,7 @@ Sub CheckPrerequisite()
       
     Dim fs 'As FileSystemObject
     Set fs = CreateObject("Scripting.FileSystemObject")
-    fs.DeleteFile("CheckPrerequisite_Result.txt")
+    fs.DeleteFile ("CheckPrerequisite_Result.txt")
     
     Dim ExeProc 'As WshExec
     Set ExeProc = objShell.Exec("git.exe")
@@ -18,7 +18,7 @@ Sub CheckPrerequisite()
     
     Dim VS_EDITION
     VS_EDITION = objShell.Environment("Process").Item("VS_EDITION")
-    If Len(VS_EDITION) = 0 then
+    If Len(VS_EDITION) = 0 Then
        VS_EDITION = "Enterprise"
     End If
     
@@ -36,8 +36,14 @@ Sub CheckPrerequisite()
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
     Wend
     
-    While fs.FolderExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC") = False
-        If MsgBox("Please check 'Desktop development with C++' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+    Dim ts 'As TextStream
+    Set ts = fs.OpenTextFile("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.txt")
+    Dim VersionNum
+    VersionNum = ts.ReadLine()
+    ts.Close
+    
+    While fs.FileExists("C:\Program Files\Microsoft Visual Studio\2022\" & VS_EDITION & "\VC\Tools\MSVC\" & VersionNum & "\atlmfc\lib\x64\mfc140ud.lib") = False
+        If MsgBox("Please check 'C++ MFC for latest v143 build tools (x86 & x64)' in Visual Studio 2022 Installer first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
         objShell.Exec ("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe")
@@ -50,7 +56,6 @@ Sub CheckPrerequisite()
         objShell.Run ("https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/")
     Wend
     
-    Dim ts 'As TextStream
     Set ts = fs.CreateTextFile("CheckPrerequisite_Result.txt")
     ts.Write ("True")
     ts.Close
