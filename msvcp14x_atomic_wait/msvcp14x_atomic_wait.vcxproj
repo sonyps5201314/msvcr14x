@@ -201,12 +201,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic_wait.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\parallel_algorithms.cpp" />
     <ClCompile Include="msvcp14x_atomic_wait.cpp" />

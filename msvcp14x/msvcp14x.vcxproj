@@ -227,12 +227,7 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cond.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cout.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cthread.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain_satellite.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

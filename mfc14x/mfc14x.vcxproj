@@ -1175,16 +1175,7 @@ if "%~t1" NEQ "%~t2" (
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprntx.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgprop.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dlgtempl.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllinit.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiRelease|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllinit.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\dllmodul.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='AnsiDebug|Win32'">true</ExcludedFromBuild>
