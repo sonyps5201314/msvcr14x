@@ -43,7 +43,7 @@ Private Sub FormatDocToFile(ByVal Doc, ByVal FileName)
     Dim rdrDom 'As MSXML2.SAXXMLReader
     Dim stmFormatted 'As ADODB.Stream
     Dim wtrFormatted 'As MSXML2.MXXMLWriter
-
+    
     Set stmFormatted = CreateObject("ADODB.Stream")
     With stmFormatted
         .Open
@@ -120,11 +120,11 @@ Function CreateTextFile(FileName, Text)
 End Function
 
 Function Pos(SubStr, S)
-   Pos = InStr(S, SubStr)
+    Pos = InStr(S, SubStr)
 End Function
 
 Sub StringChangeEx(S, FromStr, ToStr, SupportDBCS)
-    S = Replace(S, FromStr, ToStr, 1, -1, IIf(SupportDBCS, vbTextCompare, vbBinaryCompare))
+    S = Replace(S, FromStr, ToStr, 1, - 1, IIf(SupportDBCS, vbTextCompare, vbBinaryCompare))
 End Sub
 
 Function ExpandConstant(S)
@@ -144,11 +144,11 @@ End Function
 
 Sub UpdateString(dirList, Path, suffix)
     If (Len(dirList) = 0) Then
-      dirList = Path + suffix
+        dirList = Path + suffix
     Else
-      If ((Pos(Path, dirList) = 0) And (Pos(EncodeString(Path), dirList) = 0)) Then
-        dirList = Path + dirList
-      End If
+        If ((Pos(Path, dirList) = 0) And (Pos(EncodeString(Path), dirList) = 0)) Then
+            dirList = Path + dirList
+        End If
     End If
     'Debug.Print (dirList)
 End Sub
@@ -163,131 +163,131 @@ Private Sub ModifyProps(FileName, includefolder, dlibfolder, slibfolder)
     Dim StaticLibraryDirectoriesNode
     Dim AdditionalStaticLibraryDirectories
     If False = FileExists(FileName) Then
-      Dim XmlText
-      XmlText = XmlText & "<?xml version=""1.0"" encoding=""utf-8""?> " & vbCrLf
-      XmlText = XmlText & "<Project DefaultTargets=""Build"" ToolsVersion=""12.0"" xmlns=""http://schemas.microsoft.com/developer/msbuild/2003"">" & vbCrLf
-      XmlText = XmlText & "  <ImportGroup Label=""PropertySheets"">" & vbCrLf
-      XmlText = XmlText & "  </ImportGroup>" & vbCrLf
-      XmlText = XmlText & "  <PropertyGroup Label=""UserMacros"" />" & vbCrLf
-      XmlText = XmlText & "  <PropertyGroup />" & vbCrLf
-      XmlText = XmlText & "  <ItemDefinitionGroup />" & vbCrLf
-      XmlText = XmlText & "  <ItemGroup />" & vbCrLf
-      XmlText = XmlText & "</Project>" & vbCrLf
-    
-      Call CreateTextFile(FileName, XmlText)
+        Dim XmlText
+        XmlText = XmlText & "<?xml version=""1.0"" encoding=""utf-8""?> " & vbCrLf
+        XmlText = XmlText & "<Project DefaultTargets=""Build"" ToolsVersion=""12.0"" xmlns=""http://schemas.microsoft.com/developer/msbuild/2003"">" & vbCrLf
+        XmlText = XmlText & "  <ImportGroup Label=""PropertySheets"">" & vbCrLf
+        XmlText = XmlText & "  </ImportGroup>" & vbCrLf
+        XmlText = XmlText & "  <PropertyGroup Label=""UserMacros"" />" & vbCrLf
+        XmlText = XmlText & "  <PropertyGroup />" & vbCrLf
+        XmlText = XmlText & "  <ItemDefinitionGroup />" & vbCrLf
+        XmlText = XmlText & "  <ItemGroup />" & vbCrLf
+        XmlText = XmlText & "</Project>" & vbCrLf
+        
+        Call CreateTextFile(FileName, XmlText)
     End If
     Set XMLDocument = CreateObject("Msxml2.DOMDocument.3.0")
     XMLDocument.async = False
     XMLDocument.Load (FileName)
     If (XMLDocument.parseError.errorCode = 0) Then
-      Call XMLDocument.setProperty("SelectionLanguage", "XPath")
-      Call XMLDocument.setProperty("SelectionNamespaces", "xmlns:b='http://schemas.microsoft.com/developer/msbuild/2003'")
-      Set XMLNodes = XMLDocument.selectNodes("//b:Project")
-      If (XMLNodes.length = 0) Then
-        Exit Sub
-      End If
-      Set IdgNode = XMLNodes.Item(0)
-      Set XMLNodes = IdgNode.selectNodes("//b:ItemDefinitionGroup")
-      If (XMLNodes.length > 0) Then
+        Call XMLDocument.setProperty("SelectionLanguage", "XPath")
+        Call XMLDocument.setProperty("SelectionNamespaces", "xmlns:b='http://schemas.microsoft.com/developer/msbuild/2003'")
+        Set XMLNodes = XMLDocument.selectNodes("//b:Project")
+        If (XMLNodes.length = 0) Then
+            Exit Sub
+        End If
         Set IdgNode = XMLNodes.Item(0)
-      Else
-        Set XMLNode = XMLDocument.createNode(1, "ItemDefinitionGroup", "http://schemas.microsoft.com/developer/msbuild/2003")
-        Set IdgNode = IdgNode.appendChild(XMLNode)
-      End If
-      
-      If Len(includefolder) > 0 Then
-        Set XMLNodes = IdgNode.selectNodes("//b:ClCompile")
+        Set XMLNodes = IdgNode.selectNodes("//b:ItemDefinitionGroup")
         If (XMLNodes.length > 0) Then
-          Set XMLParent = XMLNodes.Item(0)
+            Set IdgNode = XMLNodes.Item(0)
         Else
-          Set XMLNode = XMLDocument.createNode(1, "ClCompile", "http://schemas.microsoft.com/developer/msbuild/2003")
-          Set XMLParent = IdgNode.appendChild(XMLNode)
+            Set XMLNode = XMLDocument.createNode(1, "ItemDefinitionGroup", "http://schemas.microsoft.com/developer/msbuild/2003")
+            Set IdgNode = IdgNode.appendChild(XMLNode)
         End If
-        Set XMLNodes = XMLParent.selectNodes("//b:ClCompile/b:AdditionalIncludeDirectories")
-        If (XMLNodes.length > 0) Then
-          Set IncludeDirectoriesNode = XMLNodes.Item(0)
-        Else
-          Set XMLNode = XMLDocument.createNode(1, "AdditionalIncludeDirectories", "http://schemas.microsoft.com/developer/msbuild/2003")
-          Set IncludeDirectoriesNode = XMLParent.appendChild(XMLNode)
+        
+        If Len(includefolder) > 0 Then
+            Set XMLNodes = IdgNode.selectNodes("//b:ClCompile")
+            If (XMLNodes.length > 0) Then
+                Set XMLParent = XMLNodes.Item(0)
+            Else
+                Set XMLNode = XMLDocument.createNode(1, "ClCompile", "http://schemas.microsoft.com/developer/msbuild/2003")
+                Set XMLParent = IdgNode.appendChild(XMLNode)
+            End If
+            Set XMLNodes = XMLParent.selectNodes("//b:ClCompile/b:AdditionalIncludeDirectories")
+            If (XMLNodes.length > 0) Then
+                Set IncludeDirectoriesNode = XMLNodes.Item(0)
+            Else
+                Set XMLNode = XMLDocument.createNode(1, "AdditionalIncludeDirectories", "http://schemas.microsoft.com/developer/msbuild/2003")
+                Set IncludeDirectoriesNode = XMLParent.appendChild(XMLNode)
+            End If
         End If
-      End If
-      If Len(dlibfolder) > 0 Then
-        Set XMLNodes = IdgNode.selectNodes("//b:Link")
-        If (XMLNodes.length > 0) Then
-          Set XMLParent = XMLNodes.Item(0)
-        Else
-          Set XMLNode = XMLDocument.createNode(1, "Link", "http://schemas.microsoft.com/developer/msbuild/2003")
-          Set XMLParent = IdgNode.appendChild(XMLNode)
+        If Len(dlibfolder) > 0 Then
+            Set XMLNodes = IdgNode.selectNodes("//b:Link")
+            If (XMLNodes.length > 0) Then
+                Set XMLParent = XMLNodes.Item(0)
+            Else
+                Set XMLNode = XMLDocument.createNode(1, "Link", "http://schemas.microsoft.com/developer/msbuild/2003")
+                Set XMLParent = IdgNode.appendChild(XMLNode)
+            End If
+            Dim s_value
+            s_value = "'$(PlatformToolset)' == 'v143' or '$(PlatformToolset)' == 'v142' or '$(PlatformToolset)' == 'v141' or '$(PlatformToolset)' == 'v141_xp' or '$(PlatformToolset)' == 'v140' or '$(PlatformToolset)' == 'v140_xp'"
+            Set XMLNodes = XMLParent.selectNodes("//b:Link/b:AdditionalLibraryDirectories[@Condition=""" + s_value + """]")
+            If (XMLNodes.length > 0) Then
+                Set DynamicLibraryDirectoriesNode = XMLNodes.Item(0)
+            Else
+                Set XMLNode = XMLDocument.createNode(1, "AdditionalLibraryDirectories", "http://schemas.microsoft.com/developer/msbuild/2003")
+                Set DynamicLibraryDirectoriesNode = XMLParent.appendChild(XMLNode)
+                Call DynamicLibraryDirectoriesNode.setAttribute("Condition", s_value)
+            End If
         End If
-        Dim s_value
-        s_value = "'$(PlatformToolset)' == 'v143' or '$(PlatformToolset)' == 'v142' or '$(PlatformToolset)' == 'v141' or '$(PlatformToolset)' == 'v141_xp' or '$(PlatformToolset)' == 'v140' or '$(PlatformToolset)' == 'v140_xp'"
-        Set XMLNodes = XMLParent.selectNodes("//b:Link/b:AdditionalLibraryDirectories[@Condition=""" + s_value + """]")
-        If (XMLNodes.length > 0) Then
-          Set DynamicLibraryDirectoriesNode = XMLNodes.Item(0)
-        Else
-          Set XMLNode = XMLDocument.createNode(1, "AdditionalLibraryDirectories", "http://schemas.microsoft.com/developer/msbuild/2003")
-          Set DynamicLibraryDirectoriesNode = XMLParent.appendChild(XMLNode)
-          Call DynamicLibraryDirectoriesNode.setAttribute("Condition", s_value)
+        If Len(slibfolder) > 0 Then
+            Set XMLNodes = IdgNode.selectNodes("//b:Lib")
+            If (XMLNodes.length > 0) Then
+                Set XMLParent = XMLNodes.Item(0)
+            Else
+                Set XMLNode = XMLDocument.createNode(1, "Lib", "http://schemas.microsoft.com/developer/msbuild/2003")
+                Set XMLParent = IdgNode.appendChild(XMLNode)
+            End If
+            Set XMLNodes = XMLParent.selectNodes("//b:Lib/b:AdditionalLibraryDirectories[@Condition=""" + s_value + """]")
+            If (XMLNodes.length > 0) Then
+                Set StaticLibraryDirectoriesNode = XMLNodes.Item(0)
+            Else
+                Set XMLNode = XMLDocument.createNode(1, "AdditionalLibraryDirectories", "http://schemas.microsoft.com/developer/msbuild/2003")
+                Set StaticLibraryDirectoriesNode = XMLParent.appendChild(XMLNode)
+                Call StaticLibraryDirectoriesNode.setAttribute("Condition", s_value)
+            End If
         End If
-     End If
-     If Len(slibfolder) > 0 Then
-        Set XMLNodes = IdgNode.selectNodes("//b:Lib")
-        If (XMLNodes.length > 0) Then
-          Set XMLParent = XMLNodes.Item(0)
-        Else
-          Set XMLNode = XMLDocument.createNode(1, "Lib", "http://schemas.microsoft.com/developer/msbuild/2003")
-          Set XMLParent = IdgNode.appendChild(XMLNode)
+        
+        If Len(includefolder) > 0 Then
+            AdditionalIncludeDirectories = ""
+            If (False = VarIsNull(IncludeDirectoriesNode)) Then
+                AdditionalIncludeDirectories = IncludeDirectoriesNode.Text
+            End If
         End If
-        Set XMLNodes = XMLParent.selectNodes("//b:Lib/b:AdditionalLibraryDirectories[@Condition=""" + s_value + """]")
-        If (XMLNodes.length > 0) Then
-          Set StaticLibraryDirectoriesNode = XMLNodes.Item(0)
-        Else
-          Set XMLNode = XMLDocument.createNode(1, "AdditionalLibraryDirectories", "http://schemas.microsoft.com/developer/msbuild/2003")
-          Set StaticLibraryDirectoriesNode = XMLParent.appendChild(XMLNode)
-          Call StaticLibraryDirectoriesNode.setAttribute("Condition", s_value)
+        If Len(dlibfolder) > 0 Then
+            AdditionalDynamicLibraryDirectories = ""
+            If (False = VarIsNull(DynamicLibraryDirectoriesNode)) Then
+                AdditionalDynamicLibraryDirectories = DynamicLibraryDirectoriesNode.Text
+            End If
         End If
-      End If
-      
-      If Len(includefolder) > 0 Then
-        AdditionalIncludeDirectories = ""
-        If (False = VarIsNull(IncludeDirectoriesNode)) Then
-          AdditionalIncludeDirectories = IncludeDirectoriesNode.Text
+        If Len(slibfolder) > 0 Then
+            AdditionalStaticLibraryDirectories = ""
+            If (False = VarIsNull(StaticLibraryDirectoriesNode)) Then
+                AdditionalStaticLibraryDirectories = StaticLibraryDirectoriesNode.Text
+            End If
         End If
-      End If
-      If Len(dlibfolder) > 0 Then
-        AdditionalDynamicLibraryDirectories = ""
-        If (False = VarIsNull(DynamicLibraryDirectoriesNode)) Then
-          AdditionalDynamicLibraryDirectories = DynamicLibraryDirectoriesNode.Text
+        
+        If Len(includefolder) > 0 Then
+            Call UpdateString(AdditionalIncludeDirectories, ExpandConstant(includefolder + ";"), "%(AdditionalIncludeDirectories)")
         End If
-      End If
-      If Len(slibfolder) > 0 Then
-        AdditionalStaticLibraryDirectories = ""
-        If (False = VarIsNull(StaticLibraryDirectoriesNode)) Then
-          AdditionalStaticLibraryDirectories = StaticLibraryDirectoriesNode.Text
+        If Len(dlibfolder) > 0 Then
+            Call UpdateString(AdditionalDynamicLibraryDirectories, ExpandConstant(dlibfolder + ";"), "%(AdditionalLibraryDirectories)")
         End If
-      End If
-      
-      If Len(includefolder) > 0 Then
-        Call UpdateString(AdditionalIncludeDirectories, ExpandConstant(includefolder + ";"), "%(AdditionalIncludeDirectories)")
-      End If
-      If Len(dlibfolder) > 0 Then
-        Call UpdateString(AdditionalDynamicLibraryDirectories, ExpandConstant(dlibfolder + ";"), "%(AdditionalLibraryDirectories)")
-      End If
-      If Len(slibfolder) > 0 Then
-        Call UpdateString(AdditionalStaticLibraryDirectories, ExpandConstant(slibfolder + ";"), "%(AdditionalLibraryDirectories)")
-      End If
-      
-      If Len(includefolder) > 0 Then
-        IncludeDirectoriesNode.Text = AdditionalIncludeDirectories
-      End If
-      If Len(dlibfolder) > 0 Then
-        DynamicLibraryDirectoriesNode.Text = AdditionalDynamicLibraryDirectories
-      End If
-      If Len(slibfolder) > 0 Then
-        StaticLibraryDirectoriesNode.Text = AdditionalStaticLibraryDirectories
-      End If
-      'XMLDocument.save (FileName)
-      FormatDocToFile XMLDocument, FileName
+        If Len(slibfolder) > 0 Then
+            Call UpdateString(AdditionalStaticLibraryDirectories, ExpandConstant(slibfolder + ";"), "%(AdditionalLibraryDirectories)")
+        End If
+        
+        If Len(includefolder) > 0 Then
+            IncludeDirectoriesNode.Text = AdditionalIncludeDirectories
+        End If
+        If Len(dlibfolder) > 0 Then
+            DynamicLibraryDirectoriesNode.Text = AdditionalDynamicLibraryDirectories
+        End If
+        If Len(slibfolder) > 0 Then
+            StaticLibraryDirectoriesNode.Text = AdditionalStaticLibraryDirectories
+        End If
+        'XMLDocument.save (FileName)
+        FormatDocToFile XMLDocument, FileName
     End If
 End Sub
 
@@ -306,128 +306,152 @@ Sub ModifyAllProps()
 End Sub
 
 Sub SetEnvironment()
-  Dim objShell
-  Set objShell = CreateObject("WScript.Shell")
-  objShell.Environment("System").Item("msvcr14x_ROOT") = ExpandConstant("{app}")
+    Dim objShell
+    Set objShell = CreateObject("WScript.Shell")
+    objShell.Environment("System").Item("msvcr14x_ROOT") = ExpandConstant("{app}")
 End Sub
 
-Sub AskForCopyDlls()
-   If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
-      Dim AppPath
-      AppPath = ExpandConstant("{app}") + "\"
-      Dim fs 'As FileSystemObject
-      Set fs = CreateObject("Scripting.FileSystemObject")
-      Dim AllDlls(3,8)
-      AllDlls(0,0) = "Debug\MSVCR14XD.dll"
-      AllDlls(0,1) = "Debug\MSVCP14XD.dll"
-      AllDlls(0,2) = "Debug\MSVCP14X_1D.dll"
-      AllDlls(0,3) = "Debug\MSVCP14X_2D.dll"
-      AllDlls(0,4) = "Debug\MSVCP14XD_ATOMIC_WAIT.dll"
-      AllDlls(0,5) = "Debug\MSVCP14XD_CODECVT_IDS.dll"
-      AllDlls(0,6) = "Debug\CONCRT14XD.dll"
-      AllDlls(0,7) = "Debug\MFC14XUD.dll"
-      AllDlls(0,8) = "Debug\MFC14XD.dll"
-      AllDlls(1,0) = "Release\MSVCR14X.dll"
-      AllDlls(1,1) = "Release\MSVCP14X.dll"
-      AllDlls(1,2) = "Release\MSVCP14X_1.dll"
-      AllDlls(1,3) = "Release\MSVCP14X_2.dll"
-      AllDlls(1,4) = "Release\MSVCP14X_ATOMIC_WAIT.dll"
-      AllDlls(1,5) = "Release\MSVCP14X_CODECVT_IDS.dll"
-      AllDlls(1,6) = "Release\CONCRT14X.dll"
-      AllDlls(1,7) = "Release\MFC14XU.dll"
-      AllDlls(1,8) = "Release\MFC14X.dll"
-      AllDlls(2,0) = "x64\Debug\MSVCR14XD.dll"
-      AllDlls(2,1) = "x64\Debug\MSVCP14XD.dll"
-      AllDlls(2,2) = "x64\Debug\MSVCP14X_1D.dll"
-      AllDlls(2,3) = "x64\Debug\MSVCP14X_2D.dll"
-      AllDlls(2,4) = "x64\Debug\MSVCP14XD_ATOMIC_WAIT.dll"
-      AllDlls(2,5) = "x64\Debug\MSVCP14XD_CODECVT_IDS.dll"
-      AllDlls(2,6) = "x64\Debug\CONCRT14XD.dll"
-      AllDlls(2,7) = "x64\Debug\MFC14XUD.dll"
-      AllDlls(2,8) = "x64\Debug\MFC14XD.dll"
-      AllDlls(3,0) = "x64\Release\MSVCR14X.dll"
-      AllDlls(3,1) = "x64\Release\MSVCP14X.dll"
-      AllDlls(3,2) = "x64\Release\MSVCP14X_1.dll"
-      AllDlls(3,3) = "x64\Release\MSVCP14X_2.dll"
-      AllDlls(3,4) = "x64\Release\MSVCP14X_ATOMIC_WAIT.dll"
-      AllDlls(3,5) = "x64\Release\MSVCP14X_CODECVT_IDS.dll"
-      AllDlls(3,6) = "x64\Release\CONCRT14X.dll"
-      AllDlls(3,7) = "x64\Release\MFC14XU.dll"
-      AllDlls(3,8) = "x64\Release\MFC14X.dll"
-      
-      Dim AllResDlls(1,9)
-      AllResDlls(0,0) = "Release\MFC14XCHS.DLL"
-      AllResDlls(0,1) = "Release\MFC14XCHT.DLL"
-      AllResDlls(0,2) = "Release\MFC14XDEU.DLL"
-      AllResDlls(0,3) = "Release\MFC14XENU.DLL"
-      AllResDlls(0,4) = "Release\MFC14XESN.DLL"
-      AllResDlls(0,5) = "Release\MFC14XFRA.DLL"
-      AllResDlls(0,6) = "Release\MFC14XITA.DLL"
-      AllResDlls(0,7) = "Release\MFC14XJPN.DLL"
-      AllResDlls(0,8) = "Release\MFC14XKOR.DLL"
-      AllResDlls(0,9) = "Release\MFC14XRUS.DLL"
-      AllResDlls(1,0) = "x64\Release\MFC14XCHS.DLL"
-      AllResDlls(1,1) = "x64\Release\MFC14XCHT.DLL"
-      AllResDlls(1,2) = "x64\Release\MFC14XDEU.DLL"
-      AllResDlls(1,3) = "x64\Release\MFC14XENU.DLL"
-      AllResDlls(1,4) = "x64\Release\MFC14XESN.DLL"
-      AllResDlls(1,5) = "x64\Release\MFC14XFRA.DLL"
-      AllResDlls(1,6) = "x64\Release\MFC14XITA.DLL"
-      AllResDlls(1,7) = "x64\Release\MFC14XJPN.DLL"
-      AllResDlls(1,8) = "x64\Release\MFC14XKOR.DLL"
-      AllResDlls(1,9) = "x64\Release\MFC14XRUS.DLL"
-	  
-      Dim DllArrays(1)
-      DllArrays(0) = AllDlls
-      DllArrays(1) = AllResDlls
-      Dim DllArray
-      For Each DllArray In DllArrays
-          Dim OneDll
-          For Each OneDll In DllArray
-             If fs.FileExists(AppPath + OneDll) = False Then
-                Call MsgBox("Please build all msvcr14x dlls first!", vbCritical, "msvcr14x")
+Sub CheckDllsAndCopyToSystemDirOrMakeDistPacks()
+    Dim objShell 'As WshShell
+    Set objShell = CreateObject("WScript.Shell")
+    objShell.CurrentDirectory = ExpandConstant("{app}")
+    Dim fs 'As FileSystemObject
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    Dim AllDlls(3, 8)
+    AllDlls(0, 0) = "Debug\MSVCR14XD.dll"
+    AllDlls(0, 1) = "Debug\MSVCP14XD.dll"
+    AllDlls(0, 2) = "Debug\MSVCP14X_1D.dll"
+    AllDlls(0, 3) = "Debug\MSVCP14X_2D.dll"
+    AllDlls(0, 4) = "Debug\MSVCP14XD_ATOMIC_WAIT.dll"
+    AllDlls(0, 5) = "Debug\MSVCP14XD_CODECVT_IDS.dll"
+    AllDlls(0, 6) = "Debug\CONCRT14XD.dll"
+    AllDlls(0, 7) = "Debug\MFC14XUD.dll"
+    AllDlls(0, 8) = "Debug\MFC14XD.dll"
+    AllDlls(1, 0) = "Release\MSVCR14X.dll"
+    AllDlls(1, 1) = "Release\MSVCP14X.dll"
+    AllDlls(1, 2) = "Release\MSVCP14X_1.dll"
+    AllDlls(1, 3) = "Release\MSVCP14X_2.dll"
+    AllDlls(1, 4) = "Release\MSVCP14X_ATOMIC_WAIT.dll"
+    AllDlls(1, 5) = "Release\MSVCP14X_CODECVT_IDS.dll"
+    AllDlls(1, 6) = "Release\CONCRT14X.dll"
+    AllDlls(1, 7) = "Release\MFC14XU.dll"
+    AllDlls(1, 8) = "Release\MFC14X.dll"
+    AllDlls(2, 0) = "x64\Debug\MSVCR14XD.dll"
+    AllDlls(2, 1) = "x64\Debug\MSVCP14XD.dll"
+    AllDlls(2, 2) = "x64\Debug\MSVCP14X_1D.dll"
+    AllDlls(2, 3) = "x64\Debug\MSVCP14X_2D.dll"
+    AllDlls(2, 4) = "x64\Debug\MSVCP14XD_ATOMIC_WAIT.dll"
+    AllDlls(2, 5) = "x64\Debug\MSVCP14XD_CODECVT_IDS.dll"
+    AllDlls(2, 6) = "x64\Debug\CONCRT14XD.dll"
+    AllDlls(2, 7) = "x64\Debug\MFC14XUD.dll"
+    AllDlls(2, 8) = "x64\Debug\MFC14XD.dll"
+    AllDlls(3, 0) = "x64\Release\MSVCR14X.dll"
+    AllDlls(3, 1) = "x64\Release\MSVCP14X.dll"
+    AllDlls(3, 2) = "x64\Release\MSVCP14X_1.dll"
+    AllDlls(3, 3) = "x64\Release\MSVCP14X_2.dll"
+    AllDlls(3, 4) = "x64\Release\MSVCP14X_ATOMIC_WAIT.dll"
+    AllDlls(3, 5) = "x64\Release\MSVCP14X_CODECVT_IDS.dll"
+    AllDlls(3, 6) = "x64\Release\CONCRT14X.dll"
+    AllDlls(3, 7) = "x64\Release\MFC14XU.dll"
+    AllDlls(3, 8) = "x64\Release\MFC14X.dll"
+    
+    Dim AllResDlls(1, 9)
+    AllResDlls(0, 0) = "Release\MFC14XCHS.DLL"
+    AllResDlls(0, 1) = "Release\MFC14XCHT.DLL"
+    AllResDlls(0, 2) = "Release\MFC14XDEU.DLL"
+    AllResDlls(0, 3) = "Release\MFC14XENU.DLL"
+    AllResDlls(0, 4) = "Release\MFC14XESN.DLL"
+    AllResDlls(0, 5) = "Release\MFC14XFRA.DLL"
+    AllResDlls(0, 6) = "Release\MFC14XITA.DLL"
+    AllResDlls(0, 7) = "Release\MFC14XJPN.DLL"
+    AllResDlls(0, 8) = "Release\MFC14XKOR.DLL"
+    AllResDlls(0, 9) = "Release\MFC14XRUS.DLL"
+    AllResDlls(1, 0) = "x64\Release\MFC14XCHS.DLL"
+    AllResDlls(1, 1) = "x64\Release\MFC14XCHT.DLL"
+    AllResDlls(1, 2) = "x64\Release\MFC14XDEU.DLL"
+    AllResDlls(1, 3) = "x64\Release\MFC14XENU.DLL"
+    AllResDlls(1, 4) = "x64\Release\MFC14XESN.DLL"
+    AllResDlls(1, 5) = "x64\Release\MFC14XFRA.DLL"
+    AllResDlls(1, 6) = "x64\Release\MFC14XITA.DLL"
+    AllResDlls(1, 7) = "x64\Release\MFC14XJPN.DLL"
+    AllResDlls(1, 8) = "x64\Release\MFC14XKOR.DLL"
+    AllResDlls(1, 9) = "x64\Release\MFC14XRUS.DLL"
+    
+    Dim DllArrays(1)
+    DllArrays(0) = AllDlls
+    DllArrays(1) = AllResDlls
+    Dim DllArray
+    For Each DllArray In DllArrays
+        Dim OneDll
+        For Each OneDll In DllArray
+            If fs.FileExists(OneDll) = False Then
+                Call MsgBox(Chr(34) & OneDll & Chr(34) & " does not exist, Please build all msvcr14x dlls first!", vbCritical, "msvcr14x")
                 Exit Sub
-             End If
-          Next
-      Next
-      
-      Dim objShell
-      Set objShell = CreateObject("WScript.Shell")
-      Dim windir
-      windir = objShell.Environment("Process").Item("windir")
-      Dim ProcArch
-      ProcArch = objShell.Environment("Process").Item("PROCESSOR_ARCHITECTURE")
-      Dim SysArch
-      SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
-      If SysArch = "AMD64" Then
-	      For Each DllArray In DllArrays
-	        For Each OneDll In DllArray
-	          If Left(OneDll, 3) = "x64" Then
-	            If ProcArch = "x86" Then
-	                Call fs.CopyFile(AppPath + OneDll, windir + "\sysnative\")
-	            Else
-	                Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
-	            End If
-	          Else
-	            Call fs.CopyFile(AppPath + OneDll, windir + "\syswow64\")
-	          End If
-	        Next
-	      Next
-      ElseIf SysArch = "x86" Then
-      	For Each DllArray In DllArrays
-            For Each OneDll In DllArray
-                If Left(OneDll, 3) <> "x64" Then
-		   Call fs.CopyFile(AppPath + OneDll, windir + "\system32\")
-                End If
-            Next
+            End If
         Next
-      Else
-        MsgBox SysArch + " is a unsupported system architecture!", vbCritical, "msvcr14x"
-      End If
-      
-   End If
+    Next
+    
+    If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+        Dim windir
+        windir = objShell.Environment("Process").Item("windir")
+        Dim ProcArch
+        ProcArch = objShell.Environment("Process").Item("PROCESSOR_ARCHITECTURE")
+        Dim SysArch
+        SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
+        If SysArch = "AMD64" Then
+            For Each DllArray In DllArrays
+                For Each OneDll In DllArray
+                    If Left(OneDll, 3) = "x64" Then
+                        If ProcArch = "x86" Then
+                            Call fs.CopyFile(OneDll, windir + "\sysnative\")
+                        Else
+                            Call fs.CopyFile(OneDll, windir + "\system32\")
+                        End If
+                    Else
+                        Call fs.CopyFile(OneDll, windir + "\syswow64\")
+                    End If
+                Next
+            Next
+        ElseIf SysArch = "x86" Then
+            For Each DllArray In DllArrays
+                For Each OneDll In DllArray
+                    If Left(OneDll, 3) <> "x64" Then
+                        Call fs.CopyFile(OneDll, windir + "\system32\")
+                    End If
+                Next
+            Next
+        Else
+            MsgBox SysArch + " is a unsupported system architecture!", vbCritical, "msvcr14x"
+        End If
+    End If
+    
+    If MsgBox("Create distribution packages for generated x86 and x64 executables?", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+        On Error Resume Next
+        Do
+            Dim Path
+            Path = objShell.RegRead("HKLM\SOFTWARE\7-Zip\Path")
+            If Len(Path) = 0 Then
+                Path = objShell.RegRead("HKLM\SOFTWARE\WOW6432Node\7-Zip\Path")
+            End If
+            If Len(Path) = 0 Then
+                If MsgBox("Please install 7-zip first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+                    Exit Sub
+                End If
+                objShell.Run ("https://www.7-zip.org/")
+            Else
+                Dim ExeProcs(1) 'As WshExec
+                Set ExeProcs(0) = objShell.Exec(Path & "7z.exe a Distrib\msvcr14x_dist.x86.exe .\Debug\*.dll .\Release\*.dll -mx=9 -sfx7z.sfx")
+                Set ExeProcs(1) = objShell.Exec(Path & "7z.exe a Distrib\msvcr14x_dist.x64.exe .\x64\Debug\*.dll .\x64\Release\*.dll -mx=9 -sfx7z.sfx")
+                Do While ExeProcs(0).Status = 0 Or ExeProcs(1).Status = 0
+                    WScript.Sleep 100
+                Loop
+                Exit Do
+            End If
+        Loop
+    End If
+    
 End Sub
 
 ModifyAllProps
 SetEnvironment
-AskForCopyDlls
+CheckDllsAndCopyToSystemDirOrMakeDistPacks
