@@ -124,7 +124,7 @@ Function Pos(SubStr, S)
 End Function
 
 Sub StringChangeEx(S, FromStr, ToStr, SupportDBCS)
-    S = Replace(S, FromStr, ToStr, 1, - 1, IIf(SupportDBCS, vbTextCompare, vbBinaryCompare))
+    S = Replace(S, FromStr, ToStr, 1, -1, IIf(SupportDBCS, vbTextCompare, vbBinaryCompare))
 End Sub
 
 Function ExpandConstant(S)
@@ -308,15 +308,17 @@ End Sub
 Sub SetEnvironment()
     Dim objShell
     Set objShell = CreateObject("WScript.Shell")
-    objShell.Environment("System").Item("msvcr14x_ROOT") = ExpandConstant("{app}")
+    objShell.Environment("User").Item("msvcr14x_ROOT") = ExpandConstant("{app}")
 End Sub
 
-Sub CheckDllsAndCopyToSystemDirOrMakeDistPacks()
+Dim DllArrays(1)
+Function CheckDlls()
     Dim objShell 'As WshShell
     Set objShell = CreateObject("WScript.Shell")
     objShell.CurrentDirectory = ExpandConstant("{app}")
     Dim fs 'As FileSystemObject
     Set fs = CreateObject("Scripting.FileSystemObject")
+    
     Dim AllDlls(3, 8)
     AllDlls(0, 0) = "Debug\MSVCR14XD.dll"
     AllDlls(0, 1) = "Debug\MSVCP14XD.dll"
@@ -377,81 +379,134 @@ Sub CheckDllsAndCopyToSystemDirOrMakeDistPacks()
     AllResDlls(1, 8) = "x64\Release\MFC14XKOR.DLL"
     AllResDlls(1, 9) = "x64\Release\MFC14XRUS.DLL"
     
-    Dim DllArrays(1)
     DllArrays(0) = AllDlls
     DllArrays(1) = AllResDlls
-    Dim DllArray
+    Dim DllArray, OneDll
     For Each DllArray In DllArrays
-        Dim OneDll
         For Each OneDll In DllArray
             If fs.FileExists(OneDll) = False Then
                 Call MsgBox(Chr(34) & OneDll & Chr(34) & " does not exist, Please build all msvcr14x dlls first!", vbCritical, "msvcr14x")
-                Exit Sub
+                Exit Function
             End If
         Next
     Next
+    CheckDlls = True
+End Function
+
+Sub MakeDistPacks()
+    Dim objShell 'As WshShell
+    Set objShell = CreateObject("WScript.Shell")
     
-    If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
-        Dim windir
-        windir = objShell.Environment("Process").Item("windir")
-        Dim ProcArch
-        ProcArch = objShell.Environment("Process").Item("PROCESSOR_ARCHITECTURE")
-        Dim SysArch
-        SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
-        If SysArch = "AMD64" Then
-            For Each DllArray In DllArrays
-                For Each OneDll In DllArray
-                    If Left(OneDll, 3) = "x64" Then
-                        If ProcArch = "x86" Then
-                            Call fs.CopyFile(OneDll, windir + "\sysnative\")
-                        Else
-                            Call fs.CopyFile(OneDll, windir + "\system32\")
-                        End If
-                    Else
-                        Call fs.CopyFile(OneDll, windir + "\syswow64\")
-                    End If
-                Next
-            Next
-        ElseIf SysArch = "x86" Then
-            For Each DllArray In DllArrays
-                For Each OneDll In DllArray
-                    If Left(OneDll, 3) <> "x64" Then
-                        Call fs.CopyFile(OneDll, windir + "\system32\")
-                    End If
-                Next
-            Next
-        Else
-            MsgBox SysArch + " is a unsupported system architecture!", vbCritical, "msvcr14x"
-        End If
-    End If
-    
-    If MsgBox("Create distribution packages for generated x86 and x64 executables?", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+    Do
         On Error Resume Next
-        Do
-            Dim Path
-            Path = objShell.RegRead("HKLM\SOFTWARE\7-Zip\Path")
-            If Len(Path) = 0 Then
-                Path = objShell.RegRead("HKLM\SOFTWARE\WOW6432Node\7-Zip\Path")
+        Dim Path
+        Path = objShell.RegRead("HKLM\SOFTWARE\7-Zip\Path")
+        If Len(Path) = 0 Then
+            Path = objShell.RegRead("HKLM\SOFTWARE\WOW6432Node\7-Zip\Path")
+        End If
+        Path = Path & "7z.exe"
+        Dim ExeProc 'As WshExec
+        Set ExeProc = Nothing
+        Set ExeProc = objShell.Exec(Path)
+        On Error GoTo 0
+        If ExeProc Is Nothing Then
+            If MsgBox("Please install 7-zip first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
+                Exit Sub
             End If
-            If Len(Path) = 0 Then
-                If MsgBox("Please install 7-zip first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
-                    Exit Sub
-                End If
-                objShell.Run ("https://www.7-zip.org/")
-            Else
-                Dim ExeProcs(1) 'As WshExec
-                Set ExeProcs(0) = objShell.Exec(Path & "7z.exe a Distrib\msvcr14x_dist.x86.exe .\Debug\*.dll .\Release\*.dll -mx=9 -sfx7z.sfx")
-                Set ExeProcs(1) = objShell.Exec(Path & "7z.exe a Distrib\msvcr14x_dist.x64.exe .\x64\Debug\*.dll .\x64\Release\*.dll -mx=9 -sfx7z.sfx")
-                Do While ExeProcs(0).Status = 0 Or ExeProcs(1).Status = 0
-                    WScript.Sleep 100
-                Loop
-                Exit Do
-            End If
-        Loop
-    End If
-    
+            objShell.Run ("https://www.7-zip.org/")
+        Else
+            Dim ExeProcs(1) 'As WshExec
+            Set ExeProcs(0) = objShell.Exec(Path & " a Distrib\msvcr14x_dist.x86.exe .\Debug\*.dll .\Release\*.dll -mx=9 -sfx7z.sfx")
+            Set ExeProcs(1) = objShell.Exec(Path & " a Distrib\msvcr14x_dist.x64.exe .\x64\Debug\*.dll .\x64\Release\*.dll -mx=9 -sfx7z.sfx")
+            Do While ExeProcs(0).Status = 0 Or ExeProcs(1).Status = 0
+                WScript.Sleep 100
+            Loop
+            Exit Do
+        End If
+    Loop
 End Sub
 
-ModifyAllProps
-SetEnvironment
-CheckDllsAndCopyToSystemDirOrMakeDistPacks
+Function CopyToSystemDir()
+    Err.Clear
+    On Error Resume Next
+    
+    Dim objShell 'As WshShell
+    Set objShell = CreateObject("WScript.Shell")
+    Dim fs 'As FileSystemObject
+    Set fs = CreateObject("Scripting.FileSystemObject")
+    
+    Dim windir
+    windir = objShell.Environment("Process").Item("windir")
+    Dim ProcArch
+    ProcArch = objShell.Environment("Process").Item("PROCESSOR_ARCHITECTURE")
+    Dim SysArch
+    SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
+    Dim DllArray, OneDll
+    If SysArch = "AMD64" Then
+        For Each DllArray In DllArrays
+            For Each OneDll In DllArray
+                If Left(OneDll, 3) = "x64" Then
+                    If ProcArch = "x86" Then
+                        Call fs.CopyFile(OneDll, windir + "\sysnative\")
+                    Else
+                        Call fs.CopyFile(OneDll, windir + "\system32\")
+                    End If
+                Else
+                    Call fs.CopyFile(OneDll, windir + "\syswow64\")
+                End If
+            Next
+        Next
+    ElseIf SysArch = "x86" Then
+        For Each DllArray In DllArrays
+            For Each OneDll In DllArray
+                If Left(OneDll, 3) <> "x64" Then
+                    Call fs.CopyFile(OneDll, windir + "\system32\")
+                End If
+            Next
+        Next
+    Else
+        MsgBox SysArch + " is a unsupported system architecture!", vbCritical, "msvcr14x"
+    End If
+    CopyToSystemDir = Err.Number = 0
+End Function
+
+If CheckDlls() = False Then
+    WScript.Quit
+End If
+Dim Args
+Set Args = WScript.Arguments
+Dim IsTryToBeElevatedForCopyToSystemDir
+If Args.Count >= 1 Then
+    IsTryToBeElevatedForCopyToSystemDir = Args(0) = "TryToBeElevatedForCopyToSystemDir"
+End If
+If IsTryToBeElevatedForCopyToSystemDir = False Then
+    ModifyAllProps
+    SetEnvironment
+    If MsgBox("Create distribution packages for generated x86 and x64 executables?", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+        MakeDistPacks
+    End If
+End If
+Dim ToCopyToSystemDir
+If IsTryToBeElevatedForCopyToSystemDir = False Then
+    If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+        ToCopyToSystemDir = True
+    End If
+Else
+    ToCopyToSystemDir = True
+End If
+If ToCopyToSystemDir Then
+    If CopyToSystemDir() = False Then
+        If IsTryToBeElevatedForCopyToSystemDir Then
+            '尝试提权后依然无法复制文件到系统目录的情况
+            Call MsgBox("Failed to copy the generated dlls to the system directory!" & vbCrLf & "Error message:" & Err.Description, vbCritical, "msvcr14x")
+        Else
+            Dim objShell 'As Shell
+            Set objShell = CreateObject("Shell.Application")
+            
+            Dim VbsFile
+            VbsFile = WScript.ScriptFullName
+            'VbsFile = "F:\MyCppProjects\msvcr14x\setup.vbs"
+            objShell.ShellExecute "WScript.exe", VbsFile & " TryToBeElevatedForCopyToSystemDir", vbNullString, "runas", 1
+        End If
+    End If
+End If

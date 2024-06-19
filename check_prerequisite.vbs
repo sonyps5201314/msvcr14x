@@ -9,6 +9,7 @@ Sub CheckPrerequisite()
     fs.DeleteFile ("CheckPrerequisite_Result.txt")
     
     Dim ExeProc 'As WshExec
+    Set ExeProc = Nothing
     Set ExeProc = objShell.Exec("git.exe")
     If ExeProc Is Nothing Then
         MsgBox "Please install git for windows first!", vbCritical, "msvcr14x"
@@ -24,8 +25,9 @@ Sub CheckPrerequisite()
     
     Dim VS_PATH
     Do
+        Set ExeProc = Nothing
         Set ExeProc = objShell.Exec("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product." & VS_EDITION)
-        If ExeProc Is Not Null Then
+        If ExeProc Is Nothing = False Then
             VS_PATH = ExeProc.StdOut.ReadLine()
             If fs.FolderExists(VS_PATH) Then
                 Exit Do
