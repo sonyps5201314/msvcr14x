@@ -482,13 +482,13 @@ End If
 If IsTryToBeElevatedForCopyToSystemDir = False Then
     ModifyAllProps
     SetEnvironment
-    If MsgBox("Create distribution packages for generated x86 and x64 executables?", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+    If MsgBox("Create distribution packages for generated x86 and x64 executables?", vbQuestion Or vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
         MakeDistPacks
     End If
 End If
 Dim ToCopyToSystemDir
 If IsTryToBeElevatedForCopyToSystemDir = False Then
-    If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
+    If MsgBox("Copy all generated dlls to System32/SysWOW64 directory?" & vbCrLf & "It's a good idea for test and debug.", vbQuestion Or vbYesNo Or vbDefaultButton1, "msvcr14x") = vbYes Then
         ToCopyToSystemDir = True
     End If
 Else
