@@ -8,7 +8,7 @@ https://github.com/sonyps5201314/ntdll.git
 run one_key_build.bat for the first time build or msvcr14x.sln for next times builds
 
 ## use method:
-run setup.vbs with a account with administrator privileges
+run setup.vbs
 
 ## compare images:
 Before![Before](images/before.png)      After![After](images/after.png)
