@@ -189,6 +189,7 @@
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -239,6 +240,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -291,6 +293,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -340,6 +343,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\i386;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -386,6 +390,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -435,6 +440,7 @@ if "%~t1" NEQ "%~t2" (
       <ImportLibrary>$(OutDir)$(TargetName)_dynamic_part.lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -487,6 +493,7 @@ if "%~t1" NEQ "%~t2" (
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
@@ -536,6 +543,7 @@ if "%~t1" NEQ "%~t2" (
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>..\msvcr14x\lib\amd64;$(OutDir)\..\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>SHELL32.dll;WININET.dll;WINMM.dll;MSIMG32.DLL;WS2_32.dll;OLEACC.dll;WINSPOOL.DRV;oledlg.dll;urlmon.dll;ODBC32.dll;crypt32.dll;GDIPlus.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>CD "$(OutDir)"
