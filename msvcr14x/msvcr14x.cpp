@@ -17,5 +17,5 @@ extern "C"
 {
 	BOOL WINAPI __acrt_DllMain(_In_ HINSTANCE hInstance, _In_ DWORD fdwReason, _In_ LPVOID lpvReserved);
 	const void* __pfnDllMainCRTStartupForYY_Thunks = __acrt_DllMain;
-	BOOL __YY_Thunks_Process_Terminating;
+	BOOL __YY_Thunks_Disable_Rreload_Dlls;
 }

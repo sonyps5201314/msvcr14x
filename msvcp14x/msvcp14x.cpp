@@ -25,6 +25,6 @@ _CRTALLOC(".CRT$XIC") /*static*/ _PIFV force_included__winapisupp_pinit = initia
 extern "C"
 {
 	const void* __pfnDllMainCRTStartupForYY_Thunks;
-	BOOL __YY_Thunks_Process_Terminating;
+	BOOL __YY_Thunks_Disable_Rreload_Dlls;
 	const void* __acrt_atexit_table;
 }
