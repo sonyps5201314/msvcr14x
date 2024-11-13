@@ -18,5 +18,6 @@ extern "C"
 {
 	const void* __pfnDllMainCRTStartupForYY_Thunks;
 	BOOL __YY_Thunks_Disable_Rreload_Dlls;
+	const void* __pfnYY_Thunks_CustomLoadLibrary;
 	const void* __acrt_atexit_table;
 }
