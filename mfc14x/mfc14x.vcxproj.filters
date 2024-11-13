@@ -1290,6 +1290,9 @@
     <ClInclude Include="verstamp.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="vcversion_generated.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(VCToolsInstallDir)atlmfc\src\mfc\afxabort.cpp">

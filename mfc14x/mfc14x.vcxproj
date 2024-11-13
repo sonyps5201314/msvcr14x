@@ -874,6 +874,7 @@ if "%~t1" NEQ "%~t2" (
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\stdafx.h" />
     <ClInclude Include="$(VCToolsInstallDir)atlmfc\src\mfc\winhand_.h" />
     <ClInclude Include="afxisapi.h" />
+    <ClInclude Include="vcversion_generated.h" />
     <ClInclude Include="version.h" />
     <ClInclude Include="verstamp.h" />
   </ItemGroup>
