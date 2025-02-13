@@ -159,6 +159,15 @@
     <ClInclude Include="inc\corecrt_internal_state_isolation.h">
       <Filter>inc</Filter>
     </ClInclude>
+    <ClInclude Include="inc\corecrt_internal_ffs.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\faststat.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\strcompare.h">
+      <Filter>inc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\memccpy.c">
