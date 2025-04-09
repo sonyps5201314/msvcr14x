@@ -15,8 +15,6 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-AnsiDebug/
-AnsiRelease/
 x64/
 x86/
 bld/
@@ -263,5 +261,6 @@ paket-files/
 __pycache__/
 *.pyc
 
-/mfc14x/*.asm
+/mfc14x/AnsiDebug
+/mfc14x/AnsiRelease
 /Distrib
