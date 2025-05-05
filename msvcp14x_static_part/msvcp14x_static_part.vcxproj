@@ -207,6 +207,7 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\sharedmutex.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\vector_algorithms.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesystem.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\tzdb.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror_import_lib.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xonce2.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xcharconv_ryu_tables.cpp" />
