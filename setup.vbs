@@ -442,7 +442,7 @@ Function CopyToSystemDir()
     Dim SysArch
     SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
     Dim DllArray, OneDll
-    If SysArch = "AMD64" Then
+    If SysArch = "AMD64" Or SysArch = "ARM64" Then
         For Each DllArray In DllArrays
             For Each OneDll In DllArray
                 If Left(OneDll, 3) = "x64" Then
