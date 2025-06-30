@@ -34,7 +34,7 @@ Function ExtractToSystemDir()
     SysArch = objShell.Environment("System").Item("PROCESSOR_ARCHITECTURE")
     
     Set objShell = CreateObject("Shell.Application")
-    If SysArch = "AMD64" Then
+    If SysArch = "AMD64" Or SysArch = "ARM64" Then
         If fs.FileExists(AppPath & Dist_x64) Then
             ProcArch = "x86" 'IsPEFile64Bit(Dist_x64)
             If ProcArch = "x86" Then
