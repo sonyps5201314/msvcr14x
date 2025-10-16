@@ -3,7 +3,7 @@ GOTO MENU
 :MENU
 set ID=%1
 if not defined ID (
-  ECHO.Which Visual Studio 2022 Edition do you want to use?
+  ECHO.Which Visual Studio 2026 Edition do you want to use?
   ECHO.1.Enterprise
   ECHO.2.Professional
   ECHO.3.Community
@@ -48,17 +48,17 @@ git -C ../YY-Thunks pull -v --progress "origin"
 
 WScript ../ntdll/setup.vbs
 
-for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 17.0 -property installationPath -products Microsoft.VisualStudio.Product.%VS_EDITION%') do set "VS_PATH=%%i"
-
+for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 18.0 -property installationPath -products Microsoft.VisualStudio.Product.%VS_EDITION%') do set "VS_PATH=%%i"
+if not defined VS_PATH SET VS_PATH=C:\Program Files\Microsoft Visual Studio\18\Insiders
 @ECHO ON
 CALL "%VS_PATH%\VC\Auxiliary\Build\vcvars32.bat"
 msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
 
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiRelease;Platform=x86
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Debug;Platform=x64
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiDebug;Platform=x64
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=Release;Platform=x64
-msbuild /m msvcr14x.sln /t:Build /p:Configuration=AnsiRelease;Platform=x64
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=Debug;Platform=x86
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=AnsiDebug;Platform=x86
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=Release;Platform=x86
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=AnsiRelease;Platform=x86
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=Debug;Platform=x64
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=AnsiDebug;Platform=x64
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=Release;Platform=x64
+msbuild /m msvcr14x.slnx /t:Build /p:Configuration=AnsiRelease;Platform=x64

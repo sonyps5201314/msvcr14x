@@ -5,7 +5,7 @@ msvcr14x is a program that allows programs compiled with VC2015 and above not to
 https://github.com/sonyps5201314/ntdll.git
 
 ## build method：
-run one_key_build.bat for the first time build or msvcr14x.sln for next times builds
+run one_key_build.bat for the first time build or msvcr14x.slnx for next times builds
 
 ## use method:
 run setup.vbs

@@ -1,0 +1,78 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="AnsiDebug" />
+    <BuildType Name="AnsiRelease" />
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="concrt14x/concrt14x.vcxproj" Id="e9eced0f-4a90-4143-a1a3-ef1e03b8dd25">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildDependency Project="msvcp14x_static_part/msvcp14x_static_part.vcxproj" />
+    <BuildDependency Project="msvcr14x/msvcr14x.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="mfc14x/mfc14x.vcxproj" Id="f7550566-5dac-48d6-855f-c2494ce61bdf">
+    <BuildDependency Project="msvcr14x/msvcr14x.vcxproj" />
+  </Project>
+  <Project Path="mfc14xloc/mfc14xloc.vcxproj" Id="7077da3c-5889-4d6c-9e1f-4903cd40433f">
+    <BuildDependency Project="mfc14x/mfc14x.vcxproj" />
+    <BuildType Project="Release" />
+    <Build Solution="AnsiDebug|*" Project="false" />
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="msvcp14x/msvcp14x.vcxproj" Id="2a9057c5-4e11-4577-bbb6-6d80298180d7">
+    <BuildDependency Project="msvcr14x/msvcr14x.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcp14x_1/msvcp14x_1.vcxproj" Id="4f5a8592-c592-4514-b77e-95628118b6de">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcp14x_2/msvcp14x_2.vcxproj" Id="88045b01-ed4d-4c1d-ba24-a561a427be07">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildDependency Project="msvcp14x_static_part/msvcp14x_static_part.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcp14x_atomic_wait/msvcp14x_atomic_wait.vcxproj" Id="4fb4db83-d650-4392-b8f9-610ecd130c25">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildDependency Project="msvcp14x_static_part/msvcp14x_static_part.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcp14x_codecvt_ids/msvcp14x_codecvt_ids.vcxproj" Id="5b949ecf-133f-4f40-a7c8-2e6553eeb3fd">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcp14x_static_part/msvcp14x_static_part.vcxproj" Id="e8586985-2ca5-4966-83b9-26847250e3e2">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildDependency Project="msvcp14x_1/msvcp14x_1.vcxproj" />
+    <BuildDependency Project="msvcp14x_codecvt_ids/msvcp14x_codecvt_ids.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcprt/msvcprt.vcxproj" Id="c6b92582-1349-4ac7-81c3-d64b2a078514">
+    <BuildDependency Project="msvcp14x/msvcp14x.vcxproj" />
+    <BuildDependency Project="msvcp14x_1/msvcp14x_1.vcxproj" />
+    <BuildDependency Project="msvcp14x_2/msvcp14x_2.vcxproj" />
+    <BuildDependency Project="msvcp14x_atomic_wait/msvcp14x_atomic_wait.vcxproj" />
+    <BuildDependency Project="msvcp14x_codecvt_ids/msvcp14x_codecvt_ids.vcxproj" />
+    <BuildDependency Project="msvcp14x_static_part/msvcp14x_static_part.vcxproj" />
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="msvcr14x/msvcr14x.vcxproj" Id="c5cef085-11dd-4a18-9d4d-be5ddfc63402">
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+  <Project Path="vcruntime/vcruntime.vcxproj" Id="2533f8ef-3719-4f4d-b5e3-100387b5b1f1">
+    <BuildType Solution="AnsiDebug|*" Project="Debug" />
+    <BuildType Solution="AnsiRelease|*" Project="Release" />
+  </Project>
+</Solution>

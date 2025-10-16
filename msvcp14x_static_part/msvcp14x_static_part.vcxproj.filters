@@ -74,6 +74,9 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\print.cpp">
       <Filter>implib</Filter>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\regex.cpp">
+      <Filter>implib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="$(VCToolsInstallDir)\crt\src\stl\alias_init_once_begin_initialize.asm">

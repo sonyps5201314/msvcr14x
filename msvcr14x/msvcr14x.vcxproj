@@ -29,14 +29,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
@@ -44,14 +44,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Static</UseOfMfc>
@@ -743,10 +743,20 @@
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcslwr.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncat.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncat_s.cpp" />
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncmp.cpp" />
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncmp.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IntrinsicFunctions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IntrinsicFunctions>
+    </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncnt.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncoll.cpp" />
-    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncpy.cpp" />
+    <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncpy.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</IntrinsicFunctions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MinSpace</Optimization>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IntrinsicFunctions>
+    </ClCompile>
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsncpy_s.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsnicmp.cpp" />
     <ClCompile Include="$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\string\wcsnicol.cpp" />
