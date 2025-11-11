@@ -29,9 +29,6 @@ Sub CheckPrerequisite()
         Set ExeProc = objShell.Exec("C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe -version 18.0 -property installationPath -products Microsoft.VisualStudio.Product." & VS_EDITION)
         If ExeProc Is Nothing = False Then
             VS_PATH = ExeProc.StdOut.ReadLine()
-            If Not fs.FolderExists(VS_PATH) Then
-                VS_PATH = "C:\Program Files\Microsoft Visual Studio\18\Insiders"
-            End If
             If fs.FolderExists(VS_PATH) Then
                 Exit Do
             End If

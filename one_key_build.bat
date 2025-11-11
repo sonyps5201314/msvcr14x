@@ -49,7 +49,6 @@ git -C ../YY-Thunks pull -v --progress "origin"
 WScript ../ntdll/setup.vbs
 
 for /f "delims=" %%i in ('"C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" -version 18.0 -property installationPath -products Microsoft.VisualStudio.Product.%VS_EDITION%') do set "VS_PATH=%%i"
-if not defined VS_PATH SET VS_PATH=C:\Program Files\Microsoft Visual Studio\18\Insiders
 @ECHO ON
 CALL "%VS_PATH%\VC\Auxiliary\Build\vcvars32.bat"
 msbuild "../YY-Thunks\src\YY-Thunks.UnitTest\YY-Thunks.UnitTest.vcxproj" -t:Build_YY_Thunks_List_hpp
