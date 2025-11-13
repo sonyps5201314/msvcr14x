@@ -36,7 +36,7 @@ Sub CheckPrerequisite()
         If MsgBox("Please install Visual Studio 2026 " & VS_EDITION & " edition first!", vbCritical Or vbYesNo Or vbDefaultButton1, "msvcr14x") <> vbYes Then
             Exit Sub
         End If
-        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&rel=18")
+        objShell.Run ("https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=" & VS_EDITION & "&channel=Stable&version=VS18")
     Loop
     
     While fs.FolderExists(VS_PATH & "\VC\Tools\MSVC") = False
