@@ -36,7 +36,8 @@ if not exist ../boost-math (
   goto :check_boost-math
 )
 cd ../boost-math
-git checkout 4d0885ae44f7d4ce94568339b2ae5501eb234e8f
+git fetch -v --progress "origin" master
+git checkout 5e088ffe2ed0e237b9069e3a7352865283d8f196
 cd %~dp0
   
 :check_YY-Thunks
