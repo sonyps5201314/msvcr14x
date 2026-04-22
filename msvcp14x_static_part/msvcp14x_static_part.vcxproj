@@ -89,7 +89,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CopyFile2=__crtCopyFile2;CreateFile2=__crtCreateFile2;CreateSymbolicLinkW=__crtCreateSymbolicLinkW;FindFirstFileExW=__crtFindFirstFileExW;GetFileInformationByHandleEx=__crtGetFileInformationByHandleEx;GetFinalPathNameByHandleW=__crtGetFinalPathNameByHandleW;SetFileInformationByHandle=__crtSetFileInformationByHandle;_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -117,7 +117,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CopyFile2=__crtCopyFile2;CreateFile2=__crtCreateFile2;CreateSymbolicLinkW=__crtCreateSymbolicLinkW;FindFirstFileExW=__crtFindFirstFileExW;GetFileInformationByHandleEx=__crtGetFileInformationByHandleEx;GetFinalPathNameByHandleW=__crtGetFinalPathNameByHandleW;SetFileInformationByHandle=__crtSetFileInformationByHandle;_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
@@ -144,7 +144,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CopyFile2=__crtCopyFile2;CreateFile2=__crtCreateFile2;CreateSymbolicLinkW=__crtCreateSymbolicLinkW;FindFirstFileExW=__crtFindFirstFileExW;GetFileInformationByHandleEx=__crtGetFileInformationByHandleEx;GetFinalPathNameByHandleW=__crtGetFinalPathNameByHandleW;SetFileInformationByHandle=__crtSetFileInformationByHandle;_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
@@ -173,7 +173,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CopyFile2=__crtCopyFile2;CreateFile2=__crtCreateFile2;CreateSymbolicLinkW=__crtCreateSymbolicLinkW;FindFirstFileExW=__crtFindFirstFileExW;GetFileInformationByHandleEx=__crtGetFileInformationByHandleEx;GetFinalPathNameByHandleW=__crtGetFinalPathNameByHandleW;SetFileInformationByHandle=__crtSetFileInformationByHandle;_LIB;_STL_WIN32_WINNT=_STL_WIN32_WINNT_WINXP;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
